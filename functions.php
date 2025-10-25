@@ -39,26 +39,6 @@ if ( ! function_exists( 'bloktastik_editor_style' ) ) :
 endif;
 add_action( 'after_setup_theme', 'bloktastik_editor_style' );
 
-// Enqueues style.css on the front.
-if ( ! function_exists( 'bloktastik_enqueue_styles' ) ) :
-	/**
-	 * Enqueues style.css on the front.
-	 *
-	 * @since Twenty Twenty-Five 1.0
-	 *
-	 * @return void
-	 */
-	function bloktastik_enqueue_styles() {
-		wp_enqueue_style(
-			'bloktastik-style',
-			get_parent_theme_file_uri( 'style.css' ),
-			array(),
-			wp_get_theme()->get( 'Version' )
-		);
-	}
-endif;
-add_action( 'wp_enqueue_scripts', 'bloktastik_enqueue_styles' );
-
 // Registers custom block styles.
 if ( ! function_exists( 'bloktastik_block_styles' ) ) :
 	/**
@@ -156,3 +136,57 @@ if ( ! function_exists( 'bloktastik_format_binding' ) ) :
 		}
 	}
 endif;
+
+/**
+ * Enqueue editor assets (for block editor)
+ */
+if ( ! function_exists( 'bloktastik_editor_assets' ) ) :
+	/**
+	 * Enqueues editor styles including Tailwind.
+	 *
+	 * @since Bloktastik 1.0
+	 *
+	 * @return void
+	 */
+	function bloktastik_editor_assets() {
+		wp_enqueue_style(
+			'bloktastik-editor-styles',
+			get_template_directory_uri() . '/build/styles/editor.css',
+			array(),
+			wp_get_theme()->get( 'Version' )
+		);
+	}
+endif;
+add_action( 'enqueue_block_editor_assets', 'bloktastik_editor_assets' );
+
+/**
+ * Enqueue frontend assets
+ */
+if ( ! function_exists( 'bloktastik_frontend_assets' ) ) :
+	/**
+	 * Enqueues frontend Tailwind styles and main JavaScript.
+	 *
+	 * @since Bloktastik 1.0
+	 *
+	 * @return void
+	 */
+	function bloktastik_frontend_assets() {
+		// Frontend Tailwind styles
+		wp_enqueue_style(
+			'bloktastik-tailwind',
+			get_template_directory_uri() . '/build/styles/tailwind.css',
+			array(),
+			wp_get_theme()->get( 'Version' )
+		);
+		
+		// Main JavaScript
+		wp_enqueue_script(
+			'bloktastik-scripts',
+			get_template_directory_uri() . '/build/scripts/main.js',
+			array(),
+			wp_get_theme()->get( 'Version' ),
+			true
+		);
+	}
+endif;
+add_action( 'wp_enqueue_scripts', 'bloktastik_frontend_assets' );

@@ -1,16 +1,21 @@
 {
-    "name": "your-theme-name",
+    "name": "Bloktastik",
     "version": "1.0.0",
     "description": "FSE Block Theme based on Twenty Twenty-Five",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "wp-scripts start",
+        "build": "wp-scripts build",
+        "format": "wp-scripts format",
+        "lint:css": "wp-scripts lint-style",
+        "lint:js": "wp-scripts lint-js",
+        "packages-update": "wp-scripts packages-update"
     },
     "keywords": [
         "wordpress",
         "theme",
         "block-theme"
     ],
-    "author": "Your Name",
+    "author": "SpaceRace Digital",
     "license": "GPL-2.0-or-later",
     "devDependencies": {
         "@wordpress/create-block": "^4.60.0",
