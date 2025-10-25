@@ -1,0 +1,23 @@
+{
+    "name": "your-theme-name",
+    "version": "1.0.0",
+    "description": "FSE Block Theme based on Twenty Twenty-Five",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "wordpress",
+        "theme",
+        "block-theme"
+    ],
+    "author": "Your Name",
+    "license": "GPL-2.0-or-later",
+    "devDependencies": {
+        "@wordpress/create-block": "^4.60.0",
+        "@wordpress/scripts": "^30.26.0",
+        "autoprefixer": "^10.4.21",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.5.6",
+        "tailwindcss": "^4.1.16"
+    }
+}
