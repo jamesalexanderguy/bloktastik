@@ -7,11 +7,6 @@ module.exports = {
     './patterns/**/*.php',
     './*.php',
   ],
-  safelist: [
-    'text-red-500',
-    'font-bold',
-    'text-4xl',
-  ],
   theme: {
     extend: {},
   },

@@ -24,6 +24,7 @@ if ( ! function_exists( 'bloktastik_post_format_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'bloktastik_post_format_setup' );
 
+
 // Enqueues editor-style.css in the editors.
 if ( ! function_exists( 'bloktastik_editor_style' ) ) :
 	/**
@@ -34,7 +35,11 @@ if ( ! function_exists( 'bloktastik_editor_style' ) ) :
 	 * @return void
 	 */
 	function bloktastik_editor_style() {
-		add_editor_style( 'assets/css/editor-style.css' );
+		// Add the compiled Tailwind editor styles to the editor canvas
+		add_editor_style( array(
+			'build/styles/editor.css',    // Tailwind + global editor styles
+			'build/style-blocks.css'             // Block-specific styles
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'bloktastik_editor_style' );
@@ -138,28 +143,6 @@ if ( ! function_exists( 'bloktastik_format_binding' ) ) :
 endif;
 
 /**
- * Enqueue editor assets (for block editor)
- */
-if ( ! function_exists( 'bloktastik_editor_assets' ) ) :
-	/**
-	 * Enqueues editor styles including Tailwind.
-	 *
-	 * @since Bloktastik 1.0
-	 *
-	 * @return void
-	 */
-	function bloktastik_editor_assets() {
-		wp_enqueue_style(
-			'bloktastik-editor-styles',
-			get_template_directory_uri() . '/build/styles/editor.css',
-			array(),
-			wp_get_theme()->get( 'Version' )
-		);
-	}
-endif;
-add_action( 'enqueue_block_editor_assets', 'bloktastik_editor_assets' );
-
-/**
  * Enqueue frontend assets
  */
 if ( ! function_exists( 'bloktastik_frontend_assets' ) ) :
@@ -179,6 +162,14 @@ if ( ! function_exists( 'bloktastik_frontend_assets' ) ) :
 			wp_get_theme()->get( 'Version' )
 		);
 		
+		// Block styles (auto-compiled from each block's style.scss)
+		wp_enqueue_style(
+			'bloktastik-blocks',
+			get_template_directory_uri() . '/build/style-blocks.css',
+			array(),
+			wp_get_theme()->get( 'Version' )
+		);
+		
 		// Main JavaScript
 		wp_enqueue_script(
 			'bloktastik-scripts',
@@ -190,3 +181,59 @@ if ( ! function_exists( 'bloktastik_frontend_assets' ) ) :
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'bloktastik_frontend_assets' );
+
+/**
+ * Register custom blocks dynamically
+ */
+if ( ! function_exists( 'bloktastik_register_blocks' ) ) :
+	/**
+	 * Automatically registers all blocks in build/blocks/ folder.
+	 *
+	 * @since Bloktastik 1.0
+	 *
+	 * @return void
+	 */
+	function bloktastik_register_blocks() {
+		$blocks_dir = __DIR__ . '/build/blocks';
+		
+		// Check if blocks directory exists
+		if ( ! is_dir( $blocks_dir ) ) {
+			return;
+		}
+		
+		// Loop through each block folder and register it
+		$block_folders = glob( $blocks_dir . '/*', GLOB_ONLYDIR );
+		foreach ( $block_folders as $block_folder ) {
+			$block_json = $block_folder . '/block.json';
+			if ( file_exists( $block_json ) ) {
+				register_block_type( $block_folder );
+			}
+		}
+	}
+endif;
+add_action( 'init', 'bloktastik_register_blocks' );
+
+/**
+ * Enqueue the single blocks bundle
+ */
+if ( ! function_exists( 'bloktastik_enqueue_blocks_bundle' ) ) :
+	/**
+	 * Enqueues the compiled blocks bundle for the editor.
+	 *
+	 * @since Bloktastik 1.0
+	 *
+	 * @return void
+	 */
+	function bloktastik_enqueue_blocks_bundle() {
+		$asset_file = include get_template_directory() . '/build/blocks.asset.php';
+		
+		wp_enqueue_script(
+			'bloktastik-blocks',
+			get_template_directory_uri() . '/build/blocks.js',
+			$asset_file['dependencies'],
+			$asset_file['version'],
+			true
+		);
+	}
+endif;
+add_action( 'enqueue_block_editor_assets', 'bloktastik_enqueue_blocks_bundle' );

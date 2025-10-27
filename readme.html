@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,nofollow" />
+	<title>Read Me</title>
+	<link rel="stylesheet" href="wp-admin/css/install.css?ver=20100228" type="text/css" />
+</head>
+<body>
+
+<h2>Important stuff</h2>
+<p>Bloktastik is a version of the wp 2025 theme to support future SRD theming.</p>
+<p>Bloktastik Theme is built on top of a stripped out 2025 theme. It has tailwind assets compiled automatically. You can add custom styles and js which will also get compiled. You can create blocks quickly by running:</p>
+<p>npx @wordpress/create-block luchito --namespace=bloktastik --category=office --no-plugin --template=/Users/admin/Desktop/Dev/block-templates/spaceblocks-block --target-dir=src/blocks/luchito</p>
+<p>This will create the block with default scaffolding from the repo @/Users/admin/Desktop/Dev/block-templates/spaceblocks-block which is also housed in github. There is a ‘component.js ‘ file which houses the main jsx for the block. You only need to change that file and it will feed to the edit.js (for the back end view) and ‘save.js’ for the front end view.</p>
+<p>For the styles, mostly you will use tailwind in the jsx. It uses tailwind v3. As at the time of build V4 is finicky with compiling with create-block assets. If you need to add any block-specific styles, you will find scss files for the editor and the front end (all front end styles show automatically in the editor - so editor is just for very unique editor stuff). Any custom stuff you put in here will be compiled with the other assets and show in the editor or frontend or both.</p>
+<p>So after making your changes to the block, you can run yarn build or npm run build and it will compile and enqueue all the assets in the right places.</p>
+
+</body>
+</html>
