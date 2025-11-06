@@ -1,0 +1,108 @@
+/* Core block variations and overrides */
+
+.no-flow-margin > * {
+	margin-block-start: 0 !important;
+	margin-block-end: 0 !important;
+}
+
+.wp-block-button__link {
+    cursor: pointer!important;
+}
+
+/* Container margins */
+.wp-block-buttons.is-layout-flex.wp-block-buttons-is-layout-flex {
+    margin-top: 5px !important;
+}
+
+  /* Blue border variation */
+  .wp-block-button.is-style-blue-border .wp-block-button__link {
+	background: var(--wp--preset--color--base)!important;
+	color: var(--wp--preset--color--hyperlink-blue)!important;
+	border: 2px solid var(--wp--preset--color--hyperlink-blue) !important;
+	transition: all 0.3s ease;
+  }
+  
+  .wp-block-button.is-style-blue-border .wp-block-button__link:hover {
+	background: var(--wp--preset--color--hyperlink-blue)!important;
+	color: white !important;
+  }
+
+  .wp-block-button.is-style-blue-border .wp-block-button__link::before {
+    transition: none;
+    transform: none;
+  }
+  
+  /* Green to red variation */
+  .wp-block-button.is-style-green-red .wp-block-button__link {
+	background: var(--wp--preset--color--bright-green)!important; 
+	color: white !important;
+	transition: all 0.3s ease;
+  }
+  
+  .wp-block-button.is-style-green-red .wp-block-button__link:hover {
+	background: var(--wp--preset--color--bright-red)!important;
+  }
+
+  /* Navigation blocks */
+/* header: remove underline, hover text color */
+header .wp-block-navigation .wp-block-navigation-item__content {
+    text-decoration: none; /* anchor: remove default underline */
+  }
+  
+  header .wp-block-navigation .wp-block-navigation-item__label {
+    display: inline-block; /* allow transforms/positioning */
+    transition: color 0.18s ease;
+    color: inherit; /* keep default site color unless overridden */
+  }
+  
+  header .wp-block-navigation .wp-block-navigation-item__content:hover
+    .wp-block-navigation-item__label,
+  header .wp-block-navigation .wp-block-navigation-item__label:hover {
+    color: var(--wp--preset--color--bright-red);
+  }
+  
+  /* footer: white text, dotted-looking underline that transitions to solid via pseudo-element */
+  footer .wp-block-navigation .wp-block-navigation-item__content {
+    text-decoration: none;
+  }
+  
+  footer .wp-block-navigation .wp-block-navigation-item__label {
+    display: inline-block; /* necessary for absolute-positioned pseudo-element */
+    position: relative;
+    color: var(--wp--preset--color--base)!important;
+    padding-bottom: 0.18em; 
+    font-size: 0.9rem;
+  }
+  
+  /* Use a repeating-linear-gradient to fake a dotted underline; animate opacity/height for smooth transition */
+  footer .wp-block-navigation .wp-block-navigation-item__label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      to right,
+      currentColor 0,
+      currentColor 1px,
+      transparent 1px,
+      transparent 4px
+    ); /* looks dotted */
+    opacity: 0.6;
+    transition: opacity 0.18s ease, height 0.18s ease;
+    transform-origin: left center;
+  }
+  
+  /* Hover state: thicker, solid-looking underline */
+  footer .wp-block-navigation .wp-block-navigation-item__content:hover
+    .wp-block-navigation-item__label::after,
+  footer .wp-block-navigation .wp-block-navigation-item__label:hover::after {
+    background-image: none;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 1;
+  }
+  
+  

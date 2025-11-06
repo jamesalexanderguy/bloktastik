@@ -11,5 +11,6 @@ module.exports = {
 		'styles/editor': path.resolve(process.cwd(), 'src/styles/editor.scss'),
 		// Scripts
 		'scripts/main': path.resolve(process.cwd(), 'src/scripts/main.js'),
+		'scripts/remove-block-styles': path.resolve(process.cwd(), 'src/scripts/remove-block-styles.js'),
 	},
 };

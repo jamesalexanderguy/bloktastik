@@ -1,0 +1,103 @@
+/* Allsetpack custom styles */
+
+main a {
+    border-bottom: #005c99 1px solid;
+  }
+  
+main a:hover {
+    border-bottom-style: dotted;
+}
+  
+#contact,
+#about,
+#packs {
+scroll-margin-top: 5rem;
+overflow: initial !important;
+}
+
+body {
+font-family: 'Work Sans', sans-serif;
+}
+
+.wysiwyg p {
+font-size: 1.25rem;
+}
+
+/* form styles */
+.form-field {
+    margin: 1em 0;
+}
+
+.form-field.textarea {
+    margin: 1em 0 0;
+}
+
+.form-field input,
+.form-field textarea {
+    background-color: #f3f4f4;
+    width: 100%;
+    padding: 1em;
+    border-radius: 0.3rem;
+}
+
+/* header */
+.logo img {
+height: 4.5rem;
+}
+
+#menu-primary li a {
+    display: block;
+    transition: all 0.3s linear;
+}
+
+#menu-primary li a:hover {
+    color: #c24545;
+}
+
+@media ( min-width: var(--desktop-lg) ) {
+    #menu-primary li a {
+        margin: 0 1rem;
+    }
+}
+
+/* menu modal */
+/*
+#hamburger.clicked #line {
+    transform: rotate(-45deg);
+    translate: 0 calc(.25rem*1.5);
+}
+
+#hamburger.clicked #line2 {
+    transform: rotate(45deg);
+    translate: 0 calc(.25rem*-1);
+}
+
+#navLayer {
+display: none;
+opacity: 0;
+transition: all 0.5s linear;
+}
+
+#navLayer .blurryFace {
+opacity: 0.45;
+display: flex;
+}
+
+#navMenu {
+right: -100%;
+transition: all 0.3s linear;
+}
+
+@media ( min-width: var(--desktop-lg) ) {
+    #navMenu {
+        right: 0;
+    }
+}
+
+#navMenu .openSesame {
+    visibility: visible;
+    opacity: 1;
+    display: inline-flex;
+    right: 0;
+}
+*/

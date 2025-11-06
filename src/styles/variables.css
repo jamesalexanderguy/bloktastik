@@ -1,0 +1,19 @@
+/* Theme variables */
+/* media queries */
+:root {
+	/* Extra extra small devices (phones, 330px and up) */
+	--phone-xxs: 330px;
+	/* Extra small devices (phones, 400px and up) */
+	--phone-400: 400px;
+	/* Small devices (landscape phones, 576px and up) */
+	--phone-xs: 576px;
+	/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+	--tablet-sm: 768px;
+	/* Large devices (desktops, 992px and up) */
+	--desktop-md: 992px;
+	/* Large devices (desktops, 1024px and up) */
+	--desktop-lg: 1024px;
+	/* Extra large devices (large desktops, 1200px and up) */
+	--widescreen-lg: 1200px;
+
+}
