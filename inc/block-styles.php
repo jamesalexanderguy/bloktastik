@@ -22,6 +22,14 @@ function bloktastik_block_styles() {
 			'label' => __('Green to Red', 'bloktastik'),
 		)
 	);
+
+	register_block_style(
+		'core/button',
+		array(
+			'name'  => 'red-pulse',
+			'label' => __('Red with pulse', 'bloktastik'),
+		)
+	);
 	
 	// Register custom list style
 	register_block_style(
@@ -42,9 +50,9 @@ function bloktastik_block_styles() {
 }
 add_action('init', 'bloktastik_block_styles');
 
-// add pulse styles to default button
-function add_pulse_classes_to_default_button($block_content, $block) {
-    if ($block['blockName'] === 'core/button' && !strpos($block_content, 'is-style-')) {
+// add pulse styles to red-pulse button
+function add_tw_classes_to_pulse_button($block_content, $block) {
+    if ($block['blockName'] === 'core/button' && strpos($block_content, 'is-style-red-pulse')) {
         // Add the Tailwind classes
         $block_content = str_replace(
             'wp-block-button__link', 
@@ -61,4 +69,4 @@ function add_pulse_classes_to_default_button($block_content, $block) {
     }
     return $block_content;
 }
-add_filter('render_block', 'add_pulse_classes_to_default_button', 10, 2);
+add_filter('render_block', 'add_tw_classes_to_pulse_button', 10, 2);

@@ -3,4 +3,10 @@
 /* Additional editor-specific styles */
 .editor-styles-wrapper {
   /* Your custom editor overrides go here */
+    /* Red pulse button variation */
+    .wp-block-button.is-style-red-pulse .wp-block-button__link {
+      background: var(--wp--preset--color--bright-red);
+      color: white !important;
+      padding: 0.5rem;
+  }
 }
