@@ -21,11 +21,11 @@
 /* Allsetpack custom styles */
 
 main a {
-    border-bottom: #005c99 1px solid;
+    border-bottom: #005c99 1px dotted;
   }
   
 main a:hover {
-    border-bottom-style: dotted;
+    border-bottom-style: solid;
 }
   
 #contact,
@@ -125,166 +125,208 @@ transition: all 0.3s linear;
 /* Core block variations and overrides */
 
 .no-flow-margin > * {
-	margin-block-start: 0 !important;
-	margin-block-end: 0 !important;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
 }
 
 .wp-block-button__link {
-    cursor: pointer!important;
+  cursor: pointer !important;
 }
 
 /* Container margins */
 .wp-block-buttons.is-layout-flex.wp-block-buttons-is-layout-flex {
-    margin-top: 5px !important;
+  margin-top: 5px !important;
 }
 
 /* Default (arrow) variation */
 .wp-block-button:not([class*="is-style-"]) .wp-block-button__link {
-    background: none;
-    color: var(--wp--preset--color--hyperlink-blue) !important;
-    border-bottom: 1px dotted var(--wp--preset--color--hyperlink-blue);
-    padding: 0;
-    border-radius: 0;
-    margin-left: 25px;
-    width: auto;
-    position: relative;
-    transition: all 0.3s ease;
+  background: none;
+  color: var(--wp--preset--color--hyperlink-blue) !important;
+  border-bottom: 1px dotted var(--wp--preset--color--hyperlink-blue);
+  padding: 0;
+  border-radius: 0;
+  margin-left: 25px;
+  width: auto;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .wp-block-button:not([class*="is-style-"]) .wp-block-button__link:hover {
-    border-bottom-style: solid;
+  border-bottom-style: solid;
 }
 
 .wp-block-button:not([class*="is-style-"]) .wp-block-button__link::before {
-    content: '→';
-    position: absolute;
-    left: -25px;
-    display: inline-block;
-    font-size: 1.25rem;
-    transition: transform 0.3s ease;
+  content: "→";
+  position: absolute;
+  left: -25px;
+  display: inline-block;
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
 }
 
-  /* Blue border button variation */
-  .wp-block-button.is-style-blue-border .wp-block-button__link {
-	background: var(--wp--preset--color--base)!important;
-	color: var(--wp--preset--color--hyperlink-blue)!important;
-	border: 2px solid var(--wp--preset--color--hyperlink-blue) !important;
-	transition: all 0.3s ease;
-    padding: 0.5rem;
-  }
-  
-  .wp-block-button.is-style-blue-border .wp-block-button__link:hover {
-	background: var(--wp--preset--color--hyperlink-blue)!important;
-	color: white !important;
-  }
+/* Blue border button variation */
+.wp-block-button.is-style-blue-border .wp-block-button__link {
+  background: var(--wp--preset--color--base) !important;
+  color: var(--wp--preset--color--hyperlink-blue) !important;
+  border: 2px solid var(--wp--preset--color--hyperlink-blue) !important;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+}
 
-  .wp-block-button.is-style-blue-border .wp-block-button__link::before {
-    transition: none;
-    transform: none;
-  }
-  
-  /* Green to red variation */
-  .wp-block-button.is-style-green-red .wp-block-button__link {
-	background: var(--wp--preset--color--bright-green)!important; 
-	color: white !important;
-	transition: all 0.3s ease;
-    padding: 0.5rem;
-  }
-  
-  .wp-block-button.is-style-green-red .wp-block-button__link:hover {
-	background: var(--wp--preset--color--bright-red)!important;
-  }
+.wp-block-button.is-style-blue-border .wp-block-button__link:hover {
+  background: var(--wp--preset--color--hyperlink-blue) !important;
+  color: white !important;
+}
 
-  /* Default (arrow) variation 
-    .wp-block-button .wp-block-button__link.arrow-button {
-        background: none;
-        color: var(--wp--preset--color--hyperlink-blue) !important;
-        border-bottom: var(--wp--preset--color--hyperlink-blue) 1px dotted;
-        padding: 0;
-        border-radius: 0;
-        margin-left: 25px;
-        width: auto;
-        position: relative;
-        transition: all 0.3s ease;
-    }
+.wp-block-button.is-style-blue-border .wp-block-button__link::before {
+  transition: none;
+  transform: none;
+}
 
-    .wp-block-button .wp-block-button__link.arrow-button:hover {
-        border-bottom-style: solid;
-    }
+/* Green to red variation */
+.wp-block-button.is-style-green-red .wp-block-button__link {
+  background: var(--wp--preset--color--bright-green) !important;
+  color: white !important;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+}
 
-    .wp-block-button .wp-block-button__link.arrow-button::before {
-        content: '→';
-        position: absolute;
-        left: -25px;
-        display: inline-block;
-        font-size: 1.25rem;
-        transition: transform 0.3s ease;
-    } */
-        
+.wp-block-button.is-style-green-red .wp-block-button__link:hover {
+  background: var(--wp--preset--color--bright-red) !important;
+}
 
-  /* Navigation blocks */
+/* Details block: change to plus sign */
+.wp-block-details summary {
+  list-style: none;
+  position: static;
+  cursor: pointer;
+  padding-left: 1.5em;
+}
+
+.wp-block-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.wp-block-details summary::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 0.7;
+  font-size: 2.8rem;
+  font-weight: normal;
+  transition: transform 0.2s ease;
+}
+
+.wp-block-details[open] summary::before {
+  content: "–"; /* minus sign */
+}
+
+.wp-block-details summary + .wp-block-group {
+  padding-top: 2rem;
+}
+
+/* All ULs and OLs in block content */
+.wp-block-post-content ul {
+  list-style-type: disc;
+  padding-left: 2em;
+}
+
+.wp-block-post-content ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+}
+
+/* FAQ Query block numbering */
+.numbered-faq-pattern.wp-block-query .wp-block-post-template {
+  list-style-type: decimal;
+  padding-left: 1.3em;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.numbered-faq-pattern .wp-block-post-template li::marker {
+    content: counter(list-item) " ";
+}
+
+li.faq h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+li.faq p {
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+/* Navigation blocks */
 /* header: remove underline, hover text color */
 header .wp-block-navigation .wp-block-navigation-item__content {
-    text-decoration: none; /* anchor: remove default underline */
-  }
-  
-  header .wp-block-navigation .wp-block-navigation-item__label {
-    display: inline-block; /* allow transforms/positioning */
-    transition: color 0.18s ease;
-    color: inherit; /* keep default site color unless overridden */
-  }
-  
-  header .wp-block-navigation .wp-block-navigation-item__content:hover
-    .wp-block-navigation-item__label,
-  header .wp-block-navigation .wp-block-navigation-item__label:hover {
-    color: var(--wp--preset--color--bright-red);
-  }
-  
-  /* footer: white text, dotted-looking underline that transitions to solid via pseudo-element */
-  footer .wp-block-navigation .wp-block-navigation-item__content {
-    text-decoration: none;
-  }
-  
-  footer .wp-block-navigation .wp-block-navigation-item__label {
-    display: inline-block; /* necessary for absolute-positioned pseudo-element */
-    position: relative;
-    color: var(--wp--preset--color--base)!important;
-    padding-bottom: 0.18em; 
-    font-size: 0.9rem;
-  }
-  
-  /* Use a repeating-linear-gradient to fake a dotted underline; animate opacity/height for smooth transition */
-  footer .wp-block-navigation .wp-block-navigation-item__label::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    pointer-events: none;
-    background-image: repeating-linear-gradient(
-      to right,
-      currentColor 0,
-      currentColor 1px,
-      transparent 1px,
-      transparent 4px
-    ); /* looks dotted */
-    opacity: 0.6;
-    transition: opacity 0.18s ease, height 0.18s ease;
-    transform-origin: left center;
-  }
-  
-  /* Hover state: thicker, solid-looking underline */
-  footer .wp-block-navigation .wp-block-navigation-item__content:hover
-    .wp-block-navigation-item__label::after,
-  footer .wp-block-navigation .wp-block-navigation-item__label:hover::after {
-    background-image: none;
-    height: 1px;
-    background-color: currentColor;
-    opacity: 1;
-  }
-  
-  
+  text-decoration: none; 
+}
+
+header .wp-block-navigation .wp-block-navigation-item__label {
+  display: inline-block; 
+  transition: color 0.18s ease;
+  color: inherit; 
+}
+
+header
+  .wp-block-navigation
+  .wp-block-navigation-item__content:hover
+  .wp-block-navigation-item__label,
+header .wp-block-navigation .wp-block-navigation-item__label:hover {
+  color: var(--wp--preset--color--bright-red);
+}
+
+/* footer: white text, dotted-looking underline that transitions to solid via pseudo-element */
+footer .wp-block-navigation .wp-block-navigation-item__content {
+  text-decoration: none;
+}
+
+footer .wp-block-navigation .wp-block-navigation-item__label {
+  display: inline-block; 
+  position: relative;
+  color: var(--wp--preset--color--base) !important;
+  padding-bottom: 0.18em;
+  font-size: 0.9rem;
+}
+
+/* Use a repeating-linear-gradient to fake a dotted underline; animate opacity/height for smooth transition */
+footer .wp-block-navigation .wp-block-navigation-item__label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right,
+    currentColor 0,
+    currentColor 1px,
+    transparent 1px,
+    transparent 4px
+  ); 
+  opacity: 0.6;
+  transition:
+    opacity 0.18s ease,
+    height 0.18s ease;
+  transform-origin: left center;
+}
+
+/* Hover state: thicker, solid-looking underline */
+footer
+  .wp-block-navigation
+  .wp-block-navigation-item__content:hover
+  .wp-block-navigation-item__label::after,
+footer .wp-block-navigation .wp-block-navigation-item__label:hover::after {
+  background-image: none;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 1;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -900,6 +942,9 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .mt-8{
   margin-top: 2rem;
 }
+.\!block{
+  display: block !important;
+}
 .block{
   display: block;
 }
@@ -909,8 +954,15 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .flex{
   display: flex;
 }
+.contents{
+  display: contents;
+}
 .hidden{
   display: none;
+}
+.size-full{
+  width: 100%;
+  height: 100%;
 }
 .h-0\.5{
   height: 0.125rem;

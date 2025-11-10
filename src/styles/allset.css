@@ -1,11 +1,11 @@
 /* Allsetpack custom styles */
 
 main a {
-    border-bottom: #005c99 1px solid;
+    border-bottom: #005c99 1px dotted;
   }
   
 main a:hover {
-    border-bottom-style: dotted;
+    border-bottom-style: solid;
 }
   
 #contact,
