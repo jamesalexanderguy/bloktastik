@@ -15,4 +15,3 @@ require_once get_template_directory() . '/inc/setup.php';
 
 // Custom post types
 require get_template_directory() . '/inc/post-types.php';
-
