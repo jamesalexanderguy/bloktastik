@@ -139,3 +139,54 @@ add_filter('block_categories_all', function($categories, $post) {
 
     return array_merge($categories, [$custom_category]);
 }, 10, 2);
+
+
+// Allow 'rand' and 'menu_order' in REST API for testimonials
+add_filter('rest_allset_testimonial_collection_params', function($params) {
+    if (isset($params['orderby']['enum'])) {
+        $params['orderby']['enum'][] = 'rand';
+    }
+    return $params;
+});
+
+// add square image size
+add_action('after_setup_theme', function() {
+    add_image_size('square_image', 500, 500, true);
+});
+
+add_filter('image_size_names_choose', function($sizes) {
+    return array_merge($sizes, [
+        'square_image' => __('Square Image')
+    ]);
+});
+
+// remove featured image block abover footer when no fi exists
+add_filter( 'render_block', function( $block_content, $block ) {
+
+    if (
+        isset( $block['blockName'], $block['attrs']['useFeaturedImage'] )
+        && $block['blockName'] === 'core/cover'
+        && $block['attrs']['useFeaturedImage'] === true
+        && isset( $block['attrs']['className'] )
+        && strpos( $block['attrs']['className'], 'footer-cover' ) !== false
+        && ! has_post_thumbnail()
+    ) {
+        return '';
+    }
+
+    return $block_content;
+}, 10, 2 );
+
+// register block pattern categories
+
+add_action( 'init', function() {
+    register_block_pattern_category(
+        'allset',
+        array(
+            'label' => __( 'Allset', 'bloktastik' ),
+        )
+    );
+} );
+
+
+

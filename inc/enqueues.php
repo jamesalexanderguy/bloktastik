@@ -85,24 +85,24 @@ endif;
 add_action( 'enqueue_block_editor_assets', 'bloktastik_enqueue_blocks_bundle' );
 
 /**
- * Remove default button styles in editor
+ * Block editor modifications
  */
-if ( ! function_exists( 'bloktastik_remove_button_styles' ) ) :
+if ( ! function_exists( 'bloktastik_block_mods' ) ) :
 	/**
-	 * Enqueues script to remove default Fill and Outline button styles.
+	 * Enqueues scripts to modify variations and editor panels.
 	 *
 	 * @since Bloktastik 1.0
 	 *
 	 * @return void
 	 */
-	function bloktastik_remove_button_styles() {
+	function bloktastik_block_mods() {
 		wp_enqueue_script(
-			'bloktastik-remove-block-styles',
-			get_template_directory_uri() . '/build/scripts/remove-block-styles.js',
+			'bloktastik-block-mods',
+			get_template_directory_uri() . '/build/scripts/block-mods.js',
 			array('wp-blocks', 'wp-dom-ready'),
 			wp_get_theme()->get('Version'),
 			true
 		);
 	}
 endif;
-add_action( 'enqueue_block_editor_assets', 'bloktastik_remove_button_styles' );
+add_action( 'enqueue_block_editor_assets', 'bloktastik_block_mods' );

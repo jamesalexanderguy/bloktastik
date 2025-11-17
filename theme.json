@@ -189,7 +189,6 @@
 		"typography": {
 			"fontFamily": "var:preset|font-family|manrope",
 			"fontSize": "var:preset|font-size|base",
-			"fontWeight": "300",
 			"letterSpacing": "-0.1px",
 			"lineHeight": "1.4"
 		},
@@ -594,6 +593,14 @@
 			},
 			"core/list": {
 				"css": "& li{margin-top: 0.5rem;}"
+			},
+			"core/image": {
+				"border": {
+					"radius": "0.75rem"
+				}
+			},
+			"core/media-text": {
+				"css": ".wp-block-media-text .wp-block-media-text__media img{border-radius:0.75rem;}"
 			}
 		},
 		"elements": {

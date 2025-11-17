@@ -2,6 +2,7 @@
 /**
  * Title: Double cards
  * Slug: bloktastik/double-cards
+ * Categories: allset
  * Description: A two-column card layout.
  * Keywords: cards, two-column
  */

@@ -204,8 +204,66 @@ footer .wp-block-navigation .wp-block-navigation-item__label:hover::after {
 }
 
 /* Allset Double Cards */
-.pattern-double-cards figure img {
+.pattern-double-cards figure img, 
+.pattern-double-cards .components-resizable-box__container {
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 100%!important;
+  height: 100%!important;
 }
+
+/* Testimonials */
+/* To remove list styles in editor only */
+.allset-testimonials ul {
+    list-style: none !important;
+}
+/* For the slider part */
+.testimonial-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .testimonial-slider-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+  }
+  
+  .testimonial-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .testimonial-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+  }
+  
+  .testimonial-arrow:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  .testimonial-arrow-prev {
+    left: 10px;
+  }
+  
+  .testimonial-arrow-next {
+    right: 10px;
+  }
+  
+  .testimonial-arrow svg {
+    display: block;
+  }

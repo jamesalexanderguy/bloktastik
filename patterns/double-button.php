@@ -2,7 +2,7 @@
 /**
  * Title: Double button
  * Slug: bloktastik/double-button
- * Categories: call-to-action, button
+ * Categories: allset, call-to-action, button
  * Description: Two buttons side-by-side like in the footer
  * Keywords: call-to-action, button
  */

@@ -2,7 +2,7 @@
 /**
  * Title: Numbered FAQ List
  * Slug: bloktastik/faq-list
- * Categories: posts
+ * Categories: allset, posts
  * Description: A numbered list of FAQ posts with customizable post type and category
  * Keywords: faq, query, numbered, list
  */

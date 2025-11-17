@@ -99,5 +99,37 @@ transition: all 0.3s linear;
     opacity: 1;
     display: inline-flex;
     right: 0;
+}*/
+/* Arrow dividers */
+.arrow-down {
+    position: relative;
+    z-index: 10;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 50px solid currentColor;
+    margin: 0 auto;
+    margin-bottom: -50px !important;
+  }
+
+.arrow-up {
+    position: relative;
+    z-index: 10;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-bottom: 50px solid currentColor;
+    margin: 0 auto;
+    margin-top: -50px !important;
 }
-*/
+
+.allset-testimonials,
+footer.wp-block-template-part {
+    margin-block-start: 0!important;
+}
+
+body #navLayer {
+    display: none!important;
+}
