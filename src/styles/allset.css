@@ -1,7 +1,8 @@
 /* Allsetpack custom styles */
 
 main a {
-    border-bottom: #005c99 1px dotted;
+    color: var(--wp--preset--color-hyperlink-blue);
+    border-bottom: var(--wp--preset--color-hyperlink-blue) 1px dotted;
   }
   
 main a:hover {
@@ -34,10 +35,20 @@ font-size: 1.25rem;
 
 .form-field input,
 .form-field textarea {
-    background-color: #f3f4f4;
+    background-color: var(--wp--preset--color--lines-grey);
     width: 100%;
     padding: 1em;
     border-radius: 0.3rem;
+    color: var(--wp--preset--color--menu-grey) ;
+    font-size: 0.8rem;
+}
+
+.contactButton {
+    margin-top: 1rem;
+}
+
+.wpcf7-spinner {
+    position: absolute;
 }
 
 /* header */
@@ -111,6 +122,7 @@ transition: all 0.3s linear;
     border-top: 50px solid currentColor;
     margin: 0 auto;
     margin-bottom: -50px !important;
+    padding-bottom: 50px;
   }
 
 .arrow-up {
@@ -123,6 +135,7 @@ transition: all 0.3s linear;
     border-bottom: 50px solid currentColor;
     margin: 0 auto;
     margin-top: -50px !important;
+    padding-top: 50px;
 }
 
 .allset-testimonials,
@@ -133,3 +146,4 @@ footer.wp-block-template-part {
 body #navLayer {
     display: none!important;
 }
+

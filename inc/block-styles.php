@@ -30,6 +30,14 @@ function bloktastik_block_styles() {
 			'label' => __('Red with pulse', 'bloktastik'),
 		)
 	);
+
+	register_block_style(
+		'core/button',
+		array(
+			'name'  => 'blue-download',
+			'label' => __('Blue download', 'bloktastik'),
+		)
+	);
 	
 	// Register custom list style
 	register_block_style(

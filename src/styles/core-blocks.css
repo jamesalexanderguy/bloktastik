@@ -71,6 +71,20 @@
   background: var(--wp--preset--color--bright-red) !important;
 }
 
+/* Blue Download variation */
+.wp-block-button.is-style-blue-download .wp-block-button__link {
+    background: var(--wp--preset--color--hyperlink-blue) !important;
+    color: white !important;
+    padding: 0.25rem 1rem;
+    border: 2px solid var(--wp--preset--color--hyperlink-blue);
+    transition: all 0.3s linear;
+  }
+  
+  .wp-block-button.is-style-blue-download .wp-block-button__link:hover {
+    background: var(--wp--preset--color--base) !important;
+    color: var(--wp--preset--color--hyperlink-blue) !important;
+  }
+
 /* Details block: change to plus sign */
 .wp-block-details summary {
   list-style: none;

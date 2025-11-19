@@ -1,0 +1,45 @@
+<?php
+/**
+ * Title: Bordered Form
+ * Slug: bloktastik/bordered-form
+ * Categories: allset
+ * Description: Form picker with red border and cta options
+ * Keywords: form, call-to-action, button
+ */
+?>
+
+<!-- wp:group {"className":"max-w-[550px]","style":{"border":{"width":"2px","color":"#c24545","radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group max-w-[550px] has-border-color" style="border-color:#c24545;border-width:2px;border-radius:12px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:image {"id":198,"width":"100px","height":"auto","sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large is-resized"><img src="https://allset.test/wp-content/uploads/2025/05/pack-illustration-e1763327537528-737x1024.png" alt="Illustration of backpack" class="wp-image-198" style="width:100px;height:auto"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|bright-red"}}}},"textColor":"bright-red"} -->
+<h2 class="wp-block-heading has-bright-red-color has-text-color has-link-color">Request a Quote</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p>Let’s find the right solution for your community. Use the form below to share your needs, and we’ll connect to discuss options and next steps.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:contact-form-7/contact-form-selector {"id":731,"hash":"a98f2a3","title":"Request a Quote"} -->
+<div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7 id="a98f2a3" title="Request a Quote"]</div>
+<!-- /wp:contact-form-7/contact-form-selector --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p>Our team will get back to you within three business days with a quote or to discuss options and next steps.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><br><strong>Phone: (250) 357-9748</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+<p style="margin-top:0;margin-bottom:0">Email: <a href="mailto:info@allsetpack.ca">info@allsetpack.ca</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
