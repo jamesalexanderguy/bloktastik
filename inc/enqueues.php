@@ -99,7 +99,15 @@ if ( ! function_exists( 'bloktastik_block_mods' ) ) :
 		wp_enqueue_script(
 			'bloktastik-block-mods',
 			get_template_directory_uri() . '/build/scripts/block-mods.js',
-			array('wp-blocks', 'wp-dom-ready'),
+			array(
+				'wp-edit-post',
+				'wp-plugins',
+				'wp-components',
+				'wp-data',
+				'wp-element',
+				'wp-blocks',
+				'wp-dom-ready'
+			),
 			wp_get_theme()->get('Version'),
 			true
 		);

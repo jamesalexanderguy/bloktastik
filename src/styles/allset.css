@@ -52,6 +52,10 @@ font-size: 1.25rem;
 }
 
 /* header */
+.is-position-sticky {
+    z-index: 20 !important;
+}
+
 .logo img {
 height: 4.5rem;
 }
@@ -72,7 +76,7 @@ height: 4.5rem;
 }
 
 /* menu modal */
-/*
+
 #hamburger.clicked #line {
     transform: rotate(-45deg);
     translate: 0 calc(.25rem*1.5);
@@ -110,7 +114,7 @@ transition: all 0.3s linear;
     opacity: 1;
     display: inline-flex;
     right: 0;
-}*/
+}
 /* Arrow dividers */
 .arrow-down {
     position: relative;
@@ -143,7 +147,7 @@ footer.wp-block-template-part {
     margin-block-start: 0!important;
 }
 
-body #navLayer {
+/* body #navLayer {
     display: none!important;
-}
+} */
 
