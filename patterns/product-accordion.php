@@ -2,7 +2,7 @@
 /**
  * Title: Product accordion
  * Slug: bloktastik/product-accordion
- * Categories: allset, accordion, details, product
+ * Categories: allset
  * Description: Accordion for product details with image and details section
  * Keywords: accordion, details, product
  */

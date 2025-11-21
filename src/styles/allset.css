@@ -52,6 +52,18 @@ font-size: 1.25rem;
 }
 
 /* header */
+header.wp-block-template-part {
+    max-width: 1280px;
+}
+
+header.wp-block-template-part .wp-block-navigation {
+    padding-top: 0.5rem;
+}
+
+header.wp-block-template-part .is-style-red-pulse {
+    margin-top: 0.5rem;
+}
+
 .is-position-sticky {
     z-index: 20 !important;
 }
@@ -74,6 +86,26 @@ height: 4.5rem;
         margin: 0 1rem;
     }
 }
+
+/* hamburger has to appear much earlier with this menu */
+@media (max-width: 1080px) {
+    .wp-block-navigation__responsive-container-open {
+      display: flex !important;
+    }
+    .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+      display: none !important;
+    }
+  }
+  
+  /* Show full menu from 1081px and up */
+  @media (min-width: 1081px) {
+    .wp-block-navigation__responsive-container-open {
+      display: none !important;
+    }
+    .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+      display: flex !important;
+    }
+  }
 
 /* menu modal */
 
