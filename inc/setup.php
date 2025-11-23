@@ -188,5 +188,14 @@ add_action( 'init', function() {
     );
 } );
 
+add_filter( 'body_class', function( $classes ) {
+    // Add class if current post/page has a featured image
+    if ( is_singular() && has_post_thumbnail() ) {
+        $classes[] = 'has-featured-image';
+    }
+    
+    return $classes;
+} );
+
 
 

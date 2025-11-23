@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer
- * Slug: bloktstik/footer
+ * Slug: bloktastik/footer
  * Categories: allset, footer
  * Block Types: core/template-part/footer
  * Description: Site footer with logo and navigation.
@@ -14,7 +14,7 @@
 ?>
 
 <!-- wp:group {"align":"full","layout":{"type":"default"},"className":"mt-[100px]"} -->
-<div class="wp-block-group alignfull mt-[100px]">
+<div class="wp-block-group alignfull">
   <!-- wp:cover {"useFeaturedImage":true,"dimRatio":0,"customOverlayColor":"#FFF","isUserOverlayColor":true,"layout":{"type":"constrained"},"className":"footer-cover"} -->
   <div class="wp-block-cover footer-cover"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim" style="background-color:#FFF"></span>
     <div class="wp-block-cover__inner-container">

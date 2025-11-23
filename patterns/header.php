@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Header
- * Slug: bloktstik/header
+ * Slug: bloktastik/header
  * Categories: allset, header
  * Block Types: core/template-part/header
  * Description: Site header with site title and navigation.

@@ -20,6 +20,14 @@
 }
 /* Allsetpack custom styles */
 
+main {
+    padding-bottom: 7rem;
+}
+
+.has-featured-image main {
+    padding-bottom: 0;
+}
+
 main a {
     color: var(--wp--preset--color-hyperlink-blue);
     border-bottom: var(--wp--preset--color-hyperlink-blue) 1px dotted;
@@ -177,7 +185,7 @@ transition: all 0.3s linear;
     border-left: 50vw solid transparent;
     border-top: 50px solid currentColor;
     margin: 0 auto;
-    margin-bottom: -50px !important;
+    margin-bottom: -100px !important;
     padding-bottom: 50px;
   }
 
@@ -190,13 +198,17 @@ transition: all 0.3s linear;
     border-left: 50vw solid transparent;
     border-bottom: 50px solid currentColor;
     margin: 0 auto;
-    margin-top: -50px !important;
+    margin-top: -100px !important;
     padding-top: 50px;
 }
 
 .allset-testimonials,
 footer.wp-block-template-part {
     margin-block-start: 0!important;
+}
+
+footer.footer-cover {
+    padding-top: 100px!important;
 }
 
 /* body #navLayer {
