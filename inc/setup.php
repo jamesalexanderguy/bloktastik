@@ -205,3 +205,11 @@ function bloktastik_render_lightbox_modal() {
     block_template_part( 'lightbox-modal' );
 }
 add_action( 'wp_footer', 'bloktastik_render_lightbox_modal' );
+
+// Disable remote patterns from WordPress.org
+add_filter('should_load_remote_block_patterns', '__return_false');
+
+// Remove all core patterns
+add_action('init', function() {
+    remove_theme_support('core-block-patterns');
+}, 10);
