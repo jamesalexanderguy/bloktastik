@@ -8,13 +8,9 @@ export function initTestimonialsSlider() {
     // Find testimonial sections using the actual class
     const testimonialSections = document.querySelectorAll('.allset-testimonials .wp-block-column[style*="66.66%"]');
     
-    console.log('Found sections:', testimonialSections.length);
-    
     testimonialSections.forEach(section => {
       // Get ALL quotes in the section (whether from query block or manual)
       const quotes = section.querySelectorAll('.wp-block-quote');
-      
-      console.log('Found quotes in section:', quotes.length);
       
       // Only initialize if there are quotes
       if (quotes.length === 0) return;
@@ -22,19 +18,14 @@ export function initTestimonialsSlider() {
       // Find the existing slider control buttons
       const sliderControls = section.querySelector('.slider-controls');
       
-      console.log('Slider controls found:', sliderControls);
-      
       // Hide controls if there's only one quote
       if (quotes.length <= 1) {
-        console.log('Only one quote, hiding controls');
         if (sliderControls) {
           sliderControls.style.display = 'none';
         }
         return; // Exit early - no slider functionality needed
       }
-      
-      console.log('Multiple quotes, showing controls');
-      
+            
       // Show controls if hidden (for multiple quotes)
       if (sliderControls) {
         sliderControls.style.display = '';

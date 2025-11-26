@@ -7,8 +7,8 @@
 	--phone-400: 400px;
 	/* Small devices (landscape phones, 576px and up) */
 	--phone-xs: 576px;
-	/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-	--tablet-sm: 768px;
+	/* Medium devices (tablets, 782px and up - wp block breakpoint) */
+	--tablet-sm: 782px;
 	/* Large devices (desktops, 992px and up) */
 	--desktop-md: 992px;
 	/* Large devices (desktops, 1024px and up) */

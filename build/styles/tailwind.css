@@ -8,8 +8,8 @@
 	--phone-400: 400px;
 	/* Small devices (landscape phones, 576px and up) */
 	--phone-xs: 576px;
-	/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-	--tablet-sm: 768px;
+	/* Medium devices (tablets, 782px and up - wp block breakpoint) */
+	--tablet-sm: 782px;
 	/* Large devices (desktops, 992px and up) */
 	--desktop-md: 992px;
 	/* Large devices (desktops, 1024px and up) */
@@ -20,6 +20,10 @@
 }
 /* Allsetpack custom styles */
 
+html {
+    scroll-padding-top: 136px;
+}
+
 main {
     padding-bottom: 7rem;
 }
@@ -29,12 +33,16 @@ main {
 }
 
 main a {
-    color: var(--wp--preset--color-hyperlink-blue);
-    border-bottom: var(--wp--preset--color-hyperlink-blue) 1px dotted;
-  }
+    color: var(--wp--preset--color--hyperlink-blue);
+    border-bottom: var(--wp--preset--color--hyperlink-blue) 1px dotted;
+}
   
 main a:hover {
     border-bottom-style: solid;
+}
+
+main figure a {
+    border-bottom: none !important;
 }
   
 #contact,
@@ -86,10 +94,6 @@ header.wp-block-template-part {
 
 header.wp-block-template-part .wp-block-navigation {
     padding-top: 0.5rem;
-}
-
-header.wp-block-template-part .is-style-red-pulse {
-    margin-top: 0.5rem;
 }
 
 .is-position-sticky {
@@ -207,20 +211,26 @@ footer.wp-block-template-part {
     margin-block-start: 0!important;
 }
 
-footer.footer-cover {
-    padding-top: 100px!important;
+footer .footer-cover {
+    min-height: 50vw !important;
 }
 
-/* body #navLayer {
-    display: none!important;
-} */
-
+/* recaptcha */
+.grecaptcha-badge {
+    visibility: hidden !important;
+    position: relative;
+    z-index: -1;
+}
 
 /* Core block variations and overrides */
 
 .no-flow-margin > * {
   margin-block-start: 0 !important;
   margin-block-end: 0 !important;
+}
+
+:root :where(.is-layout-flow) > p {
+    margin-block-start: 0.5rem;
 }
 
 .wp-block-button__link {
@@ -319,11 +329,19 @@ footer.footer-cover {
   content: "+";
   position: absolute;
   right: 0;
-  top: 0;
+  bottom: 0;
+  top: auto;
   line-height: 0.7;
   font-size: 2.8rem;
   font-weight: normal;
   transition: transform 0.2s ease;
+}
+
+@media ( min-width: 782px) {
+    .wp-block-details summary::before {
+        top: 0;
+        bottom: auto;
+    }  
 }
 
 .wp-block-details[open] summary::before {
@@ -353,9 +371,27 @@ footer.footer-cover {
   font-weight: bold;
 }
 
+.numbered-faq-pattern.wp-block-query .wp-block-post-template ul {
+    list-style-type: disc;
+    padding-left: 1.3em;
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+
+  .numbered-faq-pattern.wp-block-query .wp-block-post-template ol {
+    list-style-type: decimal;
+    padding-left: 1.3em;
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+
 .numbered-faq-pattern .wp-block-post-template li::marker {
   content: counter(list-item) " ";
 }
+
+.numbered-faq-pattern .wp-block-post-template li ul li::marker {
+    content: inherit;
+  }
 
 li.faq h3 {
   font-size: 1.8rem;
@@ -448,6 +484,12 @@ footer .wp-block-navigation .wp-block-navigation-item__label:hover::after {
 /* To remove list styles in editor only */
 .allset-testimonials ul {
     list-style: none !important;
+    padding-left: 0;
+}
+/* Ensure bold works */
+blockquote strong,
+blockquote b {
+  font-weight: 700 !important;
 }
 /* For the slider part */
 .testimonial-slider-wrapper {
@@ -500,6 +542,12 @@ footer .wp-block-navigation .wp-block-navigation-item__label:hover::after {
   .testimonial-arrow svg {
     display: block;
   }
+
+/* media-text blocks */
+.wp-block-media-text .wp-block-media-text__media img,
+.wp-block-media-text .wp-block-media-text__media video {
+    margin-bottom: 1.5rem!important;
+}
 
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
@@ -1044,6 +1092,12 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .visible{
   visibility: visible;
 }
+.fixed{
+  position: fixed;
+}
+.absolute{
+  position: absolute;
+}
 .relative{
   position: relative;
 }
@@ -1052,6 +1106,30 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 }
 .sticky{
   position: sticky;
+}
+.inset-0{
+  inset: 0px;
+}
+.-left-8{
+  left: -2rem;
+}
+.-right-8{
+  right: -2rem;
+}
+.right-2{
+  right: 0.5rem;
+}
+.top-1\/2{
+  top: 50%;
+}
+.top-10{
+  top: 2.5rem;
+}
+.z-10{
+  z-index: 10;
+}
+.z-50{
+  z-index: 50;
 }
 .m-auto{
   margin: auto;
@@ -1070,6 +1148,9 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .mb-2{
   margin-bottom: 0.5rem;
 }
+.mb-4{
+  margin-bottom: 1rem;
+}
 .mb-5{
   margin-bottom: 1.25rem;
 }
@@ -1079,11 +1160,11 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .mt-12{
   margin-top: 3rem;
 }
+.mt-4{
+  margin-top: 1rem;
+}
 .mt-6{
   margin-top: 1.5rem;
-}
-.mt-\[100px\]{
-  margin-top: 100px;
 }
 .\!block{
   display: block !important;
@@ -1125,6 +1206,12 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .h-full{
   height: 100%;
 }
+.max-h-\[80vh\]{
+  max-height: 80vh;
+}
+.max-h-full{
+  max-height: 100%;
+}
 .w-\[0\.75rem\]{
   width: 0.75rem;
 }
@@ -1137,17 +1224,30 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .w-\[45\%\]{
   width: 45%;
 }
+.w-auto{
+  width: auto;
+}
 .w-full{
   width: 100%;
 }
 .max-w-\[550px\]{
   max-width: 550px;
 }
+.max-w-full{
+  max-width: 100%;
+}
 .flex-1{
   flex: 1 1 0%;
 }
+.-translate-y-1\/2{
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 .flex-col{
   flex-direction: column;
@@ -1172,8 +1272,14 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .overflow-hidden{
   overflow: hidden;
 }
+.rounded-full{
+  border-radius: 9999px;
+}
 .rounded-lg{
   border-radius: 0.5rem;
+}
+.rounded-md{
+  border-radius: 0.375rem;
 }
 .border{
   border-width: 1px;
@@ -1190,12 +1296,22 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
   --tw-bg-opacity: 1;
   background-color: rgb(0 92 153 / var(--tw-bg-opacity, 1));
 }
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
 }
 .p-10{
   padding: 2.5rem;
+}
+.p-2{
+  padding: 0.5rem;
+}
+.p-4{
+  padding: 1rem;
 }
 .p-6{
   padding: 1.5rem;
@@ -1221,12 +1337,27 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .pt-2{
   padding-top: 0.5rem;
 }
+.pt-8{
+  padding-top: 2rem;
+}
 .text-center{
   text-align: center;
+}
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
 }
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .text-xl{
   font-size: 1.25rem;
@@ -1254,11 +1385,27 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .underline{
   text-decoration-line: underline;
 }
+.shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .outline{
   outline-style: solid;
 }
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-300{
+  transition-duration: 300ms;
+}
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Heading block defaults - matches theme.json fluid typography */
@@ -1349,11 +1496,19 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
   content: var(--tw-content);
   transition-duration: 300ms;
 }
+  .hover\:bg-lines-grey:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 235 235 / var(--tw-bg-opacity, 1));
+}
   .hover\:before\:scale-105:hover::before{
   content: var(--tw-content);
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+  .focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
   .active\:duration-75:active{
   transition-duration: 75ms;
@@ -1366,16 +1521,29 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 }
   @media (min-width: 640px){
 
+  .sm\:-left-12{
+    left: -3rem;
+  }
+
+  .sm\:-right-12{
+    right: -3rem;
+  }
+
   .sm\:w-max{
     width: -moz-max-content;
     width: max-content;
   }
+
+  .sm\:p-12{
+    padding: 3rem;
+  }
+
+  .sm\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
   @media (min-width: 768px){
-
-  .md\:inline{
-    display: inline;
-  }
 
   .md\:hidden{
     display: none;

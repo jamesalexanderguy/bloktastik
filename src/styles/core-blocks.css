@@ -5,6 +5,10 @@
   margin-block-end: 0 !important;
 }
 
+:root :where(.is-layout-flow) > p {
+    margin-block-start: 0.5rem;
+}
+
 .wp-block-button__link {
   cursor: pointer !important;
 }
@@ -101,11 +105,19 @@
   content: "+";
   position: absolute;
   right: 0;
-  top: 0;
+  bottom: 0;
+  top: auto;
   line-height: 0.7;
   font-size: 2.8rem;
   font-weight: normal;
   transition: transform 0.2s ease;
+}
+
+@media ( min-width: 782px) {
+    .wp-block-details summary::before {
+        top: 0;
+        bottom: auto;
+    }  
 }
 
 .wp-block-details[open] summary::before {
@@ -135,9 +147,27 @@
   font-weight: bold;
 }
 
+.numbered-faq-pattern.wp-block-query .wp-block-post-template ul {
+    list-style-type: disc;
+    padding-left: 1.3em;
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+
+  .numbered-faq-pattern.wp-block-query .wp-block-post-template ol {
+    list-style-type: decimal;
+    padding-left: 1.3em;
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+
 .numbered-faq-pattern .wp-block-post-template li::marker {
   content: counter(list-item) " ";
 }
+
+.numbered-faq-pattern .wp-block-post-template li ul li::marker {
+    content: inherit;
+  }
 
 li.faq h3 {
   font-size: 1.8rem;
@@ -229,6 +259,12 @@ footer .wp-block-navigation .wp-block-navigation-item__label:hover::after {
 /* To remove list styles in editor only */
 .allset-testimonials ul {
     list-style: none !important;
+    padding-left: 0;
+}
+/* Ensure bold works */
+blockquote strong,
+blockquote b {
+  font-weight: 700 !important;
 }
 /* For the slider part */
 .testimonial-slider-wrapper {
@@ -281,3 +317,9 @@ footer .wp-block-navigation .wp-block-navigation-item__label:hover::after {
   .testimonial-arrow svg {
     display: block;
   }
+
+/* media-text blocks */
+.wp-block-media-text .wp-block-media-text__media img,
+.wp-block-media-text .wp-block-media-text__media video {
+    margin-bottom: 1.5rem!important;
+}

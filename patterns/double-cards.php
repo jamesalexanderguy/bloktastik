@@ -15,7 +15,7 @@
   <div class="wp-block-column">
 
     <!-- wp:group {"className":"flex flex-col border border-lines-grey rounded-lg overflow-hidden w-full h-full"} -->
-    <div class="wp-block-group flex flex-col border border-lines-grey rounded-lg overflow-hidden w-full h-full">
+    <div class="wp-block-group flex flex-col border hover:bg-lines-grey border-lines-grey rounded-lg overflow-hidden w-full h-full bg-white transition duration-300">
 
       <!-- wp:image {"id":437,"sizeSlug":"large","linkDestination":"none","className":"aspect-[16/9] overflow-hidden object-cover"} -->
         <figure class="wp-block-image size-large aspect-[16/9] overflow-hidden object-cover">
@@ -61,7 +61,7 @@
   <div class="wp-block-column">
 
     <!-- wp:group {"className":"flex flex-col border border-lines-grey rounded-lg overflow-hidden w-full h-full"} -->
-    <div class="wp-block-group flex flex-col border border-lines-grey rounded-lg overflow-hidden w-full h-full">
+    <div class="wp-block-group flex flex-col bg-white hover:bg-lines-grey  border border-lines-grey rounded-lg overflow-hidden w-full h-full transition duration-300">
 
       <!-- wp:image {"id":437,"sizeSlug":"large","linkDestination":"none","className":"aspect-[16/9] overflow-hidden object-cover"} -->
 <figure class="wp-block-image size-large aspect-[16/9] overflow-hidden object-cover">

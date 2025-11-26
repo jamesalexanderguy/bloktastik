@@ -197,5 +197,11 @@ add_filter( 'body_class', function( $classes ) {
     return $classes;
 } );
 
-
-
+/**
+ * Add lightbox modal globally via wp_footer
+ */
+function bloktastik_render_lightbox_modal() {
+    // Load the template part
+    block_template_part( 'lightbox-modal' );
+}
+add_action( 'wp_footer', 'bloktastik_render_lightbox_modal' );

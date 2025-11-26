@@ -3,18 +3,22 @@
  * Register custom post types.
  */
 // FAQ
- add_action('init', function() {
+add_action('init', function() {
     // Register the custom post type
     register_post_type('faq', [
         'labels' => [
             'name' => __('FAQs'),
             'singular_name' => __('FAQ'),
         ],
-        'public' => true,
-        'has_archive' => true,
+        'public' => false,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'has_archive' => false,
+        'exclude_from_search' => true,
         'menu_icon' => 'dashicons-editor-help',
         'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
-        'rewrite' => ['slug' => 'faqs'],
+        'rewrite' => false,
         'show_in_rest' => true,
     ]);
 
@@ -24,12 +28,15 @@
             'name' => __('Types'),
             'singular_name' => __('Type'),
         ],
-        'public' => true,
+        'public' => false,
+        'publicly_queryable' => false,
+        'show_ui' => true,
         'hierarchical' => true, 
-        'rewrite' => ['slug' => 'faq-type'],
+        'rewrite' => false,
         'show_in_rest' => true, 
     ]);
 });
+
 // Testimonials
 add_action('init', function() {
     register_post_type('allset_testimonial', [
@@ -37,13 +44,17 @@ add_action('init', function() {
             'name' => __('Testimonials'),
             'singular_name' => __('Testimonial'),
         ],
-        'public' => true,
-        'has_archive' => true,
+        'public' => false,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'has_archive' => false,
+        'exclude_from_search' => true,
         'menu_icon' => 'dashicons-format-quote',
         'supports' => ['title', 'editor', 'sticky'],
-        'rewrite' => ['slug' => 'testimonials'],
+        'rewrite' => false,
         'show_in_rest' => true,
-        'template'    => [
+        'template' => [
             [ 'core/pattern', [ 'slug' => 'bloktastik/inner-quote' ] ],
         ],
         'template_lock' => false,

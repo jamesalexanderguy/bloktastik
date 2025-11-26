@@ -650,28 +650,28 @@
 			"h3": {
 				"typography": {
 					"fontSize": "clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 1.389), 2.25rem)",
-					"lineHeight": "1.3",
+					"lineHeight": "1.2",
 					"fontWeight": "600"
 				}
 			},
 			"h4": {
 				"typography": {
 					"fontSize": "clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.926), 1.75rem)",
-					"lineHeight": "1.4",
+					"lineHeight": "1.2",
 					"fontWeight": "500"
 				}
 			},
 			"h5": {
 				"typography": {
 					"fontSize": "clamp(1.1rem, 1.1rem + ((1vw - 0.2rem) * 0.556), 1.4rem)",
-					"lineHeight": "1.5",
+					"lineHeight": "1.2",
 					"fontWeight": "500"
 				}
 			},
 			"h6": {
 				"typography": {
 					"fontSize": "clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.463), 1.25rem)",
-					"lineHeight": "1.6",
+					"lineHeight": "1.2",
 					"fontWeight": "700",
 					"textTransform": "uppercase",
 					"letterSpacing": "0.05em"

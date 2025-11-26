@@ -13,7 +13,7 @@ if ( ! function_exists( 'bloktastik_editor_style' ) ) :
 		// Add the compiled Tailwind editor styles to the editor canvas
 		add_editor_style( array(
 			'build/styles/editor.css',    // Tailwind + global editor styles
-			'build/style-blocks.css'             // Block-specific styles
+			//'build/style-blocks.css'             // Block-specific styles
 		) );
 	}
 endif;

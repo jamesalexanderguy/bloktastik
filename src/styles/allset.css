@@ -1,5 +1,9 @@
 /* Allsetpack custom styles */
 
+html {
+    scroll-padding-top: 136px;
+}
+
 main {
     padding-bottom: 7rem;
 }
@@ -9,12 +13,16 @@ main {
 }
 
 main a {
-    color: var(--wp--preset--color-hyperlink-blue);
-    border-bottom: var(--wp--preset--color-hyperlink-blue) 1px dotted;
-  }
+    color: var(--wp--preset--color--hyperlink-blue);
+    border-bottom: var(--wp--preset--color--hyperlink-blue) 1px dotted;
+}
   
 main a:hover {
     border-bottom-style: solid;
+}
+
+main figure a {
+    border-bottom: none !important;
 }
   
 #contact,
@@ -66,10 +74,6 @@ header.wp-block-template-part {
 
 header.wp-block-template-part .wp-block-navigation {
     padding-top: 0.5rem;
-}
-
-header.wp-block-template-part .is-style-red-pulse {
-    margin-top: 0.5rem;
 }
 
 .is-position-sticky {
@@ -187,11 +191,13 @@ footer.wp-block-template-part {
     margin-block-start: 0!important;
 }
 
-footer.footer-cover {
-    padding-top: 100px!important;
+footer .footer-cover {
+    min-height: 50vw !important;
 }
 
-/* body #navLayer {
-    display: none!important;
-} */
-
+/* recaptcha */
+.grecaptcha-badge {
+    visibility: hidden !important;
+    position: relative;
+    z-index: -1;
+}
