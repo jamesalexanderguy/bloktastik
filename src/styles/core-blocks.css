@@ -200,11 +200,11 @@ header .wp-block-navigation .wp-block-navigation-item__label:hover {
 }
 
 /* footer: white text, dotted-looking underline that transitions to solid via pseudo-element */
-footer .wp-block-navigation .wp-block-navigation-item__content {
+.allset-footer .wp-block-navigation .wp-block-navigation-item__content {
   text-decoration: none;
 }
 
-footer .wp-block-navigation .wp-block-navigation-item__label {
+.allset-footer .wp-block-navigation .wp-block-navigation-item__label {
   display: inline-block;
   position: relative;
   color: var(--wp--preset--color--base) !important;

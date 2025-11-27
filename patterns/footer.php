@@ -26,7 +26,7 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"footer","align":"full","className":"text-center pt-10 md:pt-30 bg-secondary","layout":{"type":"default"}} -->
-<footer class="wp-block-group alignfull text-center pt-10 md:pt-30 bg-secondary"><!-- wp:image {"width":"144px","className":"mb-5 flex justify-center m-auto h-3/5 pb-2 mx-2"} -->
+<div class="allset-footer wp-block-group alignfull text-center pt-10 md:pt-30 bg-secondary"><!-- wp:image {"width":"144px","className":"mb-5 flex justify-center m-auto h-3/5 pb-2 mx-2"} -->
 <figure class="wp-block-image is-resized mb-5 flex justify-center m-auto h-3/5 pb-2 mx-2"><a href="/"><img src="/wp-content/themes/allsetpack/assets/svgs/allset-logo-white.svg" alt="Allset Logo" style="width:144px"/></a></figure>
 <!-- /wp:image -->
 
@@ -62,6 +62,6 @@
 <p><img class="inline m-auto w-[1.5rem] py-2 mx-2" src="/wp-content/themes/allsetpack/assets/svgs/allset-maple-leaf.svg" alt="Allset Evacuation Backpacks, Canada Maple Leaf"> <img class="text-white inline w-[0.75rem] svg-inline--fa fa-copyright fa-w-16" src="/wp-content/themes/allsetpack/assets/svgs/copyright.svg" alt="Copyright Allset Pack"> <span class="underline"><a href="https://allsetpack.ca/">ALLSET Evacuation Backpacks</a></span> <span class="text-dull"><span class="inline md:hidden"><br>|</span>   |    Site Design: <span class="text-dull"><a class="underline" href="https://theforest.ca/" target="_blank">TheForest.ca</a> &amp; <a class="underline" href="https://spaceracedigital.com/" target="_blank">SpaceRacedigital.com</a></span></span></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group --></footer>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
  
