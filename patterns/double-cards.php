@@ -19,7 +19,7 @@
 
       <!-- wp:image {"id":437,"sizeSlug":"large","linkDestination":"none","className":"aspect-[16/9] overflow-hidden object-cover"} -->
         <figure class="wp-block-image size-large aspect-[16/9] overflow-hidden object-cover">
-        <img src="https://allset.test/wp-content/uploads/2025/11/Screenshot-2025-11-07-at-6.35.31-PM-1-1024x530.png" alt="" class="wp-image-437"/>
+        <img src="/wp-content/uploads/2025/11/Screenshot-2025-11-07-at-6.35.31-PM-1-1024x530.png" alt="" class="wp-image-437"/>
         </figure>
         <!-- /wp:image -->
 
@@ -65,7 +65,7 @@
 
       <!-- wp:image {"id":437,"sizeSlug":"large","linkDestination":"none","className":"aspect-[16/9] overflow-hidden object-cover"} -->
 <figure class="wp-block-image size-large aspect-[16/9] overflow-hidden object-cover">
-  <img src="https://allset.test/wp-content/uploads/2025/11/Screenshot-2025-11-07-at-6.35.31-PM-1-1024x530.png" alt="" class="wp-image-437"/>
+  <img src="/wp-content/uploads/2025/11/Screenshot-2025-11-07-at-6.35.31-PM-1-1024x530.png" alt="" class="wp-image-437"/>
 </figure>
 <!-- /wp:image -->
 

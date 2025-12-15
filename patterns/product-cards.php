@@ -11,7 +11,7 @@
 <!-- wp:columns {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}}} -->
 <div class="wp-block-columns" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":397,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="https://allset.test/wp-content/uploads/2025/11/Screenshot-2025-11-06-at-3.42.15-PM.png" alt="" class="wp-image-397"/></figure>
+<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2025/11/Screenshot-2025-11-06-at-3.42.15-PM.png" alt="" class="wp-image-397"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":4,"style":{"elements":{"link":{"color":{"text":"var:preset|color|hyperlink-blue"}}}},"textColor":"hyperlink-blue"} -->
@@ -31,7 +31,7 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":398,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="https://allset.test/wp-content/uploads/2025/11/image.png" alt="" class="wp-image-398"/></figure>
+<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2025/11/image.png" alt="" class="wp-image-398"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":4,"style":{"elements":{"link":{"color":{"text":"var:preset|color|hyperlink-blue"}}}},"textColor":"hyperlink-blue"} -->
@@ -51,7 +51,7 @@
 
 <!-- wp:column {"layout":{"type":"default"}} -->
 <div class="wp-block-column"><!-- wp:image {"id":399,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="https://allset.test/wp-content/uploads/2025/11/image-1.png" alt="" class="wp-image-399"/></figure>
+<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2025/11/image-1.png" alt="" class="wp-image-399"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":4,"style":{"elements":{"link":{"color":{"text":"var:preset|color|hyperlink-blue"}}}},"textColor":"hyperlink-blue"} -->

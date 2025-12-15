@@ -213,3 +213,67 @@ add_filter('should_load_remote_block_patterns', '__return_false');
 add_action('init', function() {
     remove_theme_support('core-block-patterns');
 }, 10);
+
+// fix changes to query in wp6.9 for FAQ taxonomy queries
+// Filter query loop to support taxonomy queries for FAQs (front-end rendering)
+add_filter('query_loop_block_query_vars', function($query, $block, $page) {
+    // Check if this is an FAQ query with taxonomy parameters
+    if (isset($block->context['query']['postType']) 
+        && $block->context['query']['postType'] === 'faq'
+        && isset($block->context['query']['taxQuery'])) {
+        
+        $tax_query = array();
+        
+        foreach ($block->context['query']['taxQuery'] as $taxonomy => $terms) {
+            // Handle both old format (array of term IDs) and new format (object with terms)
+            if (is_array($terms)) {
+                $term_ids = isset($terms['terms']) ? $terms['terms'] : $terms;
+                $operator = isset($terms['operator']) ? $terms['operator'] : 'IN';
+            } else {
+                $term_ids = array($terms);
+                $operator = 'IN';
+            }
+            
+            $tax_query[] = array(
+                'taxonomy' => $taxonomy,
+                'field'    => 'term_id',
+                'terms'    => $term_ids,
+                'operator' => $operator,
+            );
+        }
+        
+        if (!empty($tax_query)) {
+            $query['tax_query'] = $tax_query;
+        }
+    }
+    
+    return $query;
+}, 10, 3);
+
+// Filter the REST API query (for editor preview)
+add_filter('rest_faq_query', function($args, $request) {
+    $tax_query = $request->get_param('taxQuery');
+    
+    if ($tax_query) {
+        $args['tax_query'] = array();
+        
+        foreach ($tax_query as $taxonomy => $terms) {
+            if (is_array($terms)) {
+                $term_ids = isset($terms['terms']) ? $terms['terms'] : $terms;
+                $operator = isset($terms['operator']) ? $terms['operator'] : 'IN';
+            } else {
+                $term_ids = array($terms);
+                $operator = 'IN';
+            }
+            
+            $args['tax_query'][] = array(
+                'taxonomy' => $taxonomy,
+                'field'    => 'term_id',
+                'terms'    => $term_ids,
+                'operator' => $operator,
+            );
+        }
+    }
+    
+    return $args;
+}, 10, 2);

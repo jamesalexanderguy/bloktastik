@@ -8,8 +8,8 @@
  */
 ?>
 
-<!-- wp:media-text {"mediaId":624,"mediaLink":"https://allset.test/test/screenshot-2025-11-15-at-5-54-49-pm/","mediaType":"image"} -->
-<div class="wp-block-media-text is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img src="https://allset.test/wp-content/uploads/2025/11/Screenshot-2025-11-15-at-5.54.49-PM.png" alt="" class="wp-image-624 size-full"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|bright-red"}}}},"textColor":"bright-red"} -->
+<!-- wp:media-text {"mediaId":624,"mediaType":"image"} -->
+<div class="wp-block-media-text is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img src="/wp-content/uploads/2025/11/Screenshot-2025-11-15-at-5.54.49-PM.png" alt="" class="wp-image-624 size-full"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|bright-red"}}}},"textColor":"bright-red"} -->
 <h3 class="wp-block-heading has-bright-red-color has-text-color has-link-color">Wildfire Readiness</h3>
 <!-- /wp:heading -->
 

@@ -11,7 +11,7 @@
 <!-- wp:group {"className":"max-w-[550px]","style":{"border":{"width":"2px","color":"#c24545","radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group max-w-[550px] has-border-color" style="border-color:#c24545;border-width:2px;border-radius:12px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":198,"width":"100px","height":"auto","sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://allset.test/wp-content/uploads/2025/05/pack-illustration-e1763327537528-737x1024.png" alt="Illustration of backpack" class="wp-image-198" style="width:100px;height:auto"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="/wp-content/uploads/2025/05/pack-illustration-e1763327537528-737x1024.png" alt="Illustration of backpack" class="wp-image-198" style="width:100px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->

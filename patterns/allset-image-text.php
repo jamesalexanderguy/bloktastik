@@ -20,7 +20,7 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":395,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="https://allset.test/wp-content/uploads/2025/11/Screenshot-2025-11-06-at-3.39.00-PM.png" alt="" class="wp-image-395"/></figure>
+<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2025/11/Screenshot-2025-11-06-at-3.39.00-PM.png" alt="" class="wp-image-395"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

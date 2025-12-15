@@ -12,7 +12,7 @@
 <div class="wp-block-group"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":397,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="https://allset.test/wp-content/uploads/2025/11/Screenshot-2025-11-06-at-3.42.15-PM.png" alt="" class="wp-image-397"/></figure>
+<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2025/11/Screenshot-2025-11-06-at-3.42.15-PM.png" alt="" class="wp-image-397"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -37,7 +37,7 @@
 
 <!-- wp:details -->
 <details class="wp-block-details"><summary>&nbsp;</summary><!-- wp:image {"id":395,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="https://allset.test/wp-content/uploads/2025/11/Screenshot-2025-11-06-at-3.39.00-PM.png" alt="" class="wp-image-395"/></figure>
+<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2025/11/Screenshot-2025-11-06-at-3.39.00-PM.png" alt="" class="wp-image-395"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":5,"style":{"elements":{"link":{"color":{"text":"var:preset|color|bright-red"}}}},"textColor":"bright-red"} -->

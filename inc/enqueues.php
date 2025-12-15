@@ -106,11 +106,33 @@ if ( ! function_exists( 'bloktastik_block_mods' ) ) :
 				'wp-data',
 				'wp-element',
 				'wp-blocks',
-				'wp-dom-ready'
+				'wp-dom-ready',
+				'wp-block-editor',  // Add this dependency
+				'wp-compose'         // Add this dependency
 			),
 			wp_get_theme()->get('Version'),
 			true
 		);
+		
+		// Pass taxonomy terms to JavaScript
+		$faq_types = get_terms(array(
+			'taxonomy' => 'faq_type',
+			'hide_empty' => false,
+		));
+		
+		$terms_data = array();
+		if (!is_wp_error($faq_types)) {
+			foreach ($faq_types as $term) {
+				$terms_data[] = array(
+					'id' => $term->term_id,
+					'name' => $term->name,
+				);
+			}
+		}
+		
+		wp_localize_script('bloktastik-block-mods', 'faqTaxonomyData', array(
+			'terms' => $terms_data,
+		));
 	}
 endif;
 add_action( 'enqueue_block_editor_assets', 'bloktastik_block_mods' );
