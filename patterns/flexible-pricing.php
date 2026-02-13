@@ -2,7 +2,7 @@
 /**
  * Title: Flexible pricing
  * Slug: bloktastik/flexible-pricing
- * Categories: allset
+ * Categories: lowercolumbia
  * Description: Text block pattern with heading and button
  * Keywords: text, button
  */

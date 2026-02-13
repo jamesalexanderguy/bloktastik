@@ -2,7 +2,7 @@
 /**
  * Title: Partner logos
  * Slug: bloktastik/partner-logos
- * Categories: allset
+ * Categories: lowercolumbia
  * Description: Partner logo section
  * Keywords: logos, partners
  */

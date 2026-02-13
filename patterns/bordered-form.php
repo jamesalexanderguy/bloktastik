@@ -2,7 +2,7 @@
 /**
  * Title: Bordered Form
  * Slug: bloktastik/bordered-form
- * Categories: allset
+ * Categories: lowercolumbia
  * Description: Form picker with red border and cta options
  * Keywords: form, call-to-action, button
  */

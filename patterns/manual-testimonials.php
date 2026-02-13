@@ -2,7 +2,7 @@
 /**
  * Title: Manual Testimonials
  * Slug: bloktastik/manual-testimonials
- * Categories: allset
+ * Categories: lowercolumbia
  * Description: Add testimonial area.
  * Keywords: testimonials, two-column
  *

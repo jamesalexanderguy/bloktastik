@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Allset photogrid
- * Slug: bloktastik/allset-photo-grid
- * Categories: allset, design
+ * Title: Photogrid
+ * Slug: bloktastik/photo-grid
+ * Categories: lowercolumbia
  * Description: photo grid template, with lightbox
  * Keywords: grid, lightbox, image, text, 
  */

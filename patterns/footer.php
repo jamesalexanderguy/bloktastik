@@ -2,7 +2,7 @@
 /**
  * Title: Footer
  * Slug: bloktastik/footer
- * Categories: allset, footer
+ * Categories: lowercolumbia, footer
  * Block Types: core/template-part/footer
  * Description: Site footer with logo and navigation.
  *

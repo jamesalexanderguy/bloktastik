@@ -2,7 +2,7 @@
 /**
  * Title: Inner Quote
  * Slug: bloktastik/inner-quote
- * Categories: allset
+ * Categories: lowercolumbia
  * Description: A quote to go inside the testimonial pattern. Add below the existing quotes to add more slides.
  * Keywords: testimonials, quotes
  */

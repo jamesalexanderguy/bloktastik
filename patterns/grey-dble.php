@@ -2,7 +2,7 @@
 /**
  * Title: Grey double column text box
  * Slug: bloktastik/grey-dble
- * Categories: allset
+ * Categories: lowercolumbia
  * Description: Grey double column text box with headings
  * Keywords: text, grey
  */

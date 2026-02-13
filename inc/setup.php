@@ -124,11 +124,11 @@ if ( ! function_exists( 'bloktastik_register_blocks' ) ) :
 endif;
 add_action( 'init', 'bloktastik_register_blocks' );
 
-// Register custom block category for Allset blocks
+// Register custom block category for Lower Columbia blocks
 add_filter('block_categories_all', function($categories, $post) {
     $custom_category = [
-        'slug'  => 'allset',
-        'title' => __('Allset Blocks', 'allset'),
+        'slug'  => 'lowercolumbia',
+        'title' => __('Lower Columbia Blocks', 'lowercolumbia'),
     ];
 
     foreach ($categories as $category) {
@@ -181,9 +181,9 @@ add_filter( 'render_block', function( $block_content, $block ) {
 
 add_action( 'init', function() {
     register_block_pattern_category(
-        'allset',
+        'lowercolumbia',
         array(
-            'label' => __( 'Allset', 'bloktastik' ),
+            'label' => __( 'Lower Columbia', 'bloktastik' ),
         )
     );
 } );

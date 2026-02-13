@@ -2,7 +2,7 @@
 /**
  * Title: CTA Button Group
  * Slug: bloktastik/cta-button
- * Categories: allset, call-to-action, button
+ * Categories: lowercolumbia
  * Description: Image and text with a button and border
  * Keywords: call-to-action, button
  */

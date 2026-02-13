@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: Allset image-text
- * Slug: bloktastik/allset-image-text
- * Categories: allset, design
- * Description: Standard allset text - image pattern
+ * Title: Image-text
+ * Slug: bloktastik/image-text
+ * Categories: lowercolumbia, design
+ * Description: Standard text - image pattern
  * Keywords: image, text, 
  */
 ?>

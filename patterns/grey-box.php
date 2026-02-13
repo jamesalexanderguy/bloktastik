@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Allset mediatext w/ grey textbox
+ * Title: Mediatext w/ grey textbox
  * Slug: bloktastik/grey-box
- * Categories: allset, design
+ * Categories: lowercolumbia
  * Description: Text - image pattern with grey textbox
  * Keywords: image, text, 
  */

@@ -2,7 +2,7 @@
 /**
  * Title: 404
  * Slug: bloktastik/404
- * Categories: allset
+ * Categories: lowercolumbia
  * Description: 404 message and image
  * Keywords: 404
  */
