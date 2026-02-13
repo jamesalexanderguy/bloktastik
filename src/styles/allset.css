@@ -107,6 +107,10 @@ height: 4.5rem;
     line-height: 0;
 }
 
+.header-dome.footer-dome {
+    margin-top: -14px;
+}
+
 #site-header {
     position: relative;
     z-index: 10;
