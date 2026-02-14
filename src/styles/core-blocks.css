@@ -13,10 +13,10 @@
   cursor: pointer !important;
 }
 
-/* Container margins */
+/* Container margins 
 .wp-block-buttons.is-layout-flex.wp-block-buttons-is-layout-flex {
-  margin-top: 5px !important;
-}
+  margin-top: 1rem !important;
+} */
 
 /* Default (arrow) variation */
 .wp-block-button:not([class*="is-style-"]) .wp-block-button__link {

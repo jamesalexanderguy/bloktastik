@@ -141,6 +141,12 @@ height: 4.5rem;
     padding-top: 15px;
 }
 
+#booking-box {
+    margin-top: -6rem;
+    position: relative;
+    z-index: 10;
+}
+
 @media (min-width: 1400px) {
     .header-dome {
         height: 30px;
@@ -301,10 +307,10 @@ footer .footer-cover {
   cursor: pointer !important;
 }
 
-/* Container margins */
+/* Container margins 
 .wp-block-buttons.is-layout-flex.wp-block-buttons-is-layout-flex {
-  margin-top: 5px !important;
-}
+  margin-top: 1rem !important;
+} */
 
 /* Default (arrow) variation */
 .wp-block-button:not([class*="is-style-"]) .wp-block-button__link {
