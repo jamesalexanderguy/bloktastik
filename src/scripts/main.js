@@ -1,12 +1,4 @@
-// Import components
-import { initTestimonialsSlider } from './testimonials-slider';
-import { initLightbox } from './lightbox';
-// import { initAnotherComponent } from './another-component';
-// import { someUtility } from './utils';
-
-// Initialize on DOM ready
+// main.js
 document.addEventListener('DOMContentLoaded', () => {
-  initTestimonialsSlider();
-  initLightbox();
-  // initAnotherComponent();
+  // Add any initialization code here as needed
 });

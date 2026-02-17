@@ -522,8 +522,12 @@
 					"text": "var:preset|color|cool-gray"
 				},
 				"variations": {
-					"wide": {
-						"css": " &:not(.alignfull){max-width: var(--wp--style--global--wide-size) !important;}"
+					"shorty": {
+						"border": {
+							"color": "var:preset|color|cool-gray",
+							"width": "5px 0 0 0"
+						},
+						"css": "max-width: 40px; margin-left: 0!important; margin-right: auto; border-style: solid;"
 					}
 				}
 			},
@@ -672,7 +676,6 @@
 					"fontSize": "clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.463), 1.25rem)",
 					"lineHeight": "1.2",
 					"fontWeight": "700",
-					"textTransform": "uppercase",
 					"letterSpacing": "0.05em"
 				}
 			},

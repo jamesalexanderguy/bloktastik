@@ -160,23 +160,6 @@ add_filter('image_size_names_choose', function($sizes) {
     ]);
 });
 
-// remove featured image block abover footer when no fi exists
-add_filter( 'render_block', function( $block_content, $block ) {
-
-    if (
-        isset( $block['blockName'], $block['attrs']['useFeaturedImage'] )
-        && $block['blockName'] === 'core/cover'
-        && $block['attrs']['useFeaturedImage'] === true
-        && isset( $block['attrs']['className'] )
-        && strpos( $block['attrs']['className'], 'footer-cover' ) !== false
-        && ! has_post_thumbnail()
-    ) {
-        return '';
-    }
-
-    return $block_content;
-}, 10, 2 );
-
 // register block pattern categories
 
 add_action( 'init', function() {
@@ -197,15 +180,6 @@ add_filter( 'body_class', function( $classes ) {
     return $classes;
 } );
 
-/**
- * Add lightbox modal globally via wp_footer
- */
-function bloktastik_render_lightbox_modal() {
-    // Load the template part
-    block_template_part( 'lightbox-modal' );
-}
-add_action( 'wp_footer', 'bloktastik_render_lightbox_modal' );
-
 // Disable remote patterns from WordPress.org
 add_filter('should_load_remote_block_patterns', '__return_false');
 
@@ -214,66 +188,19 @@ add_action('init', function() {
     remove_theme_support('core-block-patterns');
 }, 10);
 
-// fix changes to query in wp6.9 for FAQ taxonomy queries
-// Filter query loop to support taxonomy queries for FAQs (front-end rendering)
-add_filter('query_loop_block_query_vars', function($query, $block, $page) {
-    // Check if this is an FAQ query with taxonomy parameters
-    if (isset($block->context['query']['postType']) 
-        && $block->context['query']['postType'] === 'faq'
-        && isset($block->context['query']['taxQuery'])) {
-        
-        $tax_query = array();
-        
-        foreach ($block->context['query']['taxQuery'] as $taxonomy => $terms) {
-            // Handle both old format (array of term IDs) and new format (object with terms)
-            if (is_array($terms)) {
-                $term_ids = isset($terms['terms']) ? $terms['terms'] : $terms;
-                $operator = isset($terms['operator']) ? $terms['operator'] : 'IN';
-            } else {
-                $term_ids = array($terms);
-                $operator = 'IN';
-            }
-            
-            $tax_query[] = array(
-                'taxonomy' => $taxonomy,
-                'field'    => 'term_id',
-                'terms'    => $term_ids,
-                'operator' => $operator,
-            );
-        }
-        
-        if (!empty($tax_query)) {
-            $query['tax_query'] = $tax_query;
-        }
-    }
-    
-    return $query;
-}, 10, 3);
+// Job starter template
 
-// Filter the REST API query (for editor preview)
-add_filter('rest_faq_query', function($args, $request) {
-    $tax_query = $request->get_param('taxQuery');
+function jobs_post_template() {
+    $post_type_object = get_post_type_object( 'jobs' );
     
-    if ($tax_query) {
-        $args['tax_query'] = array();
-        
-        foreach ($tax_query as $taxonomy => $terms) {
-            if (is_array($terms)) {
-                $term_ids = isset($terms['terms']) ? $terms['terms'] : $terms;
-                $operator = isset($terms['operator']) ? $terms['operator'] : 'IN';
-            } else {
-                $term_ids = array($terms);
-                $operator = 'IN';
-            }
-            
-            $args['tax_query'][] = array(
-                'taxonomy' => $taxonomy,
-                'field'    => 'term_id',
-                'terms'    => $term_ids,
-                'operator' => $operator,
-            );
-        }
+    if ( ! $post_type_object ) {
+        return;
     }
     
-    return $args;
-}, 10, 2);
+    $post_type_object->template = array(
+        array( 'core/pattern', array(
+            'slug' => 'bloktastik/single-job-starter'
+        ) ),
+    );
+}
+add_action( 'init', 'jobs_post_template', 20 );

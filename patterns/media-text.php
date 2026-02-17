@@ -8,26 +8,16 @@
  */
 ?>
 
-<!-- wp:media-text {"mediaId":624,"mediaType":"image"} -->
-<div class="wp-block-media-text is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img src="/wp-content/uploads/2025/11/Screenshot-2025-11-15-at-5.54.49-PM.png" alt="" class="wp-image-624 size-full"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|bright-red"}}}},"textColor":"bright-red"} -->
-<h3 class="wp-block-heading has-bright-red-color has-text-color has-link-color">Wildfire Readiness</h3>
+<!-- wp:media-text {"mediaPosition":"right","mediaId":101,"mediaLink":"http://lowercolumbia.test/our-team/fake-photo/","mediaType":"image","metadata":{"categories":["lowercolumbia"],"patternName":"bloktastik/lowercolumbia-media-text","name":"Media-text"}} -->
+<div class="wp-block-media-text has-media-on-the-right is-stacked-on-mobile"><div class="wp-block-media-text__content"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"3xl"} -->
+<h3 class="wp-block-heading has-primary-color has-text-color has-link-color has-3-xl-font-size">Team-based approach</h3>
 <!-- /wp:heading -->
 
-<!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
-<li>Keep your vehicle fueled and<br>emergency kit within reach.</li>
-<!-- /wp:list-item -->
+<!-- wp:paragraph -->
+<p>Our care team includes physicians, nurses, nurse practitioners, social workers, community health workers, dietitian, Occupational Therapist, pharmacists, and other health professionals all in one space. They all collaborate to support your whole health.</p>
+<!-- /wp:paragraph -->
 
-<!-- wp:list-item -->
-<li>Have a plan for pets and livestock.</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Remove flammable items like patio<br>furniture from around your home.</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Stay tuned to official wildfire updates<br>for evacuation alerts.</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list --></div></div>
+<!-- wp:paragraph -->
+<p><a href="http://lowercolumbia.test/our-team/" data-type="page" data-id="11">Meet our team</a></p>
+<!-- /wp:paragraph --></div><figure class="wp-block-media-text__media"><img src="http://lowercolumbia.test/wp-content/uploads/2026/02/FAKE-photo-1024x685.jpg" alt="" class="wp-image-101 size-full"/></figure></div>
 <!-- /wp:media-text -->
