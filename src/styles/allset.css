@@ -42,22 +42,20 @@ font-size: 1.25rem;
 }
 
 /* form styles */
-.form-field {
-    margin: 1em 0;
-}
 
-.form-field.textarea {
-    margin: 1em 0 0;
-}
-
-.form-field input,
-.form-field textarea {
+.wpcf7 input:not(.wpcf7-submit),
+.wpcf7 textarea {
     background-color: var(--wp--preset--color--cool-gray);
     width: 100%;
     padding: 1em;
     border-radius: 0.3rem;
     color: var(--wp--preset--color--menu-grey) ;
     font-size: 0.8rem;
+    margin: 1em 0;
+}
+
+.wpcf7 input.wpcf7-submit {
+    padding:0.25rem 0.75rem;
 }
 
 .contactButton {

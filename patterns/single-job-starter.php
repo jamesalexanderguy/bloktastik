@@ -15,14 +15,12 @@
 <p class="has-xl-font-size">Reports to: Executive Director<br>Location: Trail, British Columbia<br>Type: FTE .60, Permanent<br>Salary: $89,840 – 99,840 depending on education and experience</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"var:preset|spacing|50"}}},"backgroundColor":"blush","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-blush-background-color has-background" style="padding-top:0;padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"right":"0","top":"0","left":"0","bottom":"var:preset|spacing|40"},"blockGap":"0","margin":{"bottom":"0"}}},"backgroundColor":"blush","layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"}} -->
-<div class="wp-block-group alignfull has-blush-background-color has-background" style="margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0"><!-- wp:html {"metadata":{"categories":["lowercolumbia"],"patternName":"bloktastik/pink-dome","name":"Pink Dome"}} -->
-<svg class="blush-dome" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 0,100 Q 600,50 1200,100 L 1200,0 L 0,0 Z" fill="var(--wp--preset--color--base)"/>
-</svg>
-<!-- /wp:html --></div>
-<!-- /wp:group -->
+<!-- wp:group {"metadata":{"categories":["lowercolumbia"],"patternName":"bloktastik/pink-dome","name":"Pink Dome"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"bottom":"var:preset|spacing|70","top":"0"}}},"backgroundColor":"blush","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-blush-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:cover {"url":"http://lowercolumbia.test/wp-content/uploads/2026/02/header-dome.svg","id":357,"dimRatio":0,"overlayColor":"primary","isUserOverlayColor":false,"focalPoint":{"x":0.5,"y":0.84},"minHeight":65,"sizeSlug":"large","align":"full","className":"blush-dome","style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover alignfull blush-dome" style="margin-top:0;min-height:65px"><img class="wp-block-cover__image-background wp-image-357 size-large" alt="" src="http://lowercolumbia.test/wp-content/uploads/2026/02/header-dome.svg" style="object-position:50% 84%" data-object-fit="cover" data-object-position="50% 84%"/><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size"></p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:cover -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|charcoal"}}}},"textColor":"charcoal","fontSize":"2xl"} -->
 <p class="has-charcoal-color has-text-color has-link-color has-2-xl-font-size">Are you passionate about making a meaningful impact on the health and well-being of diverse communities? Are you ready to work in a vibrant, interdisciplinary healthcare team in beautiful Trail, BC?</p>
@@ -100,6 +98,7 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
 <h3 class="wp-block-heading has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>Why Join Us?</strong></h3>
 <!-- /wp:heading -->
@@ -120,7 +119,8 @@
 
 <!-- wp:paragraph -->
 <p>If you’d like to join the team in a meaningful role, apply today and help us build a healthier future for the Lower Columbia region!</p>
-<!-- /wp:paragraph -->
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
 
 <!-- wp:media-text {"mediaPosition":"right","mediaId":101,"mediaLink":"http://lowercolumbia.test/our-team/fake-photo/","mediaType":"image","imageFill":true,"metadata":{"categories":["lowercolumbia"],"patternName":"bloktastik/image-text","name":"Mediatext w/ grey textbox"}} -->
 <div class="wp-block-media-text has-media-on-the-right is-stacked-on-mobile is-image-fill-element"><div class="wp-block-media-text__content"><!-- wp:group {"metadata":{"categories":["lowercolumbia"],"patternName":"bloktastik/cta-button","name":"CTA Button Group"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30"},"border":{"radius":{"topLeft":"10px","topRight":"10px","bottomLeft":"10px","bottomRight":"10px"},"width":"1px"}},"backgroundColor":"blush","borderColor":"coral","layout":{"type":"constrained"}} -->
