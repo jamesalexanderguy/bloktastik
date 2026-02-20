@@ -14,6 +14,6 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|header-blue"}}}},"textColor":"header-blue"} -->
-<p class="has-header-blue-color has-text-color has-link-color">Feel involved and empowered in your<br>health. We listen, involve you in decisions, and create care plans that reflect your needs, values, and health goals.If you are an existing patient,<br>you can call (250) 368-5656, come into<br>the health centre or book online.</p>
+<p class="has-header-blue-color has-text-color has-link-color">Feel involved and empowered in your health. We listen, involve you in decisions, and create care plans that reflect your needs, values, and health goals. If you are an existing patient, you can call (250) 368-5656, come into the health centre or book online.</p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
+<!-- /wp:group -->

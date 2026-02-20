@@ -18,7 +18,10 @@ add_action('init', function() {
         'exclude_from_search' => true,
         'menu_icon' => 'dashicons-businessman',
         'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
-        'rewrite' => false,
+        'rewrite' => [
+            'slug' => 'jobs',
+            'with_front' => false,
+        ],
         'show_in_rest' => true,
     ]);
 

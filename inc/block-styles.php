@@ -11,9 +11,6 @@ function bloktastik_block_styles() {
         'name'  => 'shorty',
         'label' => 'Shorty'
     ) );
-	// Remove core separator style variations
-	unregister_block_style( 'core/separator', 'dots' );
-	unregister_block_style( 'core/separator', 'wide' );
 	// Register custom button styles
 	// Register a "default" style for buttons
     register_block_style( 'core/button', array(

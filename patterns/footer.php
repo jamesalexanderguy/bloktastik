@@ -13,8 +13,8 @@
 
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60","right":"var:preset|spacing|60"}},"border":{"top":{"color":"var:preset|color|coral","width":"5px"},"right":[],"bottom":[],"left":[]}},"backgroundColor":"primary","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-primary-background-color has-background" style="border-top-color:var(--wp--preset--color--coral);border-top-width:5px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":{"top":"var:preset|spacing|20"}}}} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"0","left":"var:preset|spacing|60","right":"var:preset|spacing|60"}},"border":{"top":{"color":"var:preset|color|coral","width":"5px"},"right":[],"bottom":[],"left":[]}},"backgroundColor":"primary","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull has-primary-background-color has-background" style="border-top-color:var(--wp--preset--color--coral);border-top-width:5px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--60);padding-bottom:0;padding-left:var(--wp--preset--spacing--60)"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":{"top":"var:preset|spacing|20"}}}} -->
 <div class="wp-block-columns" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:heading {"level":6,"style":{"elements":{"link":{"color":{"text":"var:preset|color|cool-gray"}}}},"textColor":"cool-gray"} -->
 <h6 class="wp-block-heading has-cool-gray-color has-text-color has-link-color"><strong>Location</strong></h6>
@@ -72,8 +72,8 @@
 <!-- /wp:group -->
 
 <!-- wp:cover {"url":"http://lowercolumbia.test/wp-content/uploads/2026/02/footer-dome-1.svg","id":357,"dimRatio":0,"overlayColor":"primary","isUserOverlayColor":false,"minHeight":65,"sizeSlug":"large","style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover" style="margin-top:0;min-height:65px"><img class="wp-block-cover__image-background wp-image-357 size-large" alt="" src="http://lowercolumbia.test/wp-content/uploads/2026/02/footer-dome-1.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"","fontSize":"large"} -->
-<p class="has-text-align-center has-large-font-size"></p>
+<div class="wp-block-cover" style="margin-top:0;min-height:65px"><img class="wp-block-cover__image-background wp-image-357 size-large" alt="" src="http://lowercolumbia.test/wp-content/uploads/2026/02/footer-dome-1.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Footer Dome","className":"hideme","fontSize":"large"} -->
+<p class="has-text-align-center hideme has-large-font-size"></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
 
@@ -108,3 +108,4 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
+ 

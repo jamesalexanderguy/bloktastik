@@ -1,41 +1,41 @@
 <?php
 /**
- * Title: Staff bio
+ * Title: Staff Member
  * Slug: bloktastik/staff-bio
- * Categories: allset
- * Description: Staff bio with image and link to go inside group with background
+ * Categories: lowercolumbia
+ * Description: Staff image group and role
  * Keywords: bio, team, staff
  */
 ?>
 
 <!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":835,"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"50%"}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="https://allsetpack.ca/wp-content/uploads/2025/11/Screenshot-2025-11-22-at-9.46.46-AM.png" alt="" class="wp-image-835" style="border-radius:50%"/></figure>
-<!-- /wp:image --></div>
+<div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:image {"id":101,"aspectRatio":"1","scale":"cover","sizeSlug":"medium","linkDestination":"none","align":"center","className":"is-style-rounded","style":{"border":{"radius":"999px"},"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+<figure class="wp-block-image aligncenter size-medium has-custom-border is-style-rounded" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0"><img src="http://lowercolumbia.test/wp-content/uploads/2026/02/FAKE-photo-1024x685.jpg" alt="" class="wp-image-101" style="border-radius:999px;aspect-ratio:1;object-fit:cover"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><strong>Your Name</strong><br><em>Your Role</em></p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"66.66%"} -->
-<div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:heading {"level":5} -->
-<h5 class="wp-block-heading"><br><strong>Kim Hartzell</strong></h5>
-<!-- /wp:heading -->
+<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:image {"id":101,"aspectRatio":"1","scale":"cover","sizeSlug":"medium","linkDestination":"none","align":"center","className":"is-style-rounded","style":{"border":{"radius":"999px"},"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+<figure class="wp-block-image aligncenter size-medium has-custom-border is-style-rounded" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0"><img src="http://lowercolumbia.test/wp-content/uploads/2026/02/FAKE-photo-1024x685.jpg" alt="" class="wp-image-101" style="border-radius:999px;aspect-ratio:1;object-fit:cover"/></figure>
+<!-- /wp:image -->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}}}} -->
-<p style="margin-top:0"><em>Owner / Director</em></p>
-<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><strong>Your Name</strong><br><em>Your Role</em></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
 
-<!-- wp:paragraph -->
-<p>Kim Hartzell is the founder and driving force behind ALLSET,<br>bringing more than a decade of experience in wildfire response and community programming. She served as a wildland<br>firefighter in British Columbia for four years, followed by ten<br>years as a CAPC Coordinator working directly with vulnerable<br>families. In that role, Kim developed strong expertise in program<br>management, government funding, and community outreach.<br>Her leadership combines operational insight with a deep<br>commitment to helping people prepare for crisis, ensuring every<br>pack reflects ALLSET’s purpose.</p>
-<!-- /wp:paragraph -->
+<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:image {"id":101,"aspectRatio":"1","scale":"cover","sizeSlug":"medium","linkDestination":"none","align":"center","className":"is-style-rounded","style":{"border":{"radius":"999px"},"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+<figure class="wp-block-image aligncenter size-medium has-custom-border is-style-rounded" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0"><img src="http://lowercolumbia.test/wp-content/uploads/2026/02/FAKE-photo-1024x685.jpg" alt="" class="wp-image-101" style="border-radius:999px;aspect-ratio:1;object-fit:cover"/></figure>
+<!-- /wp:image -->
 
-<!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Kim’s LinkedIn profile</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons -->
-
-<!-- wp:paragraph -->
-<p></p>
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><strong>Your Name</strong><br><em>Your Role</em></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

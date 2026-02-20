@@ -22,17 +22,7 @@
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
 
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|charcoal"}}}},"textColor":"charcoal","fontSize":"2xl"} -->
-<p class="has-charcoal-color has-text-color has-link-color has-2-xl-font-size">Are you passionate about making a meaningful impact on the health and well-being of diverse communities? Are you ready to work in a vibrant, interdisciplinary healthcare team in beautiful Trail, BC?</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>About Us</strong></h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>The Lower Columbia Community Health Centre Network Society is a not-for-profit organization committed to providing holistic, accessible healthcare to all – especially the vulnerable populations we serve. Located amidst the stunning natural beauty of the Kootenay region, our organization owns and operates the Lower Columbia CHC, a new community health centre in Trail, BC. We are looking to add to our multidisciplinary team that delivers comprehensive team-based care addressing the physical, mental, and social determinants of health.</p>
-<!-- /wp:paragraph -->
+<!-- wp:block {"ref":549} /-->
 
 <!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
 <h3 class="wp-block-heading has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>Your Role</strong></h3>
@@ -97,50 +87,6 @@
 <!-- /wp:list --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>Why Join Us?</strong></h3>
-<!-- /wp:heading -->
-
-<!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
-<li>Make a Difference: Impact lives directly and drive health equity in a supportive<br>community.</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Enjoy Life in BC: Live in the breathtaking Kootenay region, where outdoor<br>adventures and close-knit communities await.</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Professional Growth: Work in a healthcare model that values learning and growth<br>and gain expe</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p>If you’d like to join the team in a meaningful role, apply today and help us build a healthier future for the Lower Columbia region!</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
-
-<!-- wp:media-text {"mediaPosition":"right","mediaId":101,"mediaLink":"http://lowercolumbia.test/our-team/fake-photo/","mediaType":"image","imageFill":true,"metadata":{"categories":["lowercolumbia"],"patternName":"bloktastik/image-text","name":"Mediatext w/ grey textbox"}} -->
-<div class="wp-block-media-text has-media-on-the-right is-stacked-on-mobile is-image-fill-element"><div class="wp-block-media-text__content"><!-- wp:group {"metadata":{"categories":["lowercolumbia"],"patternName":"bloktastik/cta-button","name":"CTA Button Group"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30"},"border":{"radius":{"topLeft":"10px","topRight":"10px","bottomLeft":"10px","bottomRight":"10px"},"width":"1px"}},"backgroundColor":"blush","borderColor":"coral","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-border-color has-coral-border-color has-blush-background-color has-background" style="border-width:1px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-primary-color has-text-color has-link-color has-3-xl-font-size">How to apply</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|header-blue"}}}},"textColor":"header-blue"} -->
-<p class="has-header-blue-color has-text-color has-link-color">Please send your resume and a cover letter detailing your passion for community health and relevant experience to Rita Macleod, Executive Director at r.macleod@lowercolumbiachc.ca.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|header-blue"}}}},"textColor":"header-blue"} -->
-<p class="has-header-blue-color has-text-color has-link-color">Applications will be reviewed on a rolling basis until the position is filled.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|header-blue"}}}},"textColor":"header-blue"} -->
-<p class="has-header-blue-color has-text-color has-link-color">Individuals will not be discriminated against because of disability, sex, race, gender identity, sexual orientation, religion, national origin, veteran status or any other protected status under law. The Lower Columbia CHC Network is an organization where every voice matters.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div><figure class="wp-block-media-text__media"><img src="http://lowercolumbia.test/wp-content/uploads/2026/02/FAKE-photo-1024x685.jpg" alt="" class="wp-image-101 size-full" style="object-position:50% 50%"/></figure></div>
-<!-- /wp:media-text --></div>
-<!-- /wp:group --></div>
+<!-- wp:block {"ref":550} /--></div>
 <!-- /wp:group -->
  

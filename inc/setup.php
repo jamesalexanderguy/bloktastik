@@ -204,3 +204,27 @@ function jobs_post_template() {
     );
 }
 add_action( 'init', 'jobs_post_template', 20 );
+
+// inject site logo inside nav modal
+add_filter( 'render_block', function( $block_content, $block ) {
+    if ( $block['blockName'] !== 'core/navigation' ) {
+        return $block_content;
+    }
+
+    $logo = render_block( array(
+		'blockName' => 'core/site-logo',
+		'attrs' => array(
+			'width'     => 210,
+			'className' => 'menu-modal-logo',
+		),
+	) );
+
+    // Inject logo at the start of the responsive overlay container
+    $block_content = preg_replace(
+        '/(<div[^>]*wp-block-navigation__responsive-container-content[^>]*>)/',
+        '$1' . $logo,
+        $block_content
+    );
+
+    return $block_content;
+}, 10, 2 );
