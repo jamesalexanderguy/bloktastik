@@ -40,12 +40,12 @@ if ( ! function_exists( 'bloktastik_frontend_assets' ) ) :
 		);
 		
 		// Block styles (auto-compiled from each block's style.scss)
-		wp_enqueue_style(
-			'bloktastik-blocks',
-			get_template_directory_uri() . '/build/style-blocks.css',
-			array(),
-			wp_get_theme()->get( 'Version' )
-		);
+		// wp_enqueue_style(
+		// 	'bloktastik-blocks',
+		// 	get_template_directory_uri() . '/build/style-blocks.css',
+		// 	array(),
+		// 	wp_get_theme()->get( 'Version' )
+		// );
 		
 		// Main JavaScript
 		wp_enqueue_script(

@@ -474,3 +474,11 @@ footer .footer-cover {
        font-size: 2rem !important;
     }
 }
+
+#landack a {
+    border-bottom: 1px dotted currentColor;
+}
+
+#landack a:hover {
+    border-bottom-style: solid;
+}
