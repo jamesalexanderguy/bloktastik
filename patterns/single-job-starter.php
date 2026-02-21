@@ -24,16 +24,16 @@
 
 <!-- wp:block {"ref":549} /-->
 
-<!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-teal-color has-text-color has-link-color has-3-xl-font-size"><strong>Your Role</strong></h3>
+<!-- wp:heading {"level":3,"className":"has-teal-color","style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
+<h3 class="wp-block-heading has-teal-color has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>Your Role</strong></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
 <p>The Lower Columbia Community Health Centre Network Society is a not-for-profit organization committed to providing holistic, accessible healthcare to all – especially the vulnerable populations we serve. Located amidst the stunning natural beauty of the Kootenay region, our organization owns and operates the Lower Columbia CHC, a new community health centre in Trail, BC. We are looking to add to our multidisciplinary team that delivers comprehensive team-based care addressing the physical, mental, and social determinants of health.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-teal-color has-text-color has-link-color has-3-xl-font-size"><strong>Key Responsibilities</strong></h3>
+<!-- wp:heading {"level":3,"className":"has-teal-color","style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
+<h3 class="wp-block-heading has-teal-color has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>Key Responsibilities</strong></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -54,8 +54,8 @@
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
-<!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-teal-color has-text-color has-link-color has-3-xl-font-size"><strong>Qualifications and Skills</strong></h3>
+<!-- wp:heading {"level":3,"className":"has-teal-color","style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
+<h3 class="wp-block-heading has-teal-color has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>Qualifications and Skills</strong></h3>
 <!-- /wp:heading -->
 
 <!-- wp:list -->
@@ -89,4 +89,4 @@
 
 <!-- wp:block {"ref":550} /--></div>
 <!-- /wp:group -->
- 
+  
