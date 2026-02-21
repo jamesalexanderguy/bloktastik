@@ -25,7 +25,7 @@
 <!-- wp:block {"ref":549} /-->
 
 <!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>Your Role</strong></h3>
+<h3 class="wp-block-heading has-teal-color has-text-color has-link-color has-3-xl-font-size"><strong>Your Role</strong></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -33,7 +33,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>Key Responsibilities</strong></h3>
+<h3 class="wp-block-heading has-teal-color has-text-color has-link-color has-3-xl-font-size"><strong>Key Responsibilities</strong></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -55,7 +55,7 @@
 <!-- /wp:list -->
 
 <!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal-dark"}}}},"textColor":"teal-dark","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-teal-dark-color has-text-color has-link-color has-3-xl-font-size"><strong>Qualifications and Skills</strong></h3>
+<h3 class="wp-block-heading has-teal-color has-text-color has-link-color has-3-xl-font-size"><strong>Qualifications and Skills</strong></h3>
 <!-- /wp:heading -->
 
 <!-- wp:list -->

@@ -49,13 +49,6 @@ main a:hover, footer a:hover {
 main figure a {
     border-bottom: none !important;
 }
-  
-#contact,
-#about,
-#packs {
-scroll-margin-top: 5rem;
-overflow: initial !important;
-}
 
 body {
 font-family: 'Noto Sans', sans-serif;
@@ -446,18 +439,6 @@ footer .footer-cover {
     opacity: 0.8;
 }
 
-#copyrightline a {
-    color: var(--wp--preset--color--base);
-    -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted;
-}
-
-#copyrightline a:hover {
-    color: var(--wp--preset--color--base);
-    -webkit-text-decoration: underline solid;
-            text-decoration: underline solid;
-}
-
 #copyrightline .pipe {
     display: inline-block;
     margin: 0 15px;
@@ -496,6 +477,10 @@ footer .footer-cover {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
+}
+
+@media ( min-width: 600px ) {
 
     body .wp-block-media-text .wp-block-media-text__media img, .wp-block-media-text .wp-block-media-text__media video {
         margin-bottom: 0 !important;
@@ -1224,9 +1209,6 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-.underline{
-  text-decoration-line: underline;
 }
 .outline{
   outline-style: solid;

@@ -9,8 +9,8 @@
 ?>
 
 <!-- wp:media-text {"mediaPosition":"right","mediaId":101,"mediaLink":"/our-team/fake-photo/","mediaType":"image","metadata":{"categories":["lowercolumbia"],"patternName":"bloktastik/lowercolumbia-media-text","name":"Media-text"}} -->
-<div class="wp-block-media-text has-media-on-the-right is-stacked-on-mobile"><div class="wp-block-media-text__content"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-primary-color has-text-color has-link-color has-3-xl-font-size">Team-based approach</h3>
+<div class="wp-block-media-text has-media-on-the-right is-stacked-on-mobile"><div class="wp-block-media-text__content"><!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|teal"}}}},"textColor":"primary","fontSize":"3xl"} -->
+<h3 class="wp-block-heading has-teal-color has-text-color has-link-color has-3-xl-font-size">Team-based approach</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
