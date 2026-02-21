@@ -11,7 +11,7 @@
 <div class="wp-block-group"><!-- wp:group {"className":"max-w-[550px]","style":{"border":{"radius":"12px","width":"0px","style":"none"},"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"teal-dark","textColor":"base","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
 <div class="wp-block-group max-w-[550px] has-base-color has-teal-dark-background-color has-text-color has-background has-link-color" style="border-style:none;border-width:0px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30)"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":107,"sizeSlug":"large","linkDestination":"none","align":"center"} -->
-<figure class="wp-block-image aligncenter size-large"><img src="http://lowercolumbia.test/wp-content/uploads/2026/02/calendar-check.svg" alt="" class="wp-image-107"/></figure>
+<figure class="wp-block-image aligncenter size-large"><img src="/wp-content/uploads/2026/02/calendar-check.svg" alt="" class="wp-image-107"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|header-blue"}}}},"textColor":"header-blue","fontSize":"xl"} -->

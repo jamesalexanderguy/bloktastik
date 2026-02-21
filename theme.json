@@ -29,19 +29,24 @@
 					"slug": "teal-dark"
 				},
 				{
-					"color": "#658386",
+					"color": "#3e5e70",
 					"name": "Teal",
 					"slug": "teal"
 				},
 				{
-					"color": "#82b2cb",
+					"color": "#80B3CD",
 					"name": "Sky Blue",
 					"slug": "sky-blue"
 				},
 				{
-					"color": "#ced4d6",
+					"color": "#f5f7f8",
 					"name": "Cool Gray",
 					"slug": "cool-gray"
+				},
+				{
+					"color": "#CCE0EB",
+					"name": "Light blue",
+					"slug": "light-blue"
 				},
 				{
 					"color": "#f9f1f2",
@@ -524,7 +529,7 @@
 				"variations": {
 					"shorty": {
 						"border": {
-							"color": "var:preset|color|cool-gray",
+							"color": "var:preset|color|light-blue",
 							"width": "5px 0 0 0"
 						},
 						"css": "max-width: 40px; margin-left: 0!important; margin-right: auto; border-style: solid;"

@@ -61,7 +61,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base"} -->
-<p class="has-base-color has-text-color has-link-color"><img class="wp-image-107" style="display:inline;width: 24px;" src="http://lowercolumbia.test/wp-content/uploads/2026/02/calendar-check.svg" alt="Calendar">Book an appointment online</p>
+<p class="has-base-color has-text-color has-link-color"><img class="wp-image-107" style="display:inline;width: 24px;" src="/wp-content/uploads/2026/02/calendar-check.svg" alt="Calendar">Book an appointment online</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"xs"} -->
@@ -71,8 +71,8 @@
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
 
-<!-- wp:cover {"url":"http://lowercolumbia.test/wp-content/uploads/2026/02/footer-dome-1.svg","id":357,"dimRatio":0,"overlayColor":"primary","isUserOverlayColor":false,"minHeight":65,"sizeSlug":"large","style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover" style="margin-top:0;min-height:65px"><img class="wp-block-cover__image-background wp-image-357 size-large" alt="" src="http://lowercolumbia.test/wp-content/uploads/2026/02/footer-dome-1.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Footer Dome","className":"hideme","fontSize":"large"} -->
+<!-- wp:cover {"url":"/wp-content/uploads/2026/02/footer-dome-1.svg","id":357,"dimRatio":0,"overlayColor":"primary","isUserOverlayColor":false,"minHeight":65,"sizeSlug":"large","style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover" style="margin-top:0;min-height:65px"><img class="wp-block-cover__image-background wp-image-357 size-large" alt="" src="/wp-content/uploads/2026/02/footer-dome-1.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Footer Dome","className":"hideme","fontSize":"large"} -->
 <p class="has-text-align-center hideme has-large-font-size"></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
@@ -81,11 +81,11 @@
 <div class="wp-block-group alignfull allset-footer text-center pt-10 md:pt-30 bg-secondary has-charcoal-color has-base-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"33.33%"} -->
 <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":25,"width":"195px","height":"auto","aspectRatio":"2.7633912735012416","sizeSlug":"full","linkDestination":"none","align":"center"} -->
-<figure class="wp-block-image aligncenter size-full is-resized"><img src="http://lowercolumbia.test/wp-content/uploads/2026/02/LCCHC-500.png" alt="" class="wp-image-25" style="aspect-ratio:2.7633912735012416;width:195px;height:auto"/></figure>
+<figure class="wp-block-image aligncenter size-full is-resized"><img src="/wp-content/uploads/2026/02/LCCHC-500.png" alt="" class="wp-image-25" style="aspect-ratio:2.7633912735012416;width:195px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"id":85,"width":"99px","height":"auto","aspectRatio":"0.7143215450213193","sizeSlug":"full","linkDestination":"none","align":"center"} -->
-<figure class="wp-block-image aligncenter size-full is-resized"><img src="http://lowercolumbia.test/wp-content/uploads/2026/02/coins_logo.png" alt="" class="wp-image-85" style="aspect-ratio:0.7143215450213193;width:99px;height:auto"/></figure>
+<figure class="wp-block-image aligncenter size-full is-resized"><img src="/wp-content/uploads/2026/02/coins_logo.png" alt="" class="wp-image-85" style="aspect-ratio:0.7143215450213193;width:99px;height:auto"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -104,7 +104,7 @@
 <!-- wp:group {"align":"full","className":"mx-auto p-10 md:px-12 xl:px-6 mt-6 bg-footer-base","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull mx-auto p-10 md:px-12 xl:px-6 mt-6 bg-footer-base" id="copyrightline"><!-- wp:group {"align":"full","className":"text-white text-center text-xs","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull text-white text-center text-xs"><!-- wp:paragraph {"className":"has-base-color has-text-color","textColor":"base"} -->
-<p class="has-base-color has-text-color has-base-color has-text-color">© Lower Columbia Community Health Center <code>    |   </code>  <strong><a href="http://lowercolumbia.test/privacy-policy/" data-type="page" data-id="178">Privacy Policy</a> </strong><code>     |     </code><a href="http://lowercolumbia.test/legal-disclaimer-terms-of-use/" data-type="page" data-id="188"><strong>Legal Policy</strong></a> <code>     |    </code><em>Site by: <a href="https://spaceracedigital.com/" target="_blank" class="underline">SpaceRace Digital</a></em></p>
+<p class="has-base-color has-text-color has-base-color has-text-color">© Lower Columbia Community Health Center <code>    |   </code>  <strong><a href="/privacy-policy/" data-type="page" data-id="178">Privacy Policy</a> </strong><code>     |     </code><a href="/legal-disclaimer-terms-of-use/" data-type="page" data-id="188"><strong>Legal Policy</strong></a> <code>     |    </code><em>Site by: <a href="https://spaceracedigital.com/" target="_blank" class="underline">SpaceRace Digital</a></em></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

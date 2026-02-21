@@ -32,8 +32,8 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:cover {"url":"http://lowercolumbia.test/wp-content/uploads/2026/02/404-sick-bear-768x1024.jpg","id":212,"dimRatio":0,"isUserOverlayColor":true,"minHeight":50,"minHeightUnit":"vw","isDark":false,"sizeSlug":"large","style":{"dimensions":{"aspectRatio":"1"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover is-light" style="min-height:50vw"><img class="wp-block-cover__image-background wp-image-212 size-large" alt="" src="http://lowercolumbia.test/wp-content/uploads/2026/02/404-sick-bear-768x1024.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+<!-- wp:cover {"url":"/wp-content/uploads/2026/02/404-sick-bear-768x1024.jpg","id":212,"dimRatio":0,"isUserOverlayColor":true,"minHeight":50,"minHeightUnit":"vw","isDark":false,"sizeSlug":"large","style":{"dimensions":{"aspectRatio":"1"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-cover is-light" style="min-height:50vw"><img class="wp-block-cover__image-background wp-image-212 size-large" alt="" src="/wp-content/uploads/2026/02/404-sick-bear-768x1024.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
 <p class="has-text-align-center has-large-font-size"></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
