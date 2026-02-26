@@ -2,7 +2,7 @@
 /**
  * Register custom post types.
  */
-// FAQ
+// Jobs
 add_action('init', function() {
     // Register the custom post type
     register_post_type('jobs', [
@@ -37,5 +37,28 @@ add_action('init', function() {
         'hierarchical' => true, 
         'rewrite' => false,
         'show_in_rest' => true, 
+    ]);
+});
+
+add_action('init', function() {
+    // Register practitioner cpt
+    register_post_type('practitioners', [
+        'labels' => [
+            'name' => __('Practitioners'),
+            'singular_name' => __('Practitioner'),
+        ],
+        'public' => false,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'has_archive' => false,
+        'exclude_from_search' => true,
+        'menu_icon' => 'dashicons-groups',
+        'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
+        'rewrite' => [
+            'slug' => 'practitioners',
+            'with_front' => false,
+        ],
+        'show_in_rest' => true,
     ]);
 });

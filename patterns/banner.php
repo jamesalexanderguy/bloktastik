@@ -1,4 +1,12 @@
-<!-- wp:group {"align":"full","layout":{"type":"default"}} -->
+<?php
+/**
+ * Title: Banner
+ * Slug: bloktastik/banner
+ * Categories: lowercolumbia, banner, hero
+ * Description: Page banner with featured image and description, and a premade heading section with intro blurb.
+ * Keywords: banner, hero, title
+ */
+?><!-- wp:group {"align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull" id="hero-banner"><!-- wp:cover {"useFeaturedImage":true,"overlayColor":"teal-dark","isUserOverlayColor":true,"style":{"border":{"bottom":{"color":"var:preset|color|coral","width":"5px"},"top":[],"right":[],"left":[]}},"layout":{"type":"default"}} -->
 <div class="wp-block-cover" style="border-bottom-color:var(--wp--preset--color--coral);border-bottom-width:5px"><span aria-hidden="true" class="wp-block-cover__background has-teal-dark-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->

@@ -51,11 +51,11 @@ main figure a {
 }
 
 body {
-font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .wysiwyg p {
-font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 /* form styles */
@@ -97,7 +97,7 @@ header.wp-block-template-part .wp-block-navigation {
 }
 
 .logo img {
-height: 4.5rem;
+    height: 4.5rem;
 }
 
 #menu-primary li a {
@@ -113,25 +113,44 @@ height: 4.5rem;
 /* Header dome effect */
 .header-dome {
     width: 100%;
-    margin-top: -55px;
-    height: auto;
-    min-height: 55px;
+    filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.1));
+    display: block !important;
+    min-height: unset !important;
+    height: auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    margin-top: -85px !important;
     position: relative;
     z-index: 10;
-    display: block;
-    filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.1));
+    background: none !important;
 }
 
-.footer-dome {
-    width: 100%;
-    display: block;
-    position: relative;
+.footer-dome, .blush-dome {
+    align-items: center;
+    box-sizing: border-box;
     z-index: 10;
     margin: 0;
-    padding: 0;
     line-height: 0;
-    min-height: 55px;
-    margin-top: -55px;
+    width: 100%;
+    display: block !important;
+    min-height: unset !important;
+    height: auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    position: relative;
+    background: none !important;
+}
+
+.wp-block-cover__image-background[src$=".svg"] {
+    max-width: none;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    -o-object-fit: unset !important;
+       object-fit: unset !important;
+    -o-object-position: unset !important;
+       object-position: unset !important;
+    display: block;
 }
 
 #hero-banner .wp-block-cover {
@@ -500,6 +519,19 @@ footer .footer-cover {
 
 #landack a:hover {
     border-bottom-style: solid;
+}
+
+/* Practitioners*/
+
+img.fallback-thumbnail {
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 
@@ -1154,6 +1186,9 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 }
 .flex{
   display: flex;
+}
+.grid{
+  display: grid;
 }
 .size-full{
   width: 100%;
