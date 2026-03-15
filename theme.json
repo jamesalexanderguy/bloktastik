@@ -8,61 +8,15 @@
 			"defaultGradients": false,
 			"defaultPalette": false,
 			"palette": [
-				{
-					"color": "#fdfdfe",
-					"name": "Base",
-					"slug": "base"
-				},
-				{
-					"color": "#0c6599",
-					"name": "Primary",
-					"slug": "primary"
-				},
-				{
-					"color": "#2d383e",
-					"name": "Charcoal",
-					"slug": "charcoal"
-				},
-				{
-					"color": "#3e7068",
-					"name": "Teal Dark",
-					"slug": "teal-dark"
-				},
-				{
-					"color": "#3e5e70",
-					"name": "Teal",
-					"slug": "teal"
-				},
-				{
-					"color": "#80B3CD",
-					"name": "Sky Blue",
-					"slug": "sky-blue"
-				},
-				{
-					"color": "#f5f7f8",
-					"name": "Cool Gray",
-					"slug": "cool-gray"
-				},
-				{
-					"color": "#CCE0EB",
-					"name": "Light blue",
-					"slug": "light-blue"
-				},
-				{
-					"color": "#f9f1f2",
-					"name": "Blush",
-					"slug": "blush"
-				},
-				{
-					"color": "#f9aeb9",
-					"name": "Rose",
-					"slug": "rose"
-				},
-				{
-					"color": "#f35f73",
-					"name": "Coral",
-					"slug": "coral"
-				}
+				{ "color": "#ffffff",  "name": "Base",        "slug": "base"        },
+				{ "color": "#c8382f",  "name": "Primary",     "slug": "primary"     },
+				{ "color": "#2b3741",  "name": "Dark",        "slug": "dark"        },
+				{ "color": "#a82e26",  "name": "Red Dark",    "slug": "red-dark"    },
+				{ "color": "#d6a65f",  "name": "Brown",       "slug": "brown"       },
+				{ "color": "#f4e9c1",  "name": "Cream",       "slug": "cream"       },
+				{ "color": "#e2e8f0",  "name": "Border",      "slug": "border"      },
+				{ "color": "#1e293b",  "name": "Text",        "slug": "text"        },
+				{ "color": "#64748b",  "name": "Muted",       "slug": "muted"       }
 			]
 		},
 		"position": {
