@@ -1,5 +1,71 @@
 /* =============================================================
-   custom.css — theme-wide styles
+   custom.css
+   ============================================================= */
+ 
+/* ============================================================
+   FONT RENDERING
+   Improves rendering of both fonts on screen.
+   ============================================================ */
+ 
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+ 
+ 
+/* ============================================================
+   LITERATA OPTICAL SIZING
+   Enables the font to auto-adjust its design based on
+   the size it's rendered at — a key feature of the typeface.
+   ============================================================ */
+ 
+h1, h2, h3, h4, h5, h6,
+.wp-block-post-title,
+.wp-block-site-title,
+.wp-block-pullquote,
+.wp-block-quote {
+	font-optical-sizing: auto;
+}
+ 
+ 
+/* ============================================================
+   WORK SANS TABULAR NUMBERS
+   For dates, stats, and any numeric content
+   ============================================================ */
+ 
+.wp-block-post-date,
+.wp-block-table,
+time {
+	font-variant-numeric: tabular-nums;
+}
+ 
+ 
+/* ============================================================
+   LITERATA ITALIC IN BODY COPY
+   :ensures it renders as a true italic rather than a slant.
+   ============================================================ */
+ 
+em, i,
+blockquote p,
+.wp-block-quote p {
+	font-style: italic;
+}
+ 
+/* ============================================================
+   WORK SANS SMALL CAPS FOR META / LABELS
+   ============================================================ */
+ 
+.wp-block-post-terms,
+.wp-block-post-date,
+figcaption,
+.wp-element-caption {
+	font-variant-caps: all-small-caps;
+	letter-spacing: 0.04em;
+}
+
+/* =============================================================
+   Theme-wide styles
    ============================================================= */
 
 html {
@@ -31,11 +97,6 @@ footer a:hover {
 
 main figure a {
 	border-bottom: none !important;
-}
-
-/* Client font — update this per project to match the font import in main.css */
-body {
-	font-family: 'Noto Sans', sans-serif;
 }
 
 .wysiwyg p {

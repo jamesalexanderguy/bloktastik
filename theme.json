@@ -17,6 +17,56 @@
 					"color": "#111111",
 					"name": "Contrast",
 					"slug": "contrast"
+				},
+				{
+					"color": "#0a2624",
+					"name": "Deep Teal",
+					"slug": "deep-teal"
+				},
+				{
+					"color": "#152f2c",
+					"name": "Dark Teal",
+					"slug": "dark-teal"
+				},
+				{
+					"color": "#445956",
+					"name": "Muted Teal",
+					"slug": "muted-teal"
+				},
+				{
+					"color": "#b8bfb0",
+					"name": "Sage Gray",
+					"slug": "sage-gray"
+				},
+				{
+					"color": "#eaeade",
+					"name": "Soft Ivory",
+					"slug": "soft-ivory"
+				},
+				{
+					"color": "#eae6da",
+					"name": "Warm Ivory",
+					"slug": "warm-ivory"
+				},
+				{
+					"color": "#fff5df",
+					"name": "Cream",
+					"slug": "cream"
+				},
+				{
+					"color": "#f9f2f6",
+					"name": "Blush White",
+					"slug": "blush-white"
+				},
+				{
+					"color": "#eddaf3",
+					"name": "Light Lavender",
+					"slug": "light-lavender"
+				},
+				{
+					"color": "#e5e8ec",
+					"name": "Cool Gray",
+					"slug": "cool-gray"
 				}
 			]
 		},
@@ -81,27 +131,32 @@
 			"fontWeight": true,
 			"defaultFontSizes": false,
 			"fontSizes": [
-				{ "slug": "xs",      "name": "XS",    "size": "0.75rem",  "fluid": { "min": "0.7rem",   "max": "0.8rem"   } },
-				{ "slug": "sm",      "name": "SM",    "size": "0.875rem", "fluid": { "min": "0.8rem",   "max": "0.95rem"  } },
-				{ "slug": "base",    "name": "Base",  "size": "1rem",     "fluid": { "min": "0.95rem",  "max": "1.1rem"   } },
-				{ "slug": "lg",      "name": "LG",    "size": "1.125rem", "fluid": { "min": "1rem",     "max": "1.25rem"  } },
-				{ "slug": "xl",      "name": "XL",    "size": "1.25rem",  "fluid": { "min": "1.1rem",   "max": "1.4rem"   } },
-				{ "slug": "2xl",     "name": "2XL",   "size": "1.5rem",   "fluid": { "min": "1.25rem",  "max": "1.75rem"  } },
-				{ "slug": "3xl",     "name": "3XL",   "size": "1.875rem", "fluid": { "min": "1.5rem",   "max": "2.25rem"  } },
-				{ "slug": "3fivexl","name": "3.5XL", "size": "2rem",     "fluid": { "min": "1.75rem",  "max": "2.4rem"   } },
-				{ "slug": "4xl",     "name": "4XL",   "size": "2.25rem",  "fluid": { "min": "2rem",     "max": "2.75rem"  } },
-				{ "slug": "5xl",     "name": "5XL",   "size": "3rem",     "fluid": { "min": "2.5rem",   "max": "3.75rem"  } },
-				{ "slug": "6xl",     "name": "6XL",   "size": "3.75rem",  "fluid": { "min": "3rem",     "max": "4.5rem"   } },
-				{ "slug": "7xl",     "name": "7XL",   "size": "4.5rem",   "fluid": { "min": "3.5rem",   "max": "5.5rem"   } },
-				{ "slug": "8xl",     "name": "8XL",   "size": "6rem",     "fluid": { "min": "4.5rem",   "max": "7rem"     } },
-				{ "slug": "9xl",     "name": "9XL",   "size": "8rem",     "fluid": { "min": "6rem",     "max": "9rem"     } }
+				{ "slug": "xs",       "name": "XS",    "size": "0.75rem",  "fluid": { "min": "0.7rem",   "max": "0.8rem"   } },
+				{ "slug": "sm",       "name": "SM",    "size": "0.875rem", "fluid": { "min": "0.8rem",   "max": "0.95rem"  } },
+				{ "slug": "base",     "name": "Base",  "size": "1rem",     "fluid": { "min": "0.95rem",  "max": "1.1rem"   } },
+				{ "slug": "lg",       "name": "LG",    "size": "1.125rem", "fluid": { "min": "1rem",     "max": "1.25rem"  } },
+				{ "slug": "xl",       "name": "XL",    "size": "1.25rem",  "fluid": { "min": "1.1rem",   "max": "1.4rem"   } },
+				{ "slug": "2xl",      "name": "2XL",   "size": "1.5rem",   "fluid": { "min": "1.25rem",  "max": "1.75rem"  } },
+				{ "slug": "3xl",      "name": "3XL",   "size": "1.875rem", "fluid": { "min": "1.5rem",   "max": "2.25rem"  } },
+				{ "slug": "3fivexl", "name": "3.5XL", "size": "2rem",     "fluid": { "min": "1.75rem",  "max": "2.4rem"   } },
+				{ "slug": "4xl",      "name": "4XL",   "size": "2.25rem",  "fluid": { "min": "2rem",     "max": "2.75rem"  } },
+				{ "slug": "5xl",      "name": "5XL",   "size": "3rem",     "fluid": { "min": "2.5rem",   "max": "3.75rem"  } },
+				{ "slug": "6xl",      "name": "6XL",   "size": "3.75rem",  "fluid": { "min": "3rem",     "max": "4.5rem"   } },
+				{ "slug": "7xl",      "name": "7XL",   "size": "4.5rem",   "fluid": { "min": "3.5rem",   "max": "5.5rem"   } },
+				{ "slug": "8xl",      "name": "8XL",   "size": "6rem",     "fluid": { "min": "4.5rem",   "max": "7rem"     } },
+				{ "slug": "9xl",      "name": "9XL",   "size": "8rem",     "fluid": { "min": "6rem",     "max": "9rem"     } }
 			],
 			"lineHeight": true,
 			"fontFamilies": [
 				{
 					"name": "Body Font",
 					"slug": "body-font",
-					"fontFamily": "Georgia, 'Times New Roman', serif"
+					"fontFamily": "'Work Sans', system-ui, sans-serif"
+				},
+				{
+					"name": "Heading Font",
+					"slug": "heading-font",
+					"fontFamily": "Literata, Georgia, serif"
 				}
 			]
 		},
@@ -332,6 +387,7 @@
 			},
 			"core/post-title": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontWeight": "700",
 					"fontSize": "var:preset|font-size|4xl",
 					"lineHeight": "1.2"
@@ -372,6 +428,7 @@
 					}
 				},
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "var:preset|font-size|lg",
 					"fontWeight": "300"
 				},
@@ -407,6 +464,7 @@
 			},
 			"core/pullquote": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "var:preset|font-size|3xl",
 					"fontWeight": "300",
 					"lineHeight": "1.2"
@@ -483,6 +541,7 @@
 			},
 			"core/site-title": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontWeight": "700",
 					"letterSpacing": "-.5px"
 				},
@@ -580,6 +639,7 @@
 			},
 			"h1": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(3rem, 3rem + ((1vw - 0.2rem) * 2.778), 4.5rem)",
 					"lineHeight": "1.1",
 					"fontWeight": "700"
@@ -590,6 +650,7 @@
 			},
 			"h2": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(2rem, 2rem + ((1vw - 0.2rem) * 1.389), 2.75rem)",
 					"lineHeight": "1.2",
 					"fontWeight": "600"
@@ -597,6 +658,7 @@
 			},
 			"h3": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 1.389), 2.25rem)",
 					"lineHeight": "1.2",
 					"fontWeight": "600"
@@ -604,6 +666,7 @@
 			},
 			"h4": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.926), 1.75rem)",
 					"lineHeight": "1.2",
 					"fontWeight": "500"
@@ -611,6 +674,7 @@
 			},
 			"h5": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(1.1rem, 1.1rem + ((1vw - 0.2rem) * 0.556), 1.4rem)",
 					"lineHeight": "1.2",
 					"fontWeight": "500"
@@ -618,6 +682,7 @@
 			},
 			"h6": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.463), 1.25rem)",
 					"lineHeight": "1.2",
 					"fontWeight": "700",
@@ -626,6 +691,7 @@
 			},
 			"heading": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|heading-font",
 					"lineHeight": "1.125",
 					"letterSpacing": "-0.1px"
 				}
