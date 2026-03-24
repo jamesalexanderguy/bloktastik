@@ -1,34 +1,58 @@
-@import 'tailwind.css';
+/* =============================================================
+   editor.scss — editor-specific styles
+   Compiled to build/styles/editor.css and loaded via add_editor_style()
+   ============================================================= */
 
-/* Additional editor-specific styles */
-.editor-styles-wrapper {
-  /* Your custom editor overrides go here */
-    /* Red pulse button variation */
-    .wp-block-button.is-style-red-pulse .wp-block-button__link {
-      background: var(--wp--preset--color--bright-red);
-      color: white !important;
-      padding: 0.5rem;
-  }
+/* Client font — keep in sync with main.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-  .slider-controls {
-    display: none;
-  }
+/* Base resets for the editor canvas */
+a {
+	text-decoration-thickness: 1px !important;
+	text-underline-offset: .1em;
+}
 
-  .wp-block-post-title.editor-post-title {
-    font-size: 1.8rem;
-  }
-  /* Style the title input field at top of editor */
-  h1 {
-      color: #000 !important;
-      background: #fff !important;
-      border: 1px solid #ddd !important;
-      border-radius: 2px;
-      padding: 8px 12px !important;
-      font-size: 1.5rem !important;
-      font-weight: normal !important;
-  }
+h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
+	text-wrap: pretty;
+}
+
+/* Core block overrides */
+.no-flow-margin > * {
+	margin-block-start: 0 !important;
+	margin-block-end: 0 !important;
+}
+
+:root :where(.is-layout-flow) > p {
+	margin-block-start: 0.5rem;
+}
+
+.wp-block-button__link {
+	cursor: pointer !important;
 }
 
 .hideme {
-    display: none!important;
+	display: none !important;
+}
+
+.slider-controls {
+	display: none;
+}
+
+/* Editor canvas overrides */
+.editor-styles-wrapper {
+
+	.wp-block-post-title.editor-post-title {
+		font-size: 1.8rem;
+	}
+
+	/* Style the title input at top of editor */
+	h1 {
+		color: #000 !important;
+		background: #fff !important;
+		border: 1px solid #ddd !important;
+		border-radius: 2px;
+		padding: 8px 12px !important;
+		font-size: 1.5rem !important;
+		font-weight: normal !important;
+	}
 }

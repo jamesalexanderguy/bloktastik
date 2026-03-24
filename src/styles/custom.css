@@ -1,0 +1,350 @@
+/* =============================================================
+   custom.css — theme-wide styles
+   ============================================================= */
+
+html {
+	scroll-padding-top: 36px;
+	scroll-behavior: smooth;
+}
+
+main {
+	padding-bottom: 3rem;
+}
+
+.has-featured-image main {
+	padding-bottom: 0;
+}
+
+main a {
+	color: currentColor;
+	border-bottom: currentColor 1px dotted;
+}
+
+footer a {
+	border-bottom: currentColor 1px dotted;
+}
+
+main a:hover,
+footer a:hover {
+	border-bottom-style: solid;
+}
+
+main figure a {
+	border-bottom: none !important;
+}
+
+/* Client font — update this per project to match the font import in main.css */
+body {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.wysiwyg p {
+	font-size: 1.25rem;
+}
+
+/* =============================================================
+   Contact Form 7
+   ============================================================= */
+
+.wpcf7 input:not(.wpcf7-submit),
+.wpcf7 textarea {
+	background-color: #f5f5f5;
+	width: 100%;
+	padding: 1em;
+	border-radius: 0.3rem;
+	color: #444;
+	font-size: 0.8rem;
+	margin: 1em 0;
+}
+
+.wpcf7 input.wpcf7-submit {
+	padding: 0.25rem 0.75rem;
+}
+
+.contactButton {
+	margin-top: 1rem;
+}
+
+.wpcf7-spinner {
+	position: absolute;
+}
+
+/* =============================================================
+   Header
+   ============================================================= */
+
+header.wp-block-template-part {
+	max-width: 1280px;
+}
+
+header.wp-block-template-part .wp-block-navigation {
+	padding-top: 0.5rem;
+}
+
+.is-position-sticky {
+	z-index: 20 !important;
+}
+
+.logo img {
+	height: 4.5rem;
+}
+
+#site-header {
+	position: relative;
+	z-index: 11;
+}
+
+/* Style last nav item as a button — set colours per project */
+.wp-block-navigation__container > li:last-child > a {
+	background-color: var(--wp--preset--color--contrast);
+	color: var(--wp--preset--color--base) !important;
+	padding: 0.25rem 0.75rem !important;
+	border-radius: 0.375rem;
+	transition: all 0.3s ease;
+}
+
+.wp-block-navigation__container > li:last-child > a:hover {
+	transform: scale(1.05);
+}
+
+/* Hamburger breakpoint — show mobile menu below 1080px */
+@media (max-width: 1080px) {
+	.wp-block-navigation__responsive-container-open {
+		display: flex !important;
+	}
+	.wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+		display: none !important;
+	}
+}
+
+@media (min-width: 1081px) {
+	.wp-block-navigation__responsive-container-open {
+		display: none !important;
+	}
+	.wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
+		display: flex !important;
+	}
+}
+
+/* Logo inside nav modal overlay */
+.menu-modal-logo {
+	display: flex;
+	align-self: flex-start;
+	margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+	.menu-modal-logo {
+		display: none;
+	}
+}
+
+/* =============================================================
+   Hero banner
+   ============================================================= */
+
+#hero-banner .wp-block-cover {
+	padding-top: 5vh;
+	padding-bottom: 7vh;
+	margin-top: -5vh;
+	min-height: 55vh;
+}
+
+body:not(.home) #hero-banner .wp-block-cover {
+	padding-bottom: 0;
+}
+
+/* =============================================================
+   Footer
+   ============================================================= */
+
+footer.wp-block-template-part {
+	margin-block-start: 0 !important;
+}
+
+/* =============================================================
+   Sticky sidebar callout
+   ============================================================= */
+
+.sticky-callout {
+	position: sticky;
+	z-index: 10;
+	top: 2rem;
+	max-height: calc(100vh - 4rem);
+}
+
+.sticky-callout ul {
+	padding-left: 1.25rem !important;
+}
+
+@media (min-width: 782px) {
+	#quicklinks-dt .sticky-callout {
+		display: block;
+	}
+
+	.go-to-top {
+		display: none;
+	}
+}
+
+/* =============================================================
+   reCAPTCHA
+   ============================================================= */
+
+.grecaptcha-badge {
+	visibility: hidden !important;
+	position: relative;
+	z-index: -1;
+}
+
+/* =============================================================
+   Staff grid
+   ============================================================= */
+
+.staff-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 280px));
+	gap: 2rem;
+	justify-content: center;
+}
+
+.staff-grid .wp-block-group p {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+img.fallback-thumbnail {
+	border-radius: 9999px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* =============================================================
+   Accordion block
+   ============================================================= */
+
+.wp-block-accordion-item {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding-top: 1rem;
+}
+
+.wp-block-accordion-item:last-child {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding-bottom: 1rem;
+}
+
+.wp-block-accordion-heading__toggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 1rem 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.wp-block-accordion-heading__toggle-title {
+	color: currentColor;
+	font-weight: 600;
+	text-align: left;
+}
+
+.wp-block-accordion-heading__toggle-icon {
+	background-color: currentColor;
+	color: white;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	flex-shrink: 0;
+	transition: transform 0.3s ease;
+	margin-left: 3rem;
+	position: relative;
+	font-size: 0;
+}
+
+.wp-block-accordion-heading__toggle-icon::before {
+	font-size: 34px;
+}
+
+.wp-block-accordion-item > .wp-block-accordion-heading .wp-block-accordion-heading__toggle-icon {
+	transition: transform 0.4s ease;
+}
+
+.wp-block-accordion-item.is-open .wp-block-accordion-heading__toggle-icon::before {
+	content: '−';
+	position: absolute;
+}
+
+.wp-block-accordion-item:not(.is-open) .wp-block-accordion-heading__toggle-icon::before {
+	content: '+';
+	position: absolute;
+}
+
+.wp-block-accordion-item.is-open > .wp-block-accordion-heading .wp-block-accordion-heading__toggle-icon {
+	transform: rotate(180deg) !important;
+}
+
+.wp-block-accordion-item.is-open > .wp-block-accordion-heading .wp-block-accordion-heading__toggle-icon::before {
+	margin-top: -2px;
+}
+
+.wp-block-accordion-panel {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+	padding: 0;
+}
+
+.wp-block-accordion-item.is-open .wp-block-accordion-panel {
+	max-height: 3000px;
+	opacity: 1;
+	padding: 0.5rem 0 1rem 0;
+}
+
+.wp-block-accordion-panel[inert] {
+	display: block !important;
+	visibility: visible !important;
+}
+
+.wp-block-accordion-heading__toggle:hover .wp-block-accordion-heading__toggle-title {
+	opacity: 0.8;
+}
+
+/* =============================================================
+   Responsive utilities
+   ============================================================= */
+
+@media (max-width: 781px) {
+	.wp-block-column.middle-c {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.wp-block-media-text__content {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+@media (min-width: 600px) {
+	body .wp-block-media-text .wp-block-media-text__media img,
+	.wp-block-media-text .wp-block-media-text__media video {
+		margin-bottom: 0 !important;
+	}
+}
+
+@media (max-width: 350px) {
+	#hero-banner p.has-5-xl-font-size {
+		font-size: 2rem !important;
+	}
+}

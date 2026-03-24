@@ -1,0 +1,70 @@
+/* =============================================================
+   Main CSS — frontend entry point
+   Add client font import here and in editor.scss
+   ============================================================= */
+
+/* Client font — swap this per project */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import './custom.css';
+@import './core-blocks.css';
+
+/* =============================================================
+   Base resets
+   ============================================================= */
+
+/* Link underline style */
+a {
+	text-decoration-thickness: 1px !important;
+	text-underline-offset: .1em;
+}
+
+/* Focus styles */
+:where(.wp-site-blocks *:focus) {
+	outline-width: 2px;
+	outline-style: solid;
+}
+
+/* Nav submenu spacing so outline is visible */
+.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation-item:not(:last-child) {
+	margin-bottom: 3px;
+}
+
+/* Outline offset on parent nav items */
+.wp-block-navigation .wp-block-navigation-item .wp-block-navigation-item__content {
+	outline-offset: 4px;
+}
+
+/* No outline offset inside submenus */
+.wp-block-navigation .wp-block-navigation-item ul.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+	outline-offset: 0;
+}
+
+/* Reduce widows and orphans */
+h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
+	text-wrap: pretty;
+}
+
+/* More block as block-level element */
+.more-link {
+	display: block;
+}
+
+/* Media-text inner block spacing */
+.wp-block-media-text .wp-block-media-text__content p,
+.wp-block-media-text .wp-block-media-text__content ul,
+.wp-block-media-text .wp-block-media-text__content ol,
+.wp-block-media-text .wp-block-media-text__content h1,
+.wp-block-media-text .wp-block-media-text__content h2,
+.wp-block-media-text .wp-block-media-text__content h3,
+.wp-block-media-text .wp-block-media-text__content h4,
+.wp-block-media-text .wp-block-media-text__content h5,
+.wp-block-media-text .wp-block-media-text__content h6 {
+	margin-block-end: 1rem;
+}
+
+/* =============================================================
+   Theme styles
+   ============================================================= */
+
+
