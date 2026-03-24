@@ -2,7 +2,7 @@
 /**
  * Title: Staff Member
  * Slug: bloktastik/staff-member
- * Categories: bloktastik
+ * Categories: theforest
  * Description: Individual staff member card with circular featured image, name, and role.
  *              Used as the post content template for the Staff post type.
  * Keywords: staff, team, person, member

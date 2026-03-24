@@ -2,7 +2,7 @@
 /**
  * Title: CTA Button Group
  * Slug: bloktastik/cta-button
- * Categories: bloktastik
+ * Categories: theforest
  * Description: Centred call-to-action box with heading, body text, and a button.
  * Keywords: call-to-action, button, cta
  */

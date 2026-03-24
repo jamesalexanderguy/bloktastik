@@ -2,7 +2,7 @@
 /**
  * Title: Header
  * Slug: bloktastik/header
- * Categories: bloktastik
+ * Categories: theforest
  * Block Types: core/template-part/header
  * Description: Site header with logo and navigation.
  *

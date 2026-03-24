@@ -2,7 +2,7 @@
 /**
  * Title: Inner Quote
  * Slug: bloktastik/inner-quote
- * Categories: bloktastik
+ * Categories: theforest
  * Description: A single testimonial quote slide. Stack multiples inside a slider or group.
  * Keywords: testimonial, quote, review
  */

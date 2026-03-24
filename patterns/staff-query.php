@@ -2,7 +2,7 @@
 /**
  * Title: Staff Query
  * Slug: bloktastik/staff-query
- * Categories: bloktastik
+ * Categories: theforest
  * Description: Alphabetical grid of all staff members using the Staff post type.
  * Keywords: team, staff, people, grid
  */

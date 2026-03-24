@@ -2,7 +2,7 @@
 /**
  * Title: 404 Content
  * Slug: bloktastik/404-content
- * Categories: bloktastik
+ * Categories: theforest
  * Description: 404 error page content with heading and link back home.
  * Keywords: 404, error, not found
  */

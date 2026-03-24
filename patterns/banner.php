@@ -2,7 +2,7 @@
 /**
  * Title: Banner
  * Slug: bloktastik/banner
- * Categories: bloktastik
+ * Categories: theforest
  * Description: Full-width hero banner with featured image, post title, and intro blurb.
  * Keywords: banner, hero, title
  */

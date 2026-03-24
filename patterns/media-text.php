@@ -2,7 +2,7 @@
 /**
  * Title: Media-text
  * Slug: bloktastik/media-text
- * Categories: bloktastik
+ * Categories: theforest
  * Description: Standard image-right, text-left media text pattern.
  * Keywords: image, text, media
  */

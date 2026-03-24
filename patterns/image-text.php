@@ -2,7 +2,7 @@
 /**
  * Title: Image-textbox
  * Slug: bloktastik/image-text
- * Categories: bloktastik
+ * Categories: theforest
  * Description: Media-text block with an image and a bordered text box.
  * Keywords: image, text, media
  */

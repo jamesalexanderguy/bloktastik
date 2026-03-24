@@ -2,7 +2,7 @@
 /**
  * Title: Double column text box
  * Slug: bloktastik/dble-textbox
- * Categories: bloktastik
+ * Categories: theforest
  * Description: Two-column text box with headings and bordered container.
  * Keywords: text, textbox, double, columns
  */

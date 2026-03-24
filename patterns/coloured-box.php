@@ -2,7 +2,7 @@
 /**
  * Title: Coloured box
  * Slug: bloktastik/coloured-box
- * Categories: bloktastik
+ * Categories: theforest
  * Description: Callout text box with border. Set background and border colours per project.
  * Keywords: callout, box, text-box, border
  */

@@ -2,7 +2,7 @@
 /**
  * Title: Footer
  * Slug: bloktastik/footer
- * Categories: bloktastik
+ * Categories: theforest
  * Block Types: core/template-part/footer
  * Description: Site footer with logo, navigation, and copyright line.
  *

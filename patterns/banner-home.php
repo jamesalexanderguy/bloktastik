@@ -2,7 +2,7 @@
 /**
  * Title: Home Hero Banner
  * Slug: bloktastik/banner-home
- * Categories: bloktastik
+ * Categories: theforest
  * Description: Full-width hero banner with featured image overlay and a CTA booking box below.
  * Keywords: banner, hero, home
  */
