@@ -22,12 +22,23 @@ add_action( 'after_setup_theme', 'bloktastik_editor_style' );
  */
 if ( ! function_exists( 'bloktastik_frontend_assets' ) ) :
 	function bloktastik_frontend_assets() {
+
+		$theme_version = wp_get_theme()->get( 'Version' );
+
+		$css_version = defined( 'WP_DEBUG' ) && WP_DEBUG
+			? filemtime( get_template_directory() . '/build/styles/main.css' )
+			: $theme_version;
+
+		$js_version = defined( 'WP_DEBUG' ) && WP_DEBUG
+			? filemtime( get_template_directory() . '/build/scripts/main.js' )
+			: $theme_version;
+
 		// Frontend styles
 		wp_enqueue_style(
 			'bloktastik-styles',
 			get_template_directory_uri() . '/build/styles/main.css',
 			array(),
-			wp_get_theme()->get( 'Version' )
+			$css_version
 		);
 
 		// Main JavaScript
@@ -35,7 +46,7 @@ if ( ! function_exists( 'bloktastik_frontend_assets' ) ) :
 			'bloktastik-scripts',
 			get_template_directory_uri() . '/build/scripts/main.js',
 			array(),
-			wp_get_theme()->get( 'Version' ),
+			$js_version,
 			true
 		);
 	}
