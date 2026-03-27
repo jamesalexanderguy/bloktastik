@@ -12,5 +12,6 @@ module.exports = {
 		// Scripts
 		'scripts/main': path.resolve(process.cwd(), 'src/scripts/main.js'),
 		'scripts/block-mods': path.resolve(process.cwd(), 'src/scripts/block-mods.js'),
+		'scripts/projects': path.resolve(process.cwd(), 'src/scripts/projects.js'),
 	},
 };

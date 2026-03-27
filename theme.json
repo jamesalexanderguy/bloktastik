@@ -585,7 +585,7 @@
 			},
 			"core/image": {
 				"border": {
-					"radius": "0.75rem"
+					"radius": "1.5rem"
 				}
 			},
 			"core/media-text": {

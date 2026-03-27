@@ -1,0 +1,206 @@
+/* =============================================================
+   Nav Secondary — filter menu (shared with any .nav-secondary)
+   ============================================================= */
+
+.nav-secondary {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    margin-block-end: var(--wp--style--root--padding-right);
+}
+
+.nav-secondary__label {
+    font-family: var(--wp--preset--font-family--heading-font);
+    font-weight: 700;
+    font-size: var(--wp--preset--font-size--base);
+    color: var(--wp--preset--color--dark-teal);
+    white-space: nowrap;
+    margin-inline-end: 0.5rem;
+}
+
+.project-filter-btn {
+    appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 1.5px solid transparent;
+    padding: 0.15rem 0;
+    cursor: pointer;
+    font-family: var(--wp--preset--font-family--body-font);
+    font-size: var(--wp--preset--font-size--base);
+    color: var(--wp--preset--color--dark-teal);
+    transition: color 0.2s ease, border-color 0.2s ease;
+    line-height: 1.4;
+}
+
+.project-filter-btn:hover {
+    color: var(--wp--preset--color--muted-teal);
+    border-bottom-color: transparent;
+}
+
+.project-filter-btn:focus {
+    outline: none;
+}
+
+.project-filter-btn.is-active {
+    color: var(--wp--preset--color--dark-teal);
+    border-bottom-color: var(--wp--preset--color--sage-gray);
+}
+
+
+/* =============================================================
+   Project Grid — layout
+   ============================================================= */
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wp--style--root--padding-right);
+    container-type: inline-size;
+}
+
+.project-grid.is-loading {
+    opacity: 0.4;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.project-row--pair {
+    display: grid;
+    grid-template-columns: 65fr 35fr;
+    gap: var(--wp--style--root--padding-right);
+    align-items: start;
+}
+
+.project-row--pair-reversed {
+    grid-template-columns: 35fr 65fr;
+}
+
+.project-row--full {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* =============================================================
+   Project Card
+   ============================================================= */
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card__link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card__image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Large card — 3/2 landscape drives row height */
+.project-card--large .project-card__image {
+    aspect-ratio: 3 / 2;
+}
+
+/* Medium card — portrait ratio calculated to match large card height at 35fr width */
+.project-card--medium .project-card__image {
+    aspect-ratio: 21 / 26;
+}
+
+/* Full width row — calc matches large card height exactly */
+.project-row--full .project-card__image {
+    height: calc((100cqi - clamp(30px, 5vw, 50px)) * 65 / 100 * 2 / 3);
+}
+
+.project-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Overlay */
+.project-card__image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--wp--preset--color--cool-gray);
+    opacity: 0.3;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+
+/* =============================================================
+   Project Card — meta
+   ============================================================= */
+
+.project-card__meta {
+    padding-block-start: 1rem;
+}
+
+.project-card__title {
+    font-family: var(--wp--preset--font-family--heading-font);
+    font-size: var(--wp--preset--font-size--2xl);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--wp--preset--color--contrast);
+    margin: 0 0 0.5rem;
+}
+
+.project-card__sep {
+    height: 1.5px;
+    background-color: var(--wp--preset--color--sage-gray);
+    width: 40px;
+    margin: 0 0 0.5rem;
+    border: none;
+    transition: width 0.35s ease;
+}
+
+.project-card__cats {
+    font-size: var(--wp--preset--font-size--sm);
+    color: var(--wp--preset--color--muted-teal);
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+/* =============================================================
+   Hover states
+   ============================================================= */
+
+.project-card__link:hover .project-card__image img {
+    transform: scale(1.02);
+}
+
+.project-card__link:hover .project-card__sep {
+    width: 100%;
+}
+
+
+/* =============================================================
+   Responsive
+   ============================================================= */
+
+@media ( max-width: 640px ) {
+
+    .project-row--pair {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-secondary {
+        gap: 0.5rem 1rem;
+    }
+
+}

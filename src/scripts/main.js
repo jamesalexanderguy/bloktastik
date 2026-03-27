@@ -1,69 +1,86 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Add any initialization code here as needed
     // docking sticky menus
-    (function () {
-        const nav1 = document.querySelector('.nav-primary');
-        const nav2 = document.querySelector('.nav-secondary');
-        if (!nav1 || !nav2) return;
+(function () {
+  const nav1 = document.querySelector('.nav-primary');
+  const nav2 = document.querySelector('.nav-secondary');
+  if (!nav1 || !nav2) return;
 
-        let nav1H, nav2H, nav2NaturalTop, lastScrollY;
-        let shim;
+  let nav1H, nav2NaturalTop, lastScrollY, shim;
+  let offset = 0;
+  let targetOffset = 0;
+  let rafId, snapTimer;
+  const LERP = 0.18; // 0–1, lower = smoother/slower
 
-        function measure() {
-            nav1.style.cssText = '';
-            nav2.style.cssText = '';
-            if (shim) shim.style.height = '0';
+  function setup() {
+    shim = document.createElement('div');
+    nav1.insertAdjacentElement('afterend', shim);
+  }
 
-            nav1H            = nav1.offsetHeight;
-            nav2H            = nav2.offsetHeight;
-            nav2NaturalTop   = nav2.getBoundingClientRect().top + window.scrollY;
-        }
+  function measure() {
+    nav1.style.top = '0';
+    nav1H = nav1.offsetHeight;
+    shim.style.height = nav1H + 'px';
+    nav2NaturalTop = nav2.getBoundingClientRect().top + window.scrollY;
+  }
 
-        function update() {
-            const scrollY  = window.scrollY;
-            const goingUp  = scrollY < lastScrollY;
-            lastScrollY    = scrollY;
+  function applyStyles() {
+    nav1.style.top = `-${offset}px`;
+    nav2.style.top = `${nav1H - offset}px`;
+  }
 
-            const pushStart = nav2NaturalTop - nav1H;
+  function animate() {
+    const diff = targetOffset - offset;
+    if (Math.abs(diff) < 0.5) {
+      offset = targetOffset;
+      applyStyles();
+      return;
+    }
+    offset += diff * LERP;
+    applyStyles();
+    rafId = requestAnimationFrame(animate);
+  }
 
-            if (scrollY <= pushStart) {
-            // ── A: Both in normal flow ──────────────────────────────
-            nav1.style.cssText = 'position:sticky;top:0;';
-            nav2.style.cssText = '';
-            shim.style.height  = '0';
+  function scheduleSnap() {
+    clearTimeout(snapTimer);
+    snapTimer = setTimeout(() => {
+      // snap to nearest boundary
+      targetOffset = offset < nav1H / 2 ? 0 : nav1H;
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(animate);
+    }, 100);
+  }
 
-            } else if (scrollY < nav2NaturalTop) {
-            // ── B: Push zone — nav1 sliding out ────────────────────
-            const push = scrollY - pushStart;
-            nav1.style.cssText = `position:sticky;top:0;transform:translateY(-${push}px);`;
-            nav2.style.cssText = '';
-            shim.style.height  = '0';
+  function update() {
+    const scrollY = window.scrollY;
+    const delta   = lastScrollY - scrollY;
+    lastScrollY   = scrollY;
 
-            } else {
-            // ── C/D: nav2 has fully taken over ─────────────────────
-            shim.style.height        = nav2H + 'px';
-            nav2.style.cssText       = `position:fixed;top:0;width:100%;z-index:200;`;
+    const trigger = nav2NaturalTop - nav1H;
 
-            if (goingUp) {
-                // D: Both visible, stacked
-                nav1.style.cssText     = `position:fixed;top:0;width:100%;z-index:100;`;
-                nav2.style.top         = nav1H + 'px';
-            } else {
-                // C: nav1 hidden above, nav2 at top
-                nav1.style.cssText     = `position:fixed;top:0;width:100%;z-index:100;transform:translateY(-${nav1H}px);pointer-events:none;`;
-            }
-            }
-        }
+    if (scrollY <= trigger) {
+      targetOffset = 0;
+    } else {
+      targetOffset = Math.min(Math.max(targetOffset - delta, 0), nav1H);
+    }
 
-        window.addEventListener('load', () => {
-            shim = document.createElement('div');
-            nav2.insertAdjacentElement('afterend', shim);
-            measure();
-            lastScrollY = window.scrollY;
-            update();
-        });
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(animate);
+    scheduleSnap();
+  }
 
-        window.addEventListener('scroll', update, { passive: true });
-        window.addEventListener('resize', () => { measure(); lastScrollY = window.scrollY; update(); }, { passive: true });
-    })();
+  window.addEventListener('load', () => {
+    setup();
+    measure();
+    lastScrollY = window.scrollY;
+    update();
+  });
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', () => {
+    measure();
+    lastScrollY = window.scrollY;
+    update();
+  }, { passive: true });
+})();
 });

@@ -1,7 +1,12 @@
 /* =============================================================
    custom.css
    ============================================================= */
- 
+
+:root {
+  --header-height: 102px; /* or measure dynamically */
+}
+
+
 /* ============================================================
    FONT RENDERING
    Improves rendering of both fonts on screen.
@@ -75,27 +80,28 @@ html {
 
 main {
 	padding-bottom: 3rem;
+	margin-top: var(--header-height)!important;
 }
 
 .has-featured-image main {
 	padding-bottom: 0;
 }
 
-main a {
+main a:not([class]) {
 	color: currentColor;
 	border-bottom: currentColor 1px dotted;
 }
 
-footer a {
+footer a:not([class]) {
 	border-bottom: currentColor 1px dotted;
 }
 
-main a:hover,
-footer a:hover {
+main a:not([class]):hover,
+footer a:not([class]):hover {
 	border-bottom-style: solid;
 }
 
-main figure a {
+main figure a:not([class]) {
 	border-bottom: none !important;
 }
 
@@ -155,6 +161,14 @@ header.wp-block-template-part .wp-block-navigation {
 	z-index: 11;
 }
 
+html {
+  scroll-padding-top: var(--header-height);
+}
+
+* {
+  scroll-margin-top: var(--header-height);
+}
+
 /* Hamburger breakpoint — show mobile menu below 1080px */
 @media (max-width: 1080px) {
 	.wp-block-navigation__responsive-container-open {
@@ -211,25 +225,35 @@ footer.wp-block-template-part {
 }
 
 /* =============================================================
+   Footer Fir treee border
+   ============================================================= */
+
+.fir-tree-border {
+  background-image: url('../assets/images/theforest-footer-trees.svg');
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: auto 110px; 
+  height: 110px;              
+  min-height: 0 !important;  
+  padding: 0 !important;
+}
+
+/* =============================================================
    Sticky docking menus
    ============================================================= */
 
 .nav-primary {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 100;
-  /* Smooth the push — remove if you want an instant snap */
-  transition: transform 0.08s linear;
-  /* Keeps it above page content during the slide */
-  will-change: transform;
 }
-/* test */
-.wp-block-navigation-item__label {color: blue!important;}
 
 .nav-secondary {
-  z-index: 200; /* sits above nav1 during the crossover */
+  position: sticky;
+  top: 0;
+  z-index: 200;
 }
-
 
 /* =============================================================
    Sticky sidebar callout
