@@ -14,6 +14,7 @@
     const el = wp.element.createElement;
 
     registerBlockType( 'theme/project-featured', {
+        apiVersion: 3,
 
         title:    'Project Featured',
         icon:     'star-filled',

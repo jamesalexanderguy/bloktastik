@@ -188,6 +188,95 @@
     width: 100%;
 }
 
+/* =============================================================
+   Project Navigation — previous / next cards
+   ============================================================= */
+ 
+.project-navigation {
+    display: flex;
+    justify-content: center;
+    gap: var(--wp--style--root--padding-right);
+}
+ 
+.project-navigation__spacer {
+    width: 300px;
+    flex-shrink: 0;
+}
+ 
+.project-nav-card {
+    width: 300px;
+    flex-shrink: 0;
+}
+ 
+.project-nav-card__link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.project-nav-card__image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+}
+ 
+.project-nav-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+ 
+.project-nav-card__image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--wp--preset--color--cool-gray);
+    opacity: 0.3;
+    border-radius: inherit;
+    pointer-events: none;
+}
+ 
+.project-nav-card__meta {
+    padding-block-start: 1rem;
+}
+ 
+.project-nav-card__label {
+    font-size: var(--wp--preset--font-size--xs);
+    color: var(--wp--preset--color--muted-teal);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.25rem;
+}
+ 
+.project-nav-card__title {
+    font-family: var(--wp--preset--font-family--heading-font);
+    font-size: var(--wp--preset--font-size--xl);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--wp--preset--color--contrast);
+    margin: 0 0 0.5rem;
+}
+ 
+.project-nav-card__sep {
+    height: 1.5px;
+    background-color: var(--wp--preset--color--sage-gray);
+    width: 40px;
+    border: none;
+    transition: width 0.35s ease;
+}
+ 
+.project-nav-card__link:hover .project-nav-card__image img {
+    transform: scale(1.02);
+}
+ 
+.project-nav-card__link:hover .project-nav-card__sep {
+    width: 100%;
+}
 
 /* =============================================================
    Responsive
@@ -201,6 +290,22 @@
 
     .nav-secondary {
         gap: 0.5rem 1rem;
+    }
+
+    /* prev/next navigation */
+
+        .project-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .project-navigation__spacer {
+        display: none;
+    }
+ 
+    .project-nav-card {
+        width: 100%;
+        max-width: 300px;
     }
 
 }

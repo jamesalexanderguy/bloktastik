@@ -14,8 +14,5 @@ require_once get_template_directory() . '/inc/block-styles.php';
 // Formats, block binding etc
 require_once get_template_directory() . '/inc/setup.php';
 
-// Custom post types
-require_once get_template_directory() . '/inc/post-types.php';
-
 // Project grids
 require_once get_template_directory() . '/inc/projects.php';

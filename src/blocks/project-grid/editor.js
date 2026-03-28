@@ -13,6 +13,7 @@
     const el = wp.element.createElement;
 
     registerBlockType( 'theme/project-grid', {
+        apiVersion: 3,
 
         title:    'Project Grid',
         icon:     'grid-view',

@@ -81,6 +81,11 @@ add_action( 'init', function () {
         ],
     ]);
 
+    // — project-navigation: previous/next project cards —
+    register_block_type( 'theme/project-navigation', [
+        'render_callback' => 'project_navigation_render',
+    ]);
+
 });
 
 
@@ -168,6 +173,55 @@ function project_featured_render( array $attributes ): string {
     project_render_grid( $post_ids, $cat_slug );
     echo '</div>';
     return ob_get_clean();
+}
+
+function project_navigation_render( array $attributes ): string {
+
+    $prev = get_adjacent_post( false, '', true );
+    $next = get_adjacent_post( false, '', false );
+
+    if ( ! $prev && ! $next ) return '';
+
+    ob_start();
+    ?>
+    <nav class="project-navigation" aria-label="Project navigation">
+        <?php if ( $prev ) : ?>
+            <?php project_navigation_card( $prev ); ?>
+        <?php else : ?>
+            <div class="project-navigation__spacer"></div>
+        <?php endif; ?>
+        <?php if ( $next ) : ?>
+            <?php project_navigation_card( $next ); ?>
+        <?php else : ?>
+            <div class="project-navigation__spacer"></div>
+        <?php endif; ?>
+    </nav>
+    <?php
+    return ob_get_clean();
+}
+
+function project_navigation_card( WP_Post $post ): void {
+
+    $url     = get_permalink( $post );
+    $title   = get_the_title( $post );
+    $img_id  = get_post_thumbnail_id( $post->ID );
+    $img_url = $img_id ? wp_get_attachment_image_url( $img_id, 'large' ) : '';
+
+    ?>
+    <article class="project-nav-card">
+        <a class="project-nav-card__link" href="<?= esc_url( $url ) ?>">
+            <?php if ( $img_url ) : ?>
+                <div class="project-nav-card__image">
+                    <img src="<?= esc_url( $img_url ) ?>" alt="<?= esc_attr( $title ) ?>" loading="lazy">
+                </div>
+            <?php endif; ?>
+            <div class="project-nav-card__meta">
+                <h3 class="project-nav-card__title"><?= esc_html( $title ) ?></h3>
+                <div class="project-nav-card__sep" aria-hidden="true"></div>
+            </div>
+        </a>
+    </article>
+    <?php
 }
 
 
