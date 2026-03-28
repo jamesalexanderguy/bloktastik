@@ -125,6 +125,7 @@ function project_grid_render( array $attributes ): string {
         'hide_empty' => true,
         'orderby'    => 'name',
         'order'      => 'ASC',
+        'exclude' => [ 10 ],
     ]);
 
     // Enqueue front-end JS only on pages that contain this block
@@ -326,7 +327,7 @@ function project_render_card( array $card ): void {
     // Get category names (not linked)
     $terms     = get_the_terms( $post->ID, 'project_category' );
     $cat_names = ( $terms && ! is_wp_error( $terms ) )
-        ? implode( ' &bull; ', array_map( fn( $t ) => esc_html( $t->name ), $terms ) )
+        ? implode( ' &bull; ', array_map( fn( $t ) => esc_html( $t->name ), array_filter( $terms, fn( $t ) => $t->slug !== 'featured' ) ) )
         : '';
 
     $image_html = $img_url ? sprintf(
