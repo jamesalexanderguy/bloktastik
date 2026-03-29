@@ -157,3 +157,25 @@ add_filter( 'render_block', function( $block_content, $block ) {
 
 	return $block_content;
 }, 10, 2 );
+
+// page color meta field for editor and frontend
+add_action( 'init', function() {
+    foreach ( array( 'page', 'project' ) as $post_type ) {
+        register_post_meta( $post_type, '_page_color', [
+            'show_in_rest'  => true,
+            'single'        => true,
+            'type'          => 'string',
+            'default'       => '#ffffff',
+            'auth_callback' => function() {
+                return current_user_can( 'edit_posts' );
+            },
+        ] );
+        add_post_type_support( $post_type, 'custom-fields' );
+    }
+}, 20 );
+
+add_action( 'wp_head', function() {
+    if ( ! is_singular( array( 'page', 'project' ) ) ) return;
+    $color = get_post_meta( get_the_ID(), '_page_color', true ) ?: '#ffffff';
+    printf( '<style>body{--page-color:%s}</style>', esc_attr( $color ) );
+} );

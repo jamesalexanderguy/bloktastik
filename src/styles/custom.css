@@ -78,6 +78,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+body {
+	background-color: var(--page-color, #ffffff);
+}
+
 main {
 	padding-bottom: 3rem;
 	margin-top: var(--header-height)!important;
@@ -141,7 +145,8 @@ main figure a:not([class]) {
    ============================================================= */
 
 header.wp-block-template-part {
-	max-width: 1280px;
+	/* max-width: 1280px; */
+	background-color: var(--page-color, #ffffff);
 }
 
 header.wp-block-template-part .wp-block-navigation {
@@ -247,12 +252,14 @@ footer.wp-block-template-part {
   top: 0;
   width: 100%;
   z-index: 100;
+
 }
 
 .nav-secondary {
   position: sticky;
   top: 0;
   z-index: 200;
+  background-color: var(--page-color, #ffffff);
 }
 
 /* =============================================================

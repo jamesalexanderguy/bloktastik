@@ -3,17 +3,19 @@
    ============================================================= */
 
 .nav-secondary {
-    display: flex;
     align-items: baseline;
+    justify-content: center;
+    padding: 1.5rem 0.5rem;
+    display: flex;
     flex-wrap: wrap;
-    gap: 0.25rem 1.5rem;
-    margin-block-end: var(--wp--style--root--padding-right);
+    gap: .25rem 1.5rem;
+    margin-block-end: 0;
 }
 
 .nav-secondary__label {
     font-family: var(--wp--preset--font-family--heading-font);
     font-weight: 700;
-    font-size: var(--wp--preset--font-size--base);
+    font-size: var(--wp--preset--font-size--xl);
     color: var(--wp--preset--color--dark-teal);
     white-space: nowrap;
     margin-inline-end: 0.5rem;
@@ -27,7 +29,7 @@
     padding: 0.15rem 0;
     cursor: pointer;
     font-family: var(--wp--preset--font-family--body-font);
-    font-size: var(--wp--preset--font-size--base);
+    font-size: var(--wp--preset--font-size--xl);
     color: var(--wp--preset--color--dark-teal);
     transition: color 0.2s ease, border-color 0.2s ease;
     line-height: 1.4;
@@ -57,6 +59,7 @@
     flex-direction: column;
     gap: var(--wp--style--root--padding-right);
     container-type: inline-size;
+    margin-top: 0;
 }
 
 .project-grid.is-loading {
@@ -276,6 +279,38 @@
  
 .project-nav-card__link:hover .project-nav-card__sep {
     width: 100%;
+}
+
+/* =============================================================
+   Project Meta — single post scope + tags
+   ============================================================= */
+
+.project-meta__sep {
+    height: 1.5px;
+    background-color: var(--wp--preset--color--sage-gray);
+    width: 20%;
+    margin: 0 0 1rem;
+    border: none;
+}
+
+.project-meta__scope,
+.project-meta__tags {
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+}
+
+.project-meta__scope {
+    font-size: var(--wp--preset--font-size--lg);
+}
+
+.project-meta__tags {
+    font-style: italic;
+    color: var(--wp--preset--color--sage-gray);
+    font-size: var(--wp--preset--font-size--lg);
+}
+
+.project-meta__label {
+    font-weight: 600;
 }
 
 /* =============================================================

@@ -59,6 +59,32 @@ add_action( 'init', function () {
 
 
 // ─────────────────────────────────────────────
+// 2B. REGISTER TAXONOMY: project_tag
+// ─────────────────────────────────────────────
+
+add_action( 'init', function () {
+
+    register_taxonomy( 'project_tag', 'project', [
+        'labels' => [
+            'name'          => 'Project Tags',
+            'singular_name' => 'Project Tag',
+            'add_new_item'  => 'Add New Tag',
+            'edit_item'     => 'Edit Tag',
+            'search_items'  => 'Search Tags',
+            'not_found'     => 'No tags found.',
+            'menu_name'     => 'Tags',
+        ],
+        'public'            => true,
+        'hierarchical'      => false,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'rewrite'           => [ 'slug' => 'project-tag' ],
+    ]);
+
+});
+
+
+// ─────────────────────────────────────────────
 // 3. REGISTER BLOCKS
 // ─────────────────────────────────────────────
 
@@ -84,6 +110,11 @@ add_action( 'init', function () {
     // — project-navigation: previous/next project cards —
     register_block_type( 'theme/project-navigation', [
         'render_callback' => 'project_navigation_render',
+    ]);
+
+    // — project-meta: scope categories + tags for single post —
+    register_block_type( 'theme/project-meta', [
+        'render_callback' => 'project_meta_render',
     ]);
 
 });
@@ -130,7 +161,7 @@ function project_grid_render( array $attributes ): string {
         'hide_empty' => true,
         'orderby'    => 'name',
         'order'      => 'ASC',
-        'exclude' => [ 10 ],
+        'exclude'    => [ 10 ],
     ]);
 
     // Enqueue front-end JS only on pages that contain this block
@@ -222,6 +253,47 @@ function project_navigation_card( WP_Post $post ): void {
         </a>
     </article>
     <?php
+}
+
+function project_meta_render( array $attributes ): string {
+
+    $post_id = get_the_ID();
+    if ( ! $post_id ) return '';
+
+    // Categories — excluding Featured (term ID 10)
+    $cat_terms = get_the_terms( $post_id, 'project_category' );
+    $cats      = ( $cat_terms && ! is_wp_error( $cat_terms ) )
+        ? implode( ' &bull; ', array_map(
+            fn( $t ) => esc_html( $t->name ),
+            array_filter( $cat_terms, fn( $t ) => $t->slug !== 'featured' )
+          ) )
+        : '';
+
+    // Tags
+    $tag_terms = get_the_terms( $post_id, 'project_tag' );
+    $tags      = ( $tag_terms && ! is_wp_error( $tag_terms ) )
+        ? implode( ' &bull; ', array_map( fn( $t ) => esc_html( $t->name ), $tag_terms ) )
+        : '';
+
+    if ( ! $cats && ! $tags ) return '';
+
+    ob_start();
+    ?>
+    <div class="project-meta">
+        <div class="project-meta__sep" aria-hidden="true"></div>
+        <?php if ( $cats ) : ?>
+            <p class="project-meta__scope">
+                <span class="project-meta__label">Scope:</span> <?= $cats ?>
+            </p>
+        <?php endif; ?>
+        <?php if ( $tags ) : ?>
+            <p class="project-meta__tags">
+                <span class="project-meta__label">Project elements included:</span> <?= $tags ?>
+            </p>
+        <?php endif; ?>
+    </div>
+    <?php
+    return ob_get_clean();
 }
 
 

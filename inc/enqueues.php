@@ -76,6 +76,11 @@ add_action( 'enqueue_block_editor_assets', 'bloktastik_enqueue_blocks_bundle' );
  */
 if ( ! function_exists( 'bloktastik_block_mods' ) ) :
 	function bloktastik_block_mods() {
+
+		$version = defined( 'WP_DEBUG' ) && WP_DEBUG
+			? filemtime( get_template_directory() . '/build/scripts/block-mods.js' )
+			: wp_get_theme()->get( 'Version' );
+
 		wp_enqueue_script(
 			'bloktastik-block-mods',
 			get_template_directory_uri() . '/build/scripts/block-mods.js',
@@ -89,8 +94,9 @@ if ( ! function_exists( 'bloktastik_block_mods' ) ) :
 				'wp-dom-ready',
 				'wp-block-editor',
 				'wp-compose',
+				'wp-core-data',
 			),
-			wp_get_theme()->get( 'Version' ),
+			$version,
 			true
 		);
 	}
