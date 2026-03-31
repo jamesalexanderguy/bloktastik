@@ -629,6 +629,11 @@
 				},
 				"typography": {
 					"fontSize": "clamp(0.95rem, 0.95rem + ((1vw - 0.2rem) * 0.278), 1.1rem)"
+				},
+				"link": {
+					"typography": {
+					"textDecoration": "none"
+					}
 				}
 			},
 			"caption": {

@@ -3,14 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // docking sticky menus
 (function () {
   const nav1 = document.querySelector('.nav-primary');
+  const nav1Inner = document.querySelector('.nav-primary-inner');
   const nav2 = document.querySelector('.nav-secondary');
-  if (!nav1 || !nav2) return;
+  const curtain = document.querySelector('.primary-curtain');
+  if (!nav1 || !nav1Inner || !nav2) return;
 
-  let nav1H, nav2NaturalTop, lastScrollY, shim;
+  let nav1H, nav2NaturalTop, lastScrollY, shim, trigger;
   let offset = 0;
   let targetOffset = 0;
   let rafId, snapTimer;
-  const LERP = 0.18; // 0–1, lower = smoother/slower
+  const LERP = 0.18;
 
   function setup() {
     shim = document.createElement('div');
@@ -18,15 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function measure() {
+    nav1Inner.style.transform = '';
     nav1.style.top = '0';
     nav1H = nav1.offsetHeight;
     shim.style.height = nav1H + 'px';
     nav2NaturalTop = nav2.getBoundingClientRect().top + window.scrollY;
+    trigger = nav2NaturalTop - nav1H;
   }
 
   function applyStyles() {
     nav1.style.top = `-${offset}px`;
+    nav1Inner.style.transform = `translateY(-${offset}px)`;
     nav2.style.top = `${nav1H - offset}px`;
+    if (curtain) {
+      const approach = Math.min(Math.max(window.scrollY / trigger, 0), 1);
+      curtain.style.transform = `translateY(${nav1H - offset}px)`;
+      curtain.style.height = `${50 + approach * 50}px`;
+    }
   }
 
   function animate() {
@@ -44,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function scheduleSnap() {
     clearTimeout(snapTimer);
     snapTimer = setTimeout(() => {
-      // snap to nearest boundary
       targetOffset = offset < nav1H / 2 ? 0 : nav1H;
       cancelAnimationFrame(rafId);
       rafId = requestAnimationFrame(animate);
@@ -56,14 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const delta   = lastScrollY - scrollY;
     lastScrollY   = scrollY;
 
-    const trigger = nav2NaturalTop - nav1H;
-
     if (scrollY <= trigger) {
       targetOffset = 0;
-    } else {
-      targetOffset = Math.min(Math.max(targetOffset - delta, 0), nav1H);
+      nav1.style.top = '0';
+      if (curtain) {
+        const approach = Math.min(Math.max(scrollY / trigger, 0), 1);
+        curtain.style.transform = `translateY(${nav1H}px)`;
+        curtain.style.height = `${50 + approach * 50}px`;
+      }
+      return;
     }
 
+    targetOffset = Math.min(Math.max(targetOffset - delta, 0), nav1H);
     cancelAnimationFrame(rafId);
     rafId = requestAnimationFrame(animate);
     scheduleSnap();

@@ -1,6 +1,9 @@
 /* =============================================================
    core-blocks.css — core block overrides and utilities
    ============================================================= */
+a:where(:not(.wp-element-button)) {
+    text-decoration: none;
+}
 
 .no-flow-margin > * {
 	margin-block-start: 0 !important;
