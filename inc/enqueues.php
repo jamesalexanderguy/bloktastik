@@ -10,12 +10,19 @@
  */
 if ( ! function_exists( 'bloktastik_editor_style' ) ) :
 	function bloktastik_editor_style() {
-		add_editor_style( array(
-			'build/styles/editor.css',
-		) );
+		$version = defined( 'WP_DEBUG' ) && WP_DEBUG
+			? filemtime( get_template_directory() . '/build/styles/editor.css' )
+			: wp_get_theme()->get( 'Version' );
+
+		wp_enqueue_style(
+			'bloktastik-editor-styles',
+			get_template_directory_uri() . '/build/styles/editor.css',
+			array(),
+			$version
+		);
 	}
 endif;
-add_action( 'after_setup_theme', 'bloktastik_editor_style' );
+add_action( 'enqueue_block_assets', 'bloktastik_editor_style' );
 
 /**
  * Enqueue frontend assets.
@@ -102,3 +109,15 @@ if ( ! function_exists( 'bloktastik_block_mods' ) ) :
 	}
 endif;
 add_action( 'enqueue_block_editor_assets', 'bloktastik_block_mods' );
+
+add_action( 'enqueue_block_assets', function() {
+    if ( ! is_admin() ) return;
+    $post_id = isset( $_GET['post'] ) ? intval( $_GET['post'] ) : 0;
+    if ( ! $post_id ) return;
+    $color = get_post_meta( $post_id, '_page_color', true ) ?: '#ffffff';
+    wp_add_inline_style(
+        'bloktastik-editor-styles',
+        ':root { --page-color: ' . esc_attr( $color ) . '; }
+        .editor-styles-wrapper { background-color: var(--page-color); }'
+    );
+} );

@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 	text-wrap: pretty;
 }
 
+/* Set the editor background to match the front-end page background */
+.editor-styles-wrapper {
+    background-color: var(--page-color, #ffffff) !important;
+}
+
 /* Core block overrides */
 .no-flow-margin > * {
 	margin-block-start: 0 !important;

@@ -83,4 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
     update();
   }, { passive: true });
 })();
+
+document.addEventListener('wpcf7mailsent', function (event) {
+  var wrapper = event.target.closest('.wpcf7');
+  var output = wrapper.querySelector('.wpcf7-response-output');
+  output.innerHTML = '<h2>Thanks for sending a message.</h2><p>I\'ll be in touch soon.</p>';
+  wrapper.classList.add('sent');
+}, false);
+
+
 });

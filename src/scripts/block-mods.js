@@ -21,8 +21,8 @@ wp.domReady(() => {
 const { registerPlugin } = wp.plugins;
 const { PluginDocumentSettingPanel } = wp.editor;
 const { PanelColorSettings } = wp.blockEditor;
-const { useSelect, useDispatch } = wp.data;
-const { useEffect } = wp.element;
+const { useSelect, useDispatch, subscribe } = wp.data;
+const { useEffect, useRef } = wp.element;
 
 const PageColorPanel = () => {
     const { postType, pageColor } = useSelect( select => ( {
@@ -32,13 +32,15 @@ const PageColorPanel = () => {
 
     const { editPost } = useDispatch( 'core/editor' );
 
+    const isFirstRender = useRef( true );
+
     useEffect( () => {
-        document.documentElement.style.setProperty(
-            '--page-color', pageColor || '#ffffff'
-        );
+        const color = pageColor || '#ffffff';
+        document.documentElement.style.setProperty( '--page-color', color );
+        isFirstRender.current = false;
     }, [ pageColor ] );
 
-	if ( postType !== 'page' && postType !== 'project' ) return null;
+    if ( ! [ 'page', 'project' ].includes( postType ) ) return null;
 
     return wp.element.createElement(
         PluginDocumentSettingPanel,
@@ -55,3 +57,34 @@ const PageColorPanel = () => {
 };
 
 registerPlugin( 'page-color', { render: PageColorPanel } );
+
+// =========================================================
+// Reload editor after save to reflect new page colour
+// =========================================================
+
+let wasSaving = false;
+let savedColor;
+let initialized = false;
+
+subscribe( () => {
+    const state = wp.data.select( 'core/editor' );
+    const currentColor = state.getEditedPostAttribute( 'meta' )?._page_color;
+
+    if ( ! initialized && currentColor !== undefined ) {
+        savedColor = currentColor;
+        initialized = true;
+        return;
+    }
+
+    const isSaving = state.isSavingPost();
+    const isDirty = state.isEditedPostDirty();
+
+    if ( wasSaving && ! isSaving && ! isDirty ) {
+        if ( currentColor !== savedColor ) {
+            savedColor = currentColor;
+            window.location.reload();
+        }
+    }
+
+    wasSaving = isSaving;
+} );
