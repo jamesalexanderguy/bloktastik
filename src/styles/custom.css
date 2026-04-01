@@ -327,6 +327,7 @@ footer.wp-block-template-part {
   width: 100%;
   z-index: 100;
   padding-top: 100px;
+  margin-top: 0;
 }
 
 .nav-secondary {
@@ -336,10 +337,10 @@ footer.wp-block-template-part {
 }
 
 .primary-curtain:after {
-    background: linear-gradient(to bottom, var(--page-color, #fff) 0, var(--page-color, #fff) 50px, transparent 100%);
-    bottom: -179px;
+    background: linear-gradient(to bottom, var(--page-color, #fff) 0, var(--page-color, #fff) 70px, transparent 100%);
+    bottom: -150px;
     content: "";
-    height: 160px;
+    height: 150px;
     left: 0;
     pointer-events: none;
     position: absolute;
@@ -348,6 +349,7 @@ footer.wp-block-template-part {
 
 .nav-primary.fixed-default {
 	  top: 0;
+	  margin-top: 0;
 }
 
 .nav-primary.fixed-default:after {

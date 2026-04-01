@@ -21,6 +21,10 @@
     margin-inline-end: 0.5rem;
 }
 
+.project-filter.nav-secondary, .page-id-13 .project-grid {
+    margin-block-start: 67px;
+}
+
 .project-filter-btn {
     appearance: none;
     background: none;

@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     update();
   });
 
+  window._dockingUpdate = update;
   window.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', () => {
     measure();

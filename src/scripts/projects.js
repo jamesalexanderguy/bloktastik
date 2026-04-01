@@ -10,10 +10,14 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
     if ( ! grid || ! buttons.length ) return;
 
-    // maxPosts is stored as a data attribute on the grid by the PHP render callback
     const maxPosts = grid.dataset.max || -1;
 
     async function fetchCategory( slug ) {
+
+        const nav       = document.querySelector( '.project-filter' );
+        const navBottom = nav.getBoundingClientRect().bottom;
+        const gridTop   = grid.getBoundingClientRect().top;
+        const target    = window.scrollY + gridTop - navBottom - 19;
 
         grid.classList.add( 'is-loading' );
 
@@ -26,7 +30,17 @@ document.addEventListener( 'DOMContentLoaded', () => {
         try {
             const res  = await fetch( projectData.ajaxUrl, { method: 'POST', body } );
             const data = await res.json();
-            if ( data.success ) grid.innerHTML = data.data.html;
+            if ( data.success ) {
+                grid.innerHTML = data.data.html;
+
+                if ( gridTop < navBottom + 19 ) {
+                    window.removeEventListener( 'scroll', window._dockingUpdate );
+                    window.scrollTo({ top: target, behavior: 'instant' });
+                    requestAnimationFrame( () => {
+                        window.addEventListener( 'scroll', window._dockingUpdate, { passive: true } );
+                    });
+                }
+            }
         } catch ( err ) {
             console.error( 'Project filter error:', err );
         } finally {
