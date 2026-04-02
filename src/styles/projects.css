@@ -159,7 +159,7 @@
 .project-card__title {
     font-family: var(--wp--preset--font-family--heading-font);
     font-size: var(--wp--preset--font-size--2xl);
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.2;
     color: var(--wp--preset--color--contrast);
     margin: 0 0 0.5rem;
@@ -167,7 +167,7 @@
 
 .project-card__sep {
     height: 1.5px;
-    background-color: var(--wp--preset--color--sage-gray);
+    background-color: var(--wp--preset--color--deep-teal);
     width: 40px;
     margin: 0 0 0.5rem;
     border: none;
@@ -175,7 +175,7 @@
 }
 
 .project-card__cats {
-    font-size: var(--wp--preset--font-size--sm);
+    font-size: var(--wp--preset--font-size--xs);
     color: var(--wp--preset--color--muted-teal);
     margin: 0;
     line-height: 1.4;
@@ -270,7 +270,7 @@
  
 .project-nav-card__sep {
     height: 1.5px;
-    background-color: var(--wp--preset--color--sage-gray);
+    background-color: var(--wp--preset--color--deep-teal);
     width: 40px;
     border: none;
     transition: width 0.35s ease;

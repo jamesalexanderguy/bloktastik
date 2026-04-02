@@ -96,12 +96,7 @@ main a:not([class]) {
 	border-bottom: currentColor 1px dotted;
 }
 
-footer a:not([class]) {
-	border-bottom: currentColor 1px dotted;
-}
-
-main a:not([class]):hover,
-footer a:not([class]):hover {
+main a:not([class]):hover {
 	border-bottom-style: solid;
 }
 
@@ -240,6 +235,15 @@ html {
   scroll-margin-top: var(--header-height);
 }
 
+li.current-menu-item a {
+	border-bottom: var(--wp--preset--color--sage-gray) 1px solid;
+}
+
+.wp-block-navigation li a:hover .wp-block-navigation-item__label {
+	color: var(--wp--preset--color--muted-teal);
+}
+
+
 /* Hamburger breakpoint — show mobile menu below 1080px */
 @media (max-width: 1080px) {
 	.wp-block-navigation__responsive-container-open {
@@ -295,6 +299,14 @@ footer.wp-block-template-part {
 	margin-block-start: 0 !important;
 }
 
+footer a {
+	border-bottom: none !important;
+}
+
+footer a:hover {
+	border-bottom: solid 1px var(--wp--preset--color--muted-teal) !important;
+}
+
 /* =============================================================
    Footer Fir treee border
    ============================================================= */
@@ -307,6 +319,52 @@ footer.wp-block-template-part {
   height: 110px;              
   min-height: 0 !important;  
   padding: 0 !important;
+}
+
+/* =============================================================
+   Spinning logo
+   ============================================================= */
+
+   .spinner {
+    position: relative;
+}
+
+.spinner svg {
+    z-index: 1;
+    margin-top: 0;
+}
+
+@media (min-width: 330px) {
+    .spinner svg { margin-top: -3em; }
+}
+
+@media (min-width: 576px) {
+    .spinner svg { margin-top: -6em; }
+}
+
+@media (min-width: 768px) {
+    .spinner svg { margin-top: -7em; }
+}
+
+#text-around {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 20000ms linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+#midlogo {
+    left: 50%;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    margin-top: 0;
+    transform: translate(-50%, -50%);
 }
 
 /* =============================================================

@@ -165,7 +165,7 @@
 	"styles": {
 		"color": {
 			"background": "var:preset|color|base",
-			"text": "var:preset|color|contrast"
+			"text": "var:preset|color|dark-teal"
 		},
 		"spacing": {
 			"blockGap": "1.2rem",
@@ -176,7 +176,7 @@
 		},
 		"typography": {
 			"fontFamily": "var:preset|font-family|body-font",
-			"fontSize": "var:preset|font-size|base",
+			"fontSize": "var:preset|font-size|xl",
 			"letterSpacing": "-0.1px",
 			"lineHeight": "1.4"
 		},
@@ -352,12 +352,12 @@
 			},
 			"core/post-date": {
 				"color": {
-					"text": "var:preset|color|contrast"
+					"text": "var:preset|color|dark-teal"
 				},
 				"elements": {
 					"link": {
 						"color": {
-							"text": "var:preset|color|contrast"
+							"text": "var:preset|color|dark-teal"
 						},
 						":hover": {
 							"typography": {
@@ -388,12 +388,12 @@
 			"core/post-title": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|heading-font",
-					"fontWeight": "700",
+					"fontWeight": "500",
 					"fontSize": "var:preset|font-size|4xl",
 					"lineHeight": "1.2"
 				},
 				"color": {
-					"text": "var:preset|color|contrast"
+					"text": "var:preset|color|dark-teal"
 				},
 				"elements": {
 					"link": {
@@ -528,9 +528,9 @@
 					"shorty": {
 						"border": {
 							"color": "currentColor",
-							"width": "5px 0 0 0"
+							"width": "1px 0 0 0"
 						},
-						"css": "max-width: 40px; margin-left: 0!important; margin-right: auto; border-style: solid;"
+						"css": "max-width: 325px; margin-left: 0!important; margin-right: auto; border-style: solid;"
 					}
 				}
 			},
@@ -542,7 +542,7 @@
 			"core/site-title": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|heading-font",
-					"fontWeight": "700",
+					"fontWeight": "400",
 					"letterSpacing": "-.5px"
 				},
 				"elements": {
@@ -571,12 +571,13 @@
 					"link": {
 						":hover": {
 							"typography": {
-								"textDecoration": "underline"
+								"textDecoration": "none"
 							}
 						},
 						"typography": {
 							"textDecoration": "none"
-						}
+						},
+						"css": "& a:focus:not(:focus-visible), & *:focus:not(:focus-visible) { outline: none !important; box-shadow: none !important; }"
 					}
 				}
 			},
@@ -595,7 +596,7 @@
 		"elements": {
 			"button": {
 				"color": {
-					"background": "var:preset|color|contrast",
+					"background": "var:preset|color|dark-teal",
 					"text": "var:preset|color|base"
 				},
 				"border": {
@@ -606,8 +607,10 @@
 				},
 				":focus": {
 					"outline": {
-						"color": "var:preset|color|contrast",
-						"offset": "2px"
+						"color": "transparent",
+						"offset": "0px",
+						"style": "none",
+						"width": "0px"
 					}
 				},
 				":hover": {
@@ -647,10 +650,10 @@
 					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(3rem, 3rem + ((1vw - 0.2rem) * 2.778), 4.5rem)",
 					"lineHeight": "1.1",
-					"fontWeight": "700"
+					"fontWeight": "400"
 				},
 				"color": {
-					"text": "var:preset|color|contrast"
+					"text": "var:preset|color|dark-teal"
 				}
 			},
 			"h2": {
@@ -658,7 +661,7 @@
 					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(2rem, 2rem + ((1vw - 0.2rem) * 1.389), 2.75rem)",
 					"lineHeight": "1.2",
-					"fontWeight": "600"
+					"fontWeight": "400"
 				}
 			},
 			"h3": {
@@ -666,7 +669,7 @@
 					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 1.389), 2.25rem)",
 					"lineHeight": "1.2",
-					"fontWeight": "600"
+					"fontWeight": "400"
 				}
 			},
 			"h4": {
@@ -674,7 +677,7 @@
 					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.926), 1.75rem)",
 					"lineHeight": "1.2",
-					"fontWeight": "500"
+					"fontWeight": "400"
 				}
 			},
 			"h5": {
@@ -682,7 +685,7 @@
 					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(1.1rem, 1.1rem + ((1vw - 0.2rem) * 0.556), 1.4rem)",
 					"lineHeight": "1.2",
-					"fontWeight": "500"
+					"fontWeight": "400"
 				}
 			},
 			"h6": {
@@ -690,7 +693,7 @@
 					"fontFamily": "var:preset|font-family|heading-font",
 					"fontSize": "clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.463), 1.25rem)",
 					"lineHeight": "1.2",
-					"fontWeight": "700",
+					"fontWeight": "400",
 					"letterSpacing": "0.05em"
 				}
 			},
@@ -711,7 +714,8 @@
 					}
 				}
 			}
-		}
+		},
+		"css": "a:focus:not(:focus-visible) { outline: none !important; box-shadow: none !important; }"
 	},
 	"templateParts": [
 		{

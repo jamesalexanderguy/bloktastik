@@ -153,15 +153,20 @@ add_action( 'wp_enqueue_scripts', function () {
 
 function project_grid_render( array $attributes ): string {
 
-    $max        = (int) ( $attributes['maxPosts'] ?? -1 );
-    $cat_slug   = 'all';
-    $post_ids   = project_get_posts( $cat_slug, $max );
+    $max      = (int) ( $attributes['maxPosts'] ?? -1 );
+    $cat_slug = 'all';
+    $post_ids = project_get_posts( $cat_slug, $max );
+
+    $all_term    = get_term_by( 'slug', 'all', 'project_category' );
+    $exclude_ids = [ 10 ]; // Featured
+    if ( $all_term ) $exclude_ids[] = $all_term->term_id;
+
     $categories = get_terms([
         'taxonomy'   => 'project_category',
         'hide_empty' => true,
         'orderby'    => 'name',
         'order'      => 'ASC',
-        'exclude'    => [ 10 ],
+        'exclude'    => $exclude_ids,
     ]);
 
     // Enqueue front-end JS only on pages that contain this block
@@ -357,17 +362,14 @@ function project_get_posts( string $cat_slug, int $max = -1 ): array {
 
     $args = [
         'post_type'      => 'project',
-        'posts_per_page' => -1, // fetch all, then sort, then slice
+        'posts_per_page' => -1,
         'fields'         => 'ids',
-    ];
-
-    if ( $cat_slug !== 'all' ) {
-        $args['tax_query'] = [[
+        'tax_query'      => [[
             'taxonomy' => 'project_category',
             'field'    => 'slug',
             'terms'    => $cat_slug,
-        ]];
-    }
+        ]],
+    ];
 
     $ids = get_posts( $args );
 
@@ -381,7 +383,7 @@ function project_get_posts( string $cat_slug, int $max = -1 ): array {
 function project_get_order( int $post_id, string $cat_slug ): int {
     $rows = get_field( 'category_order', $post_id ) ?: [];
     foreach ( $rows as $row ) {
-        if ( $cat_slug === 'all' || $row['category']->slug === $cat_slug ) {
+        if ( $row['category']->slug === $cat_slug ) {
             return (int) $row['order'];
         }
     }
@@ -509,3 +511,21 @@ function project_ajax_handler(): void {
 
     wp_send_json_success([ 'html' => ob_get_clean() ]);
 }
+
+// ─────────────────────────────────────────────
+// 11. Put all projects in "All" category on save
+// ─────────────────────────────────────────────
+
+add_action( 'publish_project', function( $post_id ) {
+
+    $all_term = get_term_by( 'slug', 'all', 'project_category' );
+    if ( ! $all_term ) return;
+
+    $current = wp_get_object_terms( $post_id, 'project_category', [ 'fields' => 'ids' ] );
+
+    if ( ! in_array( $all_term->term_id, $current ) ) {
+        wp_set_object_terms( $post_id, array_merge( $current, [ $all_term->term_id ] ), 'project_category' );
+    }
+
+});
+
