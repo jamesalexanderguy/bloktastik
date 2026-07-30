@@ -2,7 +2,7 @@
 /**
  * Title: Image-textbox
  * Slug: bloktastik/image-text
- * Categories: lowercolumbia, design
+ * Categories: laikachat, design
  * Description: Standard text - image pattern
  * Keywords: image, text, 
  */

@@ -14,8 +14,8 @@
 				{ "color": "#a82e26",  "name": "Red Dark",    "slug": "red-dark"    },
 				{ "color": "#d6a65f",  "name": "Brown",       "slug": "brown"       },
 				{ "color": "#f4e9c1",  "name": "Cream",       "slug": "cream"       },
+				{ "color": "#f4efd4",  "name": "Vanilla",     "slug": "vanilla"     },
 				{ "color": "#e2e8f0",  "name": "Border",      "slug": "border"      },
-				{ "color": "#1e293b",  "name": "Text",        "slug": "text"        },
 				{ "color": "#64748b",  "name": "Muted",       "slug": "muted"       }
 			]
 		},
@@ -98,9 +98,9 @@
 			"lineHeight": true,
 			"fontFamilies": [
 				{
-					"name": "Noto Sans",
-					"slug": "noto-sans",
-					"fontFamily": "Noto Sans, sans-serif"
+					"name": "Nunito",
+					"slug": "nunito",
+					"fontFamily": "Nunito, sans-serif"
 				}
 			]
 		},
@@ -119,7 +119,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var:preset|font-family|noto-sans",
+			"fontFamily": "var:preset|font-family|nunito",
 			"fontSize": "var:preset|font-size|base",
 			"letterSpacing": "-0.1px",
 			"lineHeight": "1.4"
@@ -175,7 +175,7 @@
 			},
 			"core/code": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|noto-sans",
+					"fontFamily": "var:preset|font-family|nunito",
 					"fontSize": "var:preset|font-size|base",
 					"fontWeight": "300"
 				},
@@ -206,7 +206,7 @@
 						},
 						":hover": {
 							"typography": {
-								"textDecoration": "underline"
+								"textDecoration": "none"
 							}
 						}
 					}
@@ -519,18 +519,21 @@
 				}
 			},
 			"core/navigation": {
-				"typography": {
-					"fontSize": "var:preset|font-size|base"
+				"color": {
+					"text": "var:preset|color|base"
 				},
 				"elements": {
 					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
 						":hover": {
+							"color": {
+							"text": "var:preset|color|accent"
+							},
 							"typography": {
 								"textDecoration": "underline"
 							}
-						},
-						"typography": {
-							"textDecoration": "none"
 						}
 					}
 				}

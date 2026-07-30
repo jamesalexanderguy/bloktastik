@@ -124,11 +124,11 @@ if ( ! function_exists( 'bloktastik_register_blocks' ) ) :
 endif;
 add_action( 'init', 'bloktastik_register_blocks' );
 
-// Register custom block category for Lower Columbia blocks
+// Register custom block category for LaikaChat blocks
 add_filter('block_categories_all', function($categories, $post) {
     $custom_category = [
-        'slug'  => 'lowercolumbia',
-        'title' => __('Lower Columbia Blocks', 'lowercolumbia'),
+        'slug'  => 'laikachat',
+        'title' => __('LaikaChat Blocks', 'bloktastik'),
     ];
 
     foreach ($categories as $category) {
@@ -164,9 +164,9 @@ add_filter('image_size_names_choose', function($sizes) {
 
 add_action( 'init', function() {
     register_block_pattern_category(
-        'lowercolumbia',
+        'laikachat',
         array(
-            'label' => __( 'Lower Columbia', 'bloktastik' ),
+            'label' => __( 'LaikaChat', 'bloktastik' ),
         )
     );
 } );
@@ -258,7 +258,6 @@ add_filter( 'render_block', function( $block_content, $block ) {
 
 // remove unused dashboard items
 add_action('admin_menu', function () {
-    remove_menu_page('edit.php');          // Posts
     remove_menu_page('edit-comments.php'); // Comments
 });
 

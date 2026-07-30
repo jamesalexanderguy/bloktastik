@@ -2,7 +2,7 @@
 /**
  * Title: Single Job Starter
  * Slug: bloktastik/single-job-starter
- * Categories: lowercolumbia
+ * Categories: laikachat
  * Description: Job posting template with dummy text and prebuilt structure
  * Keywords: jobs, template
  */

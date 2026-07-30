@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",()=>{});
+(()=>{const t=EventTarget.prototype.dispatchEvent;EventTarget.prototype.dispatchEvent=function(e){"wc-blocks_added_to_cart"===e.type&&(console.log("intercepted"),document.querySelector(".wc-block-mini-cart__button")?.click()),t.call(this,e)}})();

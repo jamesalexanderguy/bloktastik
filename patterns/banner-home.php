@@ -2,7 +2,7 @@
 /**
  * Title: Home Hero Banner
  * Slug: bloktastik/banner-home
- * Categories: lowercolumbia, banner, hero
+ * Categories: laikachat, banner, hero
  * Description: Page banner with featured image and description, and an overlapping booking box.
  * Keywords: banner, hero
  */

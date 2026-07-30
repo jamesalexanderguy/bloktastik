@@ -2,7 +2,7 @@
 /**
  * Title: Coloured box
  * Slug: bloktastik/coloured-box
- * Categories: lowercolumbia
+ * Categories: laikachat
  * Description: Coloured callout text box with border
  * Keywords: callout, box, text-box, border
  */

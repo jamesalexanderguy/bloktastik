@@ -2,7 +2,7 @@
 /**
  * Title: Double column text box
  * Slug: bloktastik/dble-textbox
- * Categories: lowercolumbia
+ * Categories: laikachat
  * Description: Double column text box with headings
  * Keywords: text, textbox, double
  */

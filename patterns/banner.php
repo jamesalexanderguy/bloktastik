@@ -2,7 +2,7 @@
 /**
  * Title: Banner
  * Slug: bloktastik/banner
- * Categories: lowercolumbia, banner, hero
+ * Categories: laikachat, banner, hero
  * Description: Page banner with featured image and description, and a premade heading section with intro blurb.
  * Keywords: banner, hero, title
  */

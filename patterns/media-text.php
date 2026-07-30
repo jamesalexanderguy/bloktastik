@@ -2,7 +2,7 @@
 /**
  * Title: Media-text
  * Slug: bloktastik/lowercolumbia-media-text
- * Categories: lowercolumbia
+ * Categories: laikachat
  * Description: Standard text - image pattern
  * Keywords: image, text, 
  */

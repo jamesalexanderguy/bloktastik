@@ -2,7 +2,7 @@
 /**
  * Title: Practitioner Query
  * Slug: bloktastik/practitioner-query
- * Categories: lowercolumbia
+ * Categories: laikachat
  * Description: Show all the practitioners in an alphabeticized grid
  * Keywords: team, staff, practitioners
  */

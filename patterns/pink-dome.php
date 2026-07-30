@@ -2,7 +2,7 @@
 /**
  * Title: Pink Dome
  * Slug: bloktastik/pink-dome
- * Categories: lowercolumbia
+ * Categories: laikachat
  * Description: A pink curve design to go above sections with a pink background
  * Keywords: curve, dome, design
  */

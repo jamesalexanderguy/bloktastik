@@ -2,7 +2,7 @@
 /**
  * Title: Lower Columbia 404
  * Slug: bloktastik/lower-columbia-404
- * Categories: lowercolumbia, 404
+ * Categories: laikachat, 404
  * Description: 404 page with a link back home
  * Keywords: 404
  */
@@ -14,12 +14,8 @@
 <!-- /wp:heading -->
 
 <!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"3xl"} -->
-<h3 class="wp-block-heading has-primary-color has-text-color has-link-color has-3-xl-font-size">Well… this page isn’t feeling great.</h3>
+<h3 class="wp-block-heading has-primary-color has-text-color has-link-color has-3-xl-font-size">Well… looks like you got lost in space. Maybe you shouldn't blindly trust humans with treats.</h3>
 <!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>It looks like the page you’re trying to reach has moved, changed, or never existed. That sometimes happens as our website gets updated.</p>
-<!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
 <p>You can head back to the <a href="/">homepage</a>, or use the menu above to find what you’re looking for.</p>

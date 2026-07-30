@@ -36,7 +36,7 @@ if ( ! function_exists( 'bloktastik_frontend_assets' ) ) :
 			'bloktastik-tailwind',
 			get_template_directory_uri() . '/build/styles/tailwind.css',
 			array(),
-			wp_get_theme()->get( 'Version' )
+			wp_get_theme()->get( 'Version')
 		);
 		
 		// Block styles (auto-compiled from each block's style.scss)
@@ -51,7 +51,7 @@ if ( ! function_exists( 'bloktastik_frontend_assets' ) ) :
 		wp_enqueue_script(
 			'bloktastik-scripts',
 			get_template_directory_uri() . '/build/scripts/main.js',
-			array(),
+			array('wc-blocks-checkout'),
 			wp_get_theme()->get( 'Version' ),
 			true
 		);

@@ -2,7 +2,7 @@
 /**
  * Title: Blue Dome
  * Slug: bloktastik/blue-dome
- * Categories: lowercolumbia
+ * Categories: laikachat
  * Description: A blue curve design to go above sections with a blue background
  * Keywords: curve, dome, design
  */
