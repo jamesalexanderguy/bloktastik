@@ -38,6 +38,7 @@ add_action('wp_footer', function() {
             'agent-prompts': 'nav-agent-prompts',
             'leads-and-conversations': 'nav-leads',
             'providers-and-billing': 'nav-providers',
+            'security': 'nav-security',
             'faq-and-troubleshooting': 'nav-faq'
         };
         var id = map[slug];
