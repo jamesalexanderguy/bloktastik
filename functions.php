@@ -23,5 +23,5 @@ require_once get_template_directory() . '/inc/block-styles.php';
 require_once get_template_directory() . '/inc/setup.php';
 
 // Custom post types
-require get_template_directory() . '/inc/post-types.php';
+// require get_template_directory() . '/inc/post-types.php';
 

@@ -188,50 +188,6 @@ add_action('init', function() {
     remove_theme_support('core-block-patterns');
 }, 10);
 
-// Job starter template
-
-function jobs_post_template() {
-    $post_type_object = get_post_type_object( 'jobs' );
-    
-    if ( ! $post_type_object ) {
-        return;
-    }
-    
-    $post_type_object->template = array(
-        array( 'core/pattern', array(
-            'slug' => 'bloktastik/single-job-starter'
-        ) ),
-    );
-}
-add_action( 'init', 'jobs_post_template', 20 );
-
-// Practitioner starter template
-
-function practitioners_post_template() {
-    $post_type_object = get_post_type_object( 'practitioners' );
-    
-    if ( ! $post_type_object ) {
-        return;
-    }
-    
-    $post_type_object->template = array(
-        array( 'core/pattern', array(
-            'slug' => 'bloktastik/practitioner'
-        ) ),
-    );
-}
-add_action( 'init', 'practitioners_post_template', 20 );
-
-// Fallback image for practitioners
-
-add_filter('post_thumbnail_html', function($html, $post_id, $post_thumbnail_id, $size) {
-    if (empty($html) && get_post_type($post_id) === 'practitioners') {
-        $fallback_url = get_theme_file_uri('assets/Team-plant-avatar.jpg');
-        $html = '<img src="' . esc_url($fallback_url) . '" class="wp-post-image fallback-thumbnail" alt="Practitioner">';
-    }
-    return $html;
-}, 10, 4);
-
 // inject site logo inside nav modal
 add_filter( 'render_block', function( $block_content, $block ) {
     if ( $block['blockName'] !== 'core/navigation' ) {
